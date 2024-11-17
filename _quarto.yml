@@ -11,6 +11,9 @@ website:
         text: Home
       - about.qmd
       - posts.qmd
+    right:
+      - icon: rss
+        href: index.xml
 
 format:
   html:
