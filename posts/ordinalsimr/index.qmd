@@ -3,7 +3,7 @@ title: "ordinalsimr"
 date: 2024-11-17T20:10:00Z
 categories:
   - packages
-  - r
+  - R
 ---
 
 (This page is currently a placeholder)

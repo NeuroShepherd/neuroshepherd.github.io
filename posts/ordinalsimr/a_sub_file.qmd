@@ -1,7 +1,9 @@
 ---
 title: "A sub post"
+date: 2024-11-17T20:05:00Z
 categories:
   - packages
-  - r
+  - R
   - releases
 ---
+
