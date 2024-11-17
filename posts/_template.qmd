@@ -1,0 +1,12 @@
+---
+title: "_template"
+description: "A template for creating new posts"
+# comments: false
+editor: source
+date: 2024-11-17T09:07:08Z
+date-modified: "`r Sys.Date()`"
+draft: true
+categories:
+  - packages
+  - r
+---
