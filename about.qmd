@@ -1,5 +1,10 @@
 ---
 title: "About"
+format:
+  html:
+    comments:
+      utterances:
+         repo: NeuroShepherd/NeuroShepherd.github.io
 ---
 
 About this site
