@@ -10,7 +10,7 @@
 <atom:link href="https://neuroshepherd.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of data projects and blog posts about cool programming things</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Sun, 17 Nov 2024 18:39:53 GMT</lastBuildDate>
+<lastBuildDate>Sun, 17 Nov 2024 18:42:23 GMT</lastBuildDate>
 <item>
   <title>ordinalsimr</title>
   <dc:creator>Pat </dc:creator>
@@ -26,7 +26,7 @@
 
  ]]></description>
   <guid>https://neuroshepherd.github.io/posts/ordinalsimr/</guid>
-  <pubDate>Sun, 17 Nov 2024 18:39:53 GMT</pubDate>
+  <pubDate>Sun, 17 Nov 2024 18:42:23 GMT</pubDate>
 </item>
 </channel>
 </rss>

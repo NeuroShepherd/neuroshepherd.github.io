@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "posts/ordinalsimr/index.html",
-    "href": "posts/ordinalsimr/index.html",
-    "title": "ordinalsimr",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": ".",
     "section": "",
-    "text": "(This page is currently a placeholder)"
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nordinalsimr\n\n\n\n\n\n\n\n\n\n\n\nPat\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPat\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -14,10 +14,10 @@
     "text": "About this site"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": ".",
+    "objectID": "posts/ordinalsimr/index.html",
+    "href": "posts/ordinalsimr/index.html",
+    "title": "ordinalsimr",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nordinalsimr\n\n\n\n\n\n\n\n\n\n\n\nPat\n\n\n\n\n\n\nNo matching items"
+    "text": "(This page is currently a placeholder)"
   }
 ]
