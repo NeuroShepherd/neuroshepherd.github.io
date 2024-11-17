@@ -20,6 +20,8 @@ website:
       - about.qmd
       - posts.qmd
     right:
+      - icon: github
+        href: https://github.com/NeuroShepherd
       - icon: rss
         href: posts.xml
 
