@@ -2,4 +2,4 @@
 title: "About"
 ---
 
-About this site
+Can fashion this page to look more like this: https://quarto.org/docs/websites/website-about.html

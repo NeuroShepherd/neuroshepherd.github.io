@@ -1,5 +1,6 @@
 ---
 title: "ordinalsimr"
+description: "Simulations of Ordinal Endpoints: A Shiny App"
 date: 2024-11-17T20:10:00Z
 categories:
   - packages

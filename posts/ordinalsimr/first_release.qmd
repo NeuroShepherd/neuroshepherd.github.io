@@ -1,5 +1,6 @@
 ---
-title: "A sub post"
+title: "{ordinalsimr} First Release"
+description: "Final checks and the process of submitting to CRAN"
 date: 2024-11-17T20:05:00Z
 categories:
   - packages
