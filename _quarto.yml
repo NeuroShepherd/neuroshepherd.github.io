@@ -14,6 +14,12 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+    
+comments:
+  giscus: 
+    repo: NeuroShepherd/NeuroShepherd.github.io
+    category: "Blog Post Comments"
+    mapping: "pathname"
 
 
 
