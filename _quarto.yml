@@ -18,6 +18,8 @@ format:
 comments:
   giscus: 
     repo: NeuroShepherd/NeuroShepherd.github.io.discussion
+    category: "Blog Post Comments"
+    mapping: "pathname"
 
 
 
