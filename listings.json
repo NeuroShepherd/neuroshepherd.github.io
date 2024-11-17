@@ -6,5 +6,12 @@
       "/posts/ordinalsimr/first_release.html",
       "/posts/munichstudentguide/munich-guide-intro.html"
     ]
+  },
+  {
+    "listing": "/posts/ordinalsimr/index.html",
+    "items": [
+      "/posts/ordinalsimr/development.html",
+      "/posts/ordinalsimr/first_release.html"
+    ]
   }
 ]
