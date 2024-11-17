@@ -1,5 +1,5 @@
 ---
-title: "{ordinalsimr} Series"
+title: "Munich Student Guide Series"
 comments: false
 listing:
   contents:
