@@ -1,6 +1,5 @@
 ---
-title: "."
-comments: false
+title: "Home Page"
 ---
 
 This is a Quarto website.
