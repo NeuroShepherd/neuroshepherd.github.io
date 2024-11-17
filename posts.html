@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -161,6 +161,13 @@ window.Quarto = {
 <span class="menu-text">Posts</span></a>
   </li>  
 </ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
@@ -173,7 +180,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="packages">packages <span class="quarto-category-count">(2)</span></div><div class="category" data-category="r">r <span class="quarto-category-count">(2)</span></div><div class="category" data-category="releases">releases <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -202,32 +209,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1731870592284" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
-<div class="thumbnail">
-<p><a href="./posts/ordinalsimr/index.html" class="no-external"></a></p><a href="./posts/ordinalsimr/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/ordinalsimr/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/ordinalsimr/index.html" class="no-external">ordinalsimr</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/ordinalsimr/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/ordinalsimr/index.html" class="no-external">(This page is currently a placeholder)</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/ordinalsimr/index.html" class="no-external"></a></p><a href="./posts/ordinalsimr/index.html" class="no-external">
-<div class="listing-author">
-Pat
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1731870592284" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="quarto-post image-right" data-index="0" data-categories="packages,r,releases" data-listing-file-modified-sort="1731871238608" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 <div class="thumbnail">
 <p><a href="./posts/ordinalsimr/a_sub_file.html" class="no-external"></a></p><a href="./posts/ordinalsimr/a_sub_file.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -240,12 +222,59 @@ Pat
 <div class="listing-subtitle">
 <a href="./posts/ordinalsimr/a_sub_file.html" class="no-external"></a>
 </div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('packages'); return false;">
+packages
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('r'); return false;">
+r
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('releases'); return false;">
+releases
+</div>
+</div>
 <div class="listing-description">
 <a href="./posts/ordinalsimr/a_sub_file.html" class="no-external"></a>
 </div>
 </div>
 <div class="metadata">
 <p><a href="./posts/ordinalsimr/a_sub_file.html" class="no-external"></a></p><a href="./posts/ordinalsimr/a_sub_file.html" class="no-external">
+<div class="listing-author">
+Pat
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="packages,r" data-listing-date-sort="1731874200000" data-listing-file-modified-sort="1731871238608" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="20">
+<div class="thumbnail">
+<p><a href="./posts/ordinalsimr/index.html" class="no-external"></a></p><a href="./posts/ordinalsimr/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/ordinalsimr/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/ordinalsimr/index.html" class="no-external">ordinalsimr</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/ordinalsimr/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('packages'); return false;">
+packages
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('r'); return false;">
+r
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/ordinalsimr/index.html" class="no-external">(This page is currently a placeholder)</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/ordinalsimr/index.html" class="no-external">
+<div class="listing-date">
+Nov 17, 2024
+</div>
 <div class="listing-author">
 Pat
 </div>

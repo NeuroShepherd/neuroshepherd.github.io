@@ -10,7 +10,7 @@
 <atom:link href="https://neuroshepherd.github.io/posts.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of data projects and blog posts about cool programming things</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Sun, 17 Nov 2024 19:10:07 GMT</lastBuildDate>
+<lastBuildDate>Sun, 17 Nov 2024 20:10:00 GMT</lastBuildDate>
 <item>
   <title>ordinalsimr</title>
   <dc:creator>Pat </dc:creator>
@@ -21,12 +21,16 @@
 
 
 <p>(This page is currently a placeholder)</p>
+<p>This page should be designed in the spirit of one of the templates available here:</p>
+<p>https://quarto.org/docs/websites/website-about.html</p>
 
 
 
  ]]></description>
+  <category>packages</category>
+  <category>r</category>
   <guid>https://neuroshepherd.github.io/posts/ordinalsimr/</guid>
-  <pubDate>Sun, 17 Nov 2024 19:10:07 GMT</pubDate>
+  <pubDate>Sun, 17 Nov 2024 20:10:00 GMT</pubDate>
 </item>
 <item>
   <title>A sub post</title>
@@ -41,8 +45,11 @@
 
 
  ]]></description>
+  <category>packages</category>
+  <category>r</category>
+  <category>releases</category>
   <guid>https://neuroshepherd.github.io/posts/ordinalsimr/a_sub_file.html</guid>
-  <pubDate>Sun, 17 Nov 2024 19:10:07 GMT</pubDate>
+  <pubDate>Sun, 17 Nov 2024 19:20:50 GMT</pubDate>
 </item>
 </channel>
 </rss>
