@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>NeuroShepherd Projects</title>
+<link>https://neuroshepherd.github.io/</link>
+<atom:link href="https://neuroshepherd.github.io/index.xml" rel="self" type="application/rss+xml"/>
+<description>A collection of data projects and blog posts about cool programming things</description>
+<generator>quarto-1.5.57</generator>
+<lastBuildDate>Sun, 17 Nov 2024 18:39:53 GMT</lastBuildDate>
+<item>
+  <title>ordinalsimr</title>
+  <dc:creator>Pat </dc:creator>
+  <link>https://neuroshepherd.github.io/posts/ordinalsimr/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>(This page is currently a placeholder)</p>
+
+
+
+ ]]></description>
+  <guid>https://neuroshepherd.github.io/posts/ordinalsimr/</guid>
+  <pubDate>Sun, 17 Nov 2024 18:39:53 GMT</pubDate>
+</item>
+</channel>
+</rss>

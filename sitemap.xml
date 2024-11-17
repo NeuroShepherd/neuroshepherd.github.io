@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://NeuroShepherd.github.io/neuroshepherd.github.io/index.html</loc>
-    <lastmod>2024-11-17T15:30:47.473Z</lastmod>
+    <loc>https://neuroshepherd.github.io/posts/ordinalsimr/index.html</loc>
+    <lastmod>2024-11-17T18:39:39.886Z</lastmod>
   </url>
   <url>
-    <loc>https://NeuroShepherd.github.io/neuroshepherd.github.io/about.html</loc>
-    <lastmod>2024-11-17T15:30:47.473Z</lastmod>
+    <loc>https://neuroshepherd.github.io/about.html</loc>
+    <lastmod>2024-11-17T18:39:39.886Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/index.html</loc>
+    <lastmod>2024-11-17T18:39:39.886Z</lastmod>
   </url>
 </urlset>
