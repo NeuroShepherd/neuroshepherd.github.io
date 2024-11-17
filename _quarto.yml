@@ -2,7 +2,9 @@ project:
   type: website
 
 website:
-  title: "."
+  title: "NeuroShepherd Projects"
+  site-url: "https://neuroshepherd.github.io"
+  description: "A collection of data projects and blog posts about cool programming things"
   navbar:
     left:
       - href: index.qmd
@@ -14,12 +16,6 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
-    
-comments:
-  giscus: 
-    repo: NeuroShepherd/NeuroShepherd.github.io
-    category: "Blog Post Comments"
-    mapping: "pathname"
 
 
 
