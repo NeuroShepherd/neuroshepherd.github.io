@@ -2,9 +2,16 @@ project:
   type: website
 
 website:
-  title: "NeuroShepherd Projects"
+  title: "NeuroShepherd"
   site-url: "https://neuroshepherd.github.io"
   description: "A collection of data projects and blog posts about cool programming things"
+  page-footer: "Footer in progress"
+  announcement: 
+    icon: info-circle
+    dismissable: true
+    content: "**Website still very much under construction**"
+    type: primary
+    position: below-navbar
   navbar:
     left:
       - href: index.qmd
@@ -13,13 +20,21 @@ website:
       - posts.qmd
     right:
       - icon: rss
-        href: index.xml
+        href: posts.xml
 
+      
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
+    toc-depth: 3
+    # include-after-body: footer.html
+    grid:
+      sidebar-width: 300px
+      body-width: 900px
+      margin-width: 200px
+      gutter-width: 1.5rem
 
 
 
