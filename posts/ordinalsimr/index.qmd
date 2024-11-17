@@ -1,5 +1,13 @@
 ---
 title: "ordinalsimr"
+date: 2024-11-17T20:10:00Z
+categories:
+  - packages
+  - r
 ---
 
 (This page is currently a placeholder)
+
+This page should be designed in the spirit of one of the templates available here:
+
+https://quarto.org/docs/websites/website-about.html
