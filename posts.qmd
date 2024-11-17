@@ -1,9 +1,20 @@
 ---
 title: "Posts"
+toc: false
 listing:
-  contents: posts
+  contents:
+    - "posts/**/*.qmd"
+    - "!posts/**/index.qmd"
   sort: "date desc"
   type: default
   categories: true
   feed: true
+  # page-size: 2
 ---
+
+
+Here is some content
+
+# [ordinalsimr posts](posts/ordinalsimr/index.qmd)
+
+# [Munich Student Guide posts](posts/munichstudentguide/index.qmd)
