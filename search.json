@@ -7,11 +7,18 @@
     "text": "(This page is currently a placeholder)\nThis page should be designed in the spirit of one of the templates available here:\nhttps://quarto.org/docs/websites/website-about.html"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home Page",
+    "objectID": "posts/munichstudentguide/index.html",
+    "href": "posts/munichstudentguide/index.html",
+    "title": "Munich Student Guide Series",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Munich Student Guide\n\n\n\n\n\nUnfinished Business: A guide for students in Munich\n\n\n\n\n\nNov 17, 2024\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Posts",
+    "section": "",
+    "text": "Here is some content\n\nordinalsimr posts\n\n\nMunich Student Guide posts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nordinalsimr\n\n\n\n\n\n\npackages\n\n\nR\n\n\n\nSimulations of Ordinal Endpoints: A Shiny App\n\n\n\n\n\nNov 17, 2024\n\n\nPat\n\n\n\n\n\n\n\n\n\n\n\n\n{ordinalsimr} First Release\n\n\n\n\n\n\npackages\n\n\nR\n\n\nreleases\n\n\n\nFinal checks and the process of submitting to CRAN\n\n\n\n\n\nNov 17, 2024\n\n\nPat\n\n\n\n\n\n\n\n\n\n\n\n\nMunich Student Guide\n\n\n\n\n\n\nGermany\n\n\n\nUnfinished Business: A guide for students in Munich\n\n\n\n\n\nNov 17, 2024\n\n\nPat\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -21,11 +28,11 @@
     "text": "Can fashion this page to look more like this: https://quarto.org/docs/websites/website-about.html"
   },
   {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "Posts",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home Page",
     "section": "",
-    "text": "Here is some content\n\nordinalsimr posts\n\n\nMunich Student Guide posts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nordinalsimr\n\n\n\n\n\n\npackages\n\n\nR\n\n\n\nSimulations of Ordinal Endpoints: A Shiny App\n\n\n\n\n\nNov 17, 2024\n\n\nPat\n\n\n\n\n\n\n\n\n\n\n\n\n{ordinalsimr} First Release\n\n\n\n\n\n\npackages\n\n\nR\n\n\nreleases\n\n\n\nFinal checks and the process of submitting to CRAN\n\n\n\n\n\nNov 17, 2024\n\n\nPat\n\n\n\n\n\n\n\n\n\n\n\n\nMunich Student Guide\n\n\n\n\n\n\nGermany\n\n\n\nUnfinished Business: A guide for students in Munich\n\n\n\n\n\nNov 17, 2024\n\n\nPat\n\n\n\n\n\n\nNo matching items"
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
     "objectID": "posts/munichstudentguide/munich-guide-intro.html",

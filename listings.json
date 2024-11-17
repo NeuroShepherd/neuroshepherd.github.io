@@ -1,5 +1,11 @@
 [
   {
+    "listing": "/posts/munichstudentguide/index.html",
+    "items": [
+      "/posts/munichstudentguide/munich-guide-intro.html"
+    ]
+  },
+  {
     "listing": "/posts.html",
     "items": [
       "/posts/ordinalsimr/development.html",
