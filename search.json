@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "posts/munichstudentguide/munich-guide-intro.html",
+    "href": "posts/munichstudentguide/munich-guide-intro.html",
+    "title": "Munich Student Guide",
+    "section": "",
+    "text": "This page will detail the start (and long pause) in developing the Munich Student Guide site."
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Posts",
+    "section": "",
+    "text": "ordinalsimr\n\n\n\n\n\n\npackages\n\n\nR\n\n\n\nSimulations of Ordinal Endpoints: A Shiny App\n\n\n\n\n\nNov 17, 2024\n\n\nPat\n\n\n\n\n\n\n\n\n\n\n\n\n{ordinalsimr} First Release\n\n\n\n\n\n\npackages\n\n\nR\n\n\nreleases\n\n\n\nFinal checks and the process of submitting to CRAN\n\n\n\n\n\nNov 17, 2024\n\n\nPat\n\n\n\n\n\n\n\n\n\n\n\n\nMunich Student Guide\n\n\n\n\n\n\nGermany\n\n\n\nUnfinished Business: A guide for students in Munich\n\n\n\n\n\nNov 17, 2024\n\n\nPat\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Can fashion this page to look more like this: https://quarto.org/docs/websites/website-about.html"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home Page",
@@ -7,22 +28,8 @@
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "Posts",
-    "section": "",
-    "text": "ordinalsimr\n\n\n\n\n\n\npackages\n\n\nR\n\n\n\n\n\n\n\n\n\nNov 17, 2024\n\n\nPat\n\n\n\n\n\n\n\n\n\n\n\n\nA sub post\n\n\n\n\n\n\npackages\n\n\nR\n\n\nreleases\n\n\n\n\n\n\n\n\n\nNov 17, 2024\n\n\nPat\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/ordinalsimr/index.html",
-    "href": "posts/ordinalsimr/index.html",
+    "objectID": "posts/ordinalsimr/development.html",
+    "href": "posts/ordinalsimr/development.html",
     "title": "ordinalsimr",
     "section": "",
     "text": "(This page is currently a placeholder)\nThis page should be designed in the spirit of one of the templates available here:\nhttps://quarto.org/docs/websites/website-about.html"

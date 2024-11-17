@@ -14,7 +14,7 @@
 <item>
   <title>ordinalsimr</title>
   <dc:creator>Pat </dc:creator>
-  <link>https://neuroshepherd.github.io/posts/ordinalsimr/</link>
+  <link>https://neuroshepherd.github.io/posts/ordinalsimr/development.html</link>
   <description><![CDATA[ 
 
 
@@ -29,13 +29,13 @@
  ]]></description>
   <category>packages</category>
   <category>R</category>
-  <guid>https://neuroshepherd.github.io/posts/ordinalsimr/</guid>
+  <guid>https://neuroshepherd.github.io/posts/ordinalsimr/development.html</guid>
   <pubDate>Sun, 17 Nov 2024 20:10:00 GMT</pubDate>
 </item>
 <item>
-  <title>A sub post</title>
+  <title>{ordinalsimr} First Release</title>
   <dc:creator>Pat </dc:creator>
-  <link>https://neuroshepherd.github.io/posts/ordinalsimr/a_sub_file.html</link>
+  <link>https://neuroshepherd.github.io/posts/ordinalsimr/first_release.html</link>
   <description><![CDATA[ 
 
 
@@ -48,8 +48,26 @@
   <category>packages</category>
   <category>R</category>
   <category>releases</category>
-  <guid>https://neuroshepherd.github.io/posts/ordinalsimr/a_sub_file.html</guid>
+  <guid>https://neuroshepherd.github.io/posts/ordinalsimr/first_release.html</guid>
   <pubDate>Sun, 17 Nov 2024 20:05:00 GMT</pubDate>
+</item>
+<item>
+  <title>Munich Student Guide</title>
+  <dc:creator>Pat </dc:creator>
+  <link>https://neuroshepherd.github.io/posts/munichstudentguide/munich-guide-intro.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>This page will detail the start (and long pause) in developing the Munich Student Guide site.</p>
+
+
+
+ ]]></description>
+  <category>Germany</category>
+  <guid>https://neuroshepherd.github.io/posts/munichstudentguide/munich-guide-intro.html</guid>
+  <pubDate>Sun, 17 Nov 2024 09:07:08 GMT</pubDate>
 </item>
 </channel>
 </rss>

@@ -2,8 +2,9 @@
   {
     "listing": "/posts.html",
     "items": [
-      "/posts/ordinalsimr/index.html",
-      "/posts/ordinalsimr/a_sub_file.html"
+      "/posts/ordinalsimr/development.html",
+      "/posts/ordinalsimr/first_release.html",
+      "/posts/munichstudentguide/munich-guide-intro.html"
     ]
   }
 ]
