@@ -2,8 +2,8 @@
   {
     "listing": "/posts.html",
     "items": [
-      "/posts/ordinalsimr/a_sub_file.html",
-      "/posts/ordinalsimr/index.html"
+      "/posts/ordinalsimr/index.html",
+      "/posts/ordinalsimr/a_sub_file.html"
     ]
   }
 ]

@@ -5,7 +5,7 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>NeuroShepherd Projects</title>
+<title>NeuroShepherd</title>
 <link>https://neuroshepherd.github.io/posts.html</link>
 <atom:link href="https://neuroshepherd.github.io/posts.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of data projects and blog posts about cool programming things</description>
@@ -28,7 +28,7 @@
 
  ]]></description>
   <category>packages</category>
-  <category>r</category>
+  <category>R</category>
   <guid>https://neuroshepherd.github.io/posts/ordinalsimr/</guid>
   <pubDate>Sun, 17 Nov 2024 20:10:00 GMT</pubDate>
 </item>
@@ -46,10 +46,10 @@
 
  ]]></description>
   <category>packages</category>
-  <category>r</category>
+  <category>R</category>
   <category>releases</category>
   <guid>https://neuroshepherd.github.io/posts/ordinalsimr/a_sub_file.html</guid>
-  <pubDate>Sun, 17 Nov 2024 19:20:50 GMT</pubDate>
+  <pubDate>Sun, 17 Nov 2024 20:05:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
