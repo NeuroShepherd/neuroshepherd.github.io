@@ -4,6 +4,7 @@ project:
 website:
   title: "NeuroShepherd"
   site-url: "https://neuroshepherd.github.io"
+  search: true
   description: "A collection of data projects and blog posts about cool programming things"
   page-footer: "Footer in progress"
   announcement: 
