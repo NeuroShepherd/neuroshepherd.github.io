@@ -9,7 +9,7 @@ date-modified: "`r Sys.Date()`"
 draft: true
 categories:
   - packages
-  - r
+  - R
 title-block-banner: false # this can also be a hex color or an image
 title-block-banner-color: "#000"
 ---
