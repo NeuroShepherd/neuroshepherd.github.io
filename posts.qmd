@@ -13,8 +13,44 @@ listing:
 ---
 
 
-Here is some content
+<!-- first grid -->
 
-# [ordinalsimr posts](posts/ordinalsimr/index.qmd)
+::: {.grid}
+::: {.g-col-6}
+::: {.card}
+### [ordinalsimr posts](posts/ordinalsimr/index.qmd)
+:::
+:::
 
-# [Munich Student Guide posts](posts/munichstudentguide/index.qmd)
+::: {.g-col-6}
+::: {.card}
+### [Munich Student Guide posts](posts/munichstudentguide/index.qmd)
+
+:::
+:::
+:::
+
+<br>
+
+<!-- second grid -->
+
+::: {.grid}
+::: {.g-col-6}
+::: {.card}
+
+### [track topic here?]
+
+:::
+:::
+
+::: {.g-col-6}
+
+::: {.card}
+
+### [another topic here?]
+
+:::
+:::
+:::
+
+<br><br><br>
