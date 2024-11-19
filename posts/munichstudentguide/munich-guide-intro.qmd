@@ -1,6 +1,7 @@
 ---
 title: "Munich Student Guide"
 description: "Unfinished Business: A guide for students in Munich"
+image: Golde33443.jpg
 editor: source
 date: 2024-11-17T09:07:08Z
 date-format: "MMMM Do, YYYY"

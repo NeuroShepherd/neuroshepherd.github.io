@@ -1,5 +1,5 @@
 ---
-title: "Posts"
+title: ""
 toc: false
 listing:
   contents:
@@ -13,44 +13,97 @@ listing:
 ---
 
 
-<!-- first grid -->
+```{=html}
 
-::: {.grid}
-::: {.g-col-6}
-::: {.card}
-### [ordinalsimr posts](posts/ordinalsimr/index.qmd)
-:::
-:::
 
-::: {.g-col-6}
-::: {.card}
-### [Munich Student Guide posts](posts/munichstudentguide/index.qmd)
+<div class="quarto-listing quarto-listing-container-grid">
+   <div class="list grid quarto-listing-cols-2">
+      <div class="g-col-1" data-index="0">
+         <a class="quarto-grid-link" href="posts/ordinalsimr/index.qmd" data-original-href="posts/ordinalsimr/index.qmd">
+            <div class="quarto-grid-item card h-100 card-left">
+               <p class="card-img-top">
+                  <img loading="lazy" src="./posts/munichstudentguide/Golde33443.jpg" class="thumbnail-image card-img" style="height: 180px">
+               </p>
+               <div class="card-body post-contents">
+                  <h5 class="no-anchor card-title listing-title">
+                     Open Science and Fun Projects
+                  </h5>
+                  <div class="card-text listing-description">
+                     A collection of open science projects, programming guides, and some silly things I've coded
+                  </div>
+                  <div class="card-attribution card-text-small justify">
+                  </div>
+               </div>
+         </a>
+         </div>
+      </div>
+      <div class="g-col-1" data-index="1">
+         <a class="quarto-grid-link" href="posts/ordinalsimr/index.qmd" data-original-href="posts/ordinalsimr/index.qmd">
+            <div class="quarto-grid-item card h-100 card-left">
+               <p class="card-img-top">
+                  <img loading="lazy" src="./posts/munichstudentguide/Golde33443.jpg" class="thumbnail-image card-img" style="height: 180px">
+               </p>
+               <div class="card-body post-contents">
+                  <h5 class="no-anchor card-title listing-title">
+                    ordinalsimr
+                  </h5>
+                  <div class="card-text listing-description">
+                     Simulations of Ordinal Endpoints: An R Package and Shiny Application for applied researchers
+                  </div>
+                  <div class="card-attribution card-text-small justify">
+                  </div>
+               </div>
+         </a>
+         </div>
+      </div>
+   </div>
+</div>
 
-:::
-:::
-:::
 
-<br>
+<div class="quarto-listing quarto-listing-container-grid">
+   <div class="list grid quarto-listing-cols-2">
+      <div class="g-col-1" data-index="0">
+         <a class="quarto-grid-link" href="posts/munichstudentguide/index.qmd" data-original-href="posts/munichstudentguide/index.qmd">
+            <div class="quarto-grid-item card h-100 card-left">
+               <p class="card-img-top">
+                  <img loading="lazy" src="./posts/munichstudentguide/Golde33443.jpg" class="thumbnail-image card-img" style="height: 180px">
+               </p>
+               <div class="card-body post-contents">
+                  <h5 class="no-anchor card-title listing-title">
+                     Munich Student Guide
+                  </h5>
+                  <div class="card-text listing-description">
+                     Updates and progress on the someday-to-be-completed Munich Student Guide
+                  </div>
+                  <div class="card-attribution card-text-small justify">
+                  </div>
+               </div>
+         </a>
+         </div>
+      </div>
+      <div class="g-col-1" data-index="1">
+         <a class="quarto-grid-link" href="posts/ordinalsimr/index.qmd" data-original-href="posts/ordinalsimr/index.qmd">
+            <div class="quarto-grid-item card h-100 card-left">
+               <p class="card-img-top">
+                  <img loading="lazy" src="./posts/munichstudentguide/Golde33443.jpg" class="thumbnail-image card-img" style="height: 180px">
+               </p>
+               <div class="card-body post-contents">
+                  <h5 class="no-anchor card-title listing-title">
+                     Programming Learnings
+                  </h5>
+                  <div class="card-text listing-description">
+                     Miscellaneous things I've learned about programming
+                  </div>
+                  <div class="card-attribution card-text-small justify">
+                  </div>
+               </div>
+         </a>
+         </div>
+      </div>
+   </div>
+</div>
+```
 
-<!-- second grid -->
 
-::: {.grid}
-::: {.g-col-6}
-::: {.card}
 
-### [track topic here?]
-
-:::
-:::
-
-::: {.g-col-6}
-
-::: {.card}
-
-### [another topic here?]
-
-:::
-:::
-:::
-
-<br><br><br>
+# Recent Posts
