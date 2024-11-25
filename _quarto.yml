@@ -34,8 +34,8 @@ format:
     toc-depth: 3
     # include-after-body: footer.html
     grid:
-      sidebar-width: 300px
-      body-width: 900px
+      sidebar-width: 100px
+      body-width: 1050px
       margin-width: 200px
       gutter-width: 1.5rem
 
