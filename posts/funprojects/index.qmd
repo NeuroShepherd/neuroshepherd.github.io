@@ -1,0 +1,17 @@
+---
+title: "Open Science, Fun Projects, and Silly Things"
+comments: false
+listing:
+  contents:
+    - "*.qmd"
+    - "!index.qmd"
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, reading-time, description]
+  feed: true
+page-layout: full
+title-block-banner: true
+---

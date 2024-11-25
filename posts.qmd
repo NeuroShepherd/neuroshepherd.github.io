@@ -1,6 +1,7 @@
 ---
 title: ""
 toc: false
+cache: false
 listing:
   contents:
     - "posts/**/*.qmd"
