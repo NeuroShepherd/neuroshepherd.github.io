@@ -10,11 +10,30 @@
 <atom:link href="https://neuroshepherd.github.io/posts.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of data projects and blog posts about cool programming things</description>
 <generator>quarto-1.7.32</generator>
-<lastBuildDate>Sun, 17 Nov 2024 20:10:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 03 Aug 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Hello</title>
+  <dc:creator>Pat </dc:creator>
+  <link>https://neuroshepherd.github.io/posts/example2025.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>(This page is currently a placeholder)</p>
+
+
+
+ ]]></description>
+  <category>packages</category>
+  <category>R</category>
+  <guid>https://neuroshepherd.github.io/posts/example2025.html</guid>
+  <pubDate>Sun, 03 Aug 2025 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>ordinalsimr</title>
   <dc:creator>Pat </dc:creator>
-  <link>https://neuroshepherd.github.io/posts/ordinalsimr/development.html</link>
+  <link>https://neuroshepherd.github.io/posts/development.html</link>
   <description><![CDATA[ 
 
 
@@ -29,13 +48,14 @@
  ]]></description>
   <category>packages</category>
   <category>R</category>
-  <guid>https://neuroshepherd.github.io/posts/ordinalsimr/development.html</guid>
+  <guid>https://neuroshepherd.github.io/posts/development.html</guid>
   <pubDate>Sun, 17 Nov 2024 20:10:00 GMT</pubDate>
+  <media:content url="https://neuroshepherd.github.io/images/placeholder.png" medium="image" type="image/png" height="216" width="144"/>
 </item>
 <item>
   <title>{ordinalsimr} First Release</title>
   <dc:creator>Pat </dc:creator>
-  <link>https://neuroshepherd.github.io/posts/ordinalsimr/first_release.html</link>
+  <link>https://neuroshepherd.github.io/posts/first_release.html</link>
   <description><![CDATA[ 
 
 
@@ -48,13 +68,13 @@
   <category>packages</category>
   <category>R</category>
   <category>releases</category>
-  <guid>https://neuroshepherd.github.io/posts/ordinalsimr/first_release.html</guid>
+  <guid>https://neuroshepherd.github.io/posts/first_release.html</guid>
   <pubDate>Sun, 17 Nov 2024 20:05:00 GMT</pubDate>
 </item>
 <item>
   <title>Munich Student Guide</title>
   <dc:creator>Pat </dc:creator>
-  <link>https://neuroshepherd.github.io/posts/munichstudentguide/munich-guide-intro.html</link>
+  <link>https://neuroshepherd.github.io/posts/munich-guide-intro.html</link>
   <description><![CDATA[ 
 
 
@@ -66,7 +86,7 @@
 
  ]]></description>
   <category>Germany</category>
-  <guid>https://neuroshepherd.github.io/posts/munichstudentguide/munich-guide-intro.html</guid>
+  <guid>https://neuroshepherd.github.io/posts/munich-guide-intro.html</guid>
   <pubDate>Sun, 17 Nov 2024 09:07:08 GMT</pubDate>
 </item>
 </channel>
