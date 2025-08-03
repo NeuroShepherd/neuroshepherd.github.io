@@ -1,5 +1,10 @@
 ---
 title: "About"
+toc: false
 ---
 
+
 Can fashion this page to look more like this: https://quarto.org/docs/websites/website-about.html
+
+This will be a more detailed page about me, my work, and my interests. It will include sections on my background, experience, and recent projects?
+

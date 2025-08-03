@@ -1,7 +1,54 @@
 ---
-title: "Home Page"
+title: "About Me"
+format:
+  html:
+    grid:
+      sidebar-width: 100px
+      body-width: 1050px
+      margin-width: 200px
+      gutter-width: 2em
+about:
+    template: trestles
+    id: above-content
+    image: images/placeholder.png
+    # image-shape: rectangle, round, rounded
+    links:
+      - icon: github
+        text: "GitHub"
+        href: "https://github.com/neuroshepherd"
+
 ---
 
-This is a Quarto website.
+{{< include partials/hero-image.html >}}
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+::: {.dark-content}
+
+Hello there, dark-mode user.
+
+:::
+
+content above main card
+
+::: {#above-content}
+
+Pat is a passionate advocate for open science and reproducible research, with a focus on epidemiology and research software engineering. He is dedicated to making complex scientific concepts accessible to a broader audience through engaging and informative content.
+
+## Experience
+
+Company | Role | Dates
+
+Company | Role | Dates
+
+- R Package Developer
+- Data Analyst
+
+## Recent Posts
+
+- something about masters thesis
+- something about previous work
+- something about fun projects
+
+:::
+
+content below main card
