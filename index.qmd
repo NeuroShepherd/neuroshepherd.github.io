@@ -1,5 +1,6 @@
 ---
 title: "About Me"
+pagetitle: "About NeuroShepherd"
 format:
   html:
     grid:

@@ -2,9 +2,12 @@
 title: "Posts"
 toc: true
 toc-location: right
+toc-title: Post Year
 page-layout: full
+title-block-banner: "#cdd39aff"
 listing:
   - id: year2025
+    template: _templates/custom-listing.ejs
     contents: posts
     include:
       year: 2025
@@ -13,12 +16,16 @@ listing:
     categories: true
     feed: true
   - id: year2024
+    template: _templates/custom-listing.ejs
     contents: posts
     include:
       year: 2024
     sort: "date desc"
     type: default
 ---
+
+
+
 
 
 ## 2025
