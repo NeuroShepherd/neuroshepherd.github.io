@@ -1,20 +1,32 @@
 ---
 title: "Posts"
-toc: false
+toc: true
+toc-location: right
+page-layout: full
 listing:
-  contents:
-    - "posts/**/*.qmd"
-    - "!posts/**/index.qmd"
-  sort: "date desc"
-  type: default
-  categories: true
-  feed: true
-  # page-size: 2
+  - id: year2025
+    contents: posts
+    include:
+      year: 2025
+    sort: "date desc"
+    type: default
+    categories: true
+    feed: true
+  - id: year2024
+    contents: posts
+    include:
+      year: 2024
+    sort: "date desc"
+    type: default
 ---
 
 
-Here is some content
+## 2025
 
-# [ordinalsimr posts](posts/ordinalsimr/index.qmd)
+::: {#year2025}
+:::
 
-# [Munich Student Guide posts](posts/munichstudentguide/index.qmd)
+## 2024
+
+::: {#year2024}
+:::

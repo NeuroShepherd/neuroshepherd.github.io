@@ -3,6 +3,7 @@ title: "Munich Student Guide"
 description: "Unfinished Business: A guide for students in Munich"
 editor: source
 date: 2024-11-17T09:07:08Z
+year: 2024
 date-format: "MMMM Do, YYYY"
 date-modified: "`r Sys.Date()`"
 draft: false
