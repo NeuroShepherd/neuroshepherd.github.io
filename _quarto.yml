@@ -52,8 +52,8 @@ format:
     toc: true
     toc-depth: 3
     grid:
-      sidebar-width: 300px
-      body-width: 900px
+      sidebar-width: 100px
+      body-width: 1050px
       margin-width: 200px
       gutter-width: 1.5rem
     linestretch: 1.25

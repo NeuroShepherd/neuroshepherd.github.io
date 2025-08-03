@@ -1,5 +1,6 @@
 ---
 title: "_template"
+author: 'Pat'
 description: "A template for creating new posts"
 # comments: false
 editor: source

@@ -1,6 +1,7 @@
 ---
-title: "Posts"
+title: ""
 toc: false
+cache: false
 listing:
   contents:
     - "posts/**/*.qmd"
@@ -13,8 +14,13 @@ listing:
 ---
 
 
-Here is some content
+````{=html}
+```{r, echo=FALSE, results='asis'}
+xfun::file_string('posts/_posts_grid.html')
+```
+````
 
-# [ordinalsimr posts](posts/ordinalsimr/index.qmd)
 
-# [Munich Student Guide posts](posts/munichstudentguide/index.qmd)
+
+
+# Recent Posts
