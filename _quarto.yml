@@ -47,7 +47,8 @@ website:
       
 format:
   html:
-    theme: cosmo
+    theme: 
+      - styles.scss
     css: styles.css
     toc: true
     toc-depth: 3
@@ -60,6 +61,8 @@ format:
     fontsize: 1.08em
     respect-user-color-scheme: true
     linkcolor: "#F97316"
+    title-prefix: ""
+
 
 
 
