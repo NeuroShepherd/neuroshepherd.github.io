@@ -1,5 +1,54 @@
 [
   {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Posts",
+    "section": "",
+    "text": "Here is some content\n\nordinalsimr posts\n\n\nMunich Student Guide posts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nordinalsimr\n\n\n\npackages\n\nR\n\n\n\nSimulations of Ordinal Endpoints: A Shiny App\n\n\n\n\n\nNov 17, 2024\n\n\nPat\n\n\n\n\n\n\n\n\n\n\n\n\n{ordinalsimr} First Release\n\n\n\npackages\n\nR\n\nreleases\n\n\n\nFinal checks and the process of submitting to CRAN\n\n\n\n\n\nNov 17, 2024\n\n\nPat\n\n\n\n\n\n\n\n\n\n\n\n\nMunich Student Guide\n\n\n\nGermany\n\n\n\nUnfinished Business: A guide for students in Munich\n\n\n\n\n\nNov 17, 2024\n\n\nPat\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/munichstudentguide/index.html",
+    "href": "posts/munichstudentguide/index.html",
+    "title": "Munich Student Guide Series",
+    "section": "",
+    "text": "Munich Student Guide\n\n\nUnfinished Business: A guide for students in Munich\n\n\n\n\n\nNov 17, 2024\n\n1 min\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/ordinalsimr/index.html",
+    "href": "posts/ordinalsimr/index.html",
+    "title": "{ordinalsimr} Series",
+    "section": "",
+    "text": "ordinalsimr\n\n\nSimulations of Ordinal Endpoints: A Shiny App\n\n\n\n\n\nNov 17, 2024\n\n1 min\n\n\n\n\n\n\n{ordinalsimr} First Release\n\n\nFinal checks and the process of submitting to CRAN\n\n\n\n\n\nNov 17, 2024\n\n1 min\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About Me",
+    "section": "",
+    "text": "content above main card\ncontent below main card"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "About Me",
+    "section": "Experience",
+    "text": "Experience\nCompany | Role | Dates\nCompany | Role | Dates\n\nR Package Developer\nData Analyst"
+  },
+  {
+    "objectID": "index.html#recent-posts",
+    "href": "index.html#recent-posts",
+    "title": "About Me",
+    "section": "Recent Posts",
+    "text": "Recent Posts\n\nsomething about masters thesis\nsomething about previous work\nsomething about fun projects"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Can fashion this page to look more like this: https://quarto.org/docs/websites/website-about.html\nThis will be a more detailed page about me, my work, and my interests. It will include sections on my background, experience, and recent projects?"
+  },
+  {
     "objectID": "posts/ordinalsimr/development.html",
     "href": "posts/ordinalsimr/development.html",
     "title": "ordinalsimr",
@@ -7,45 +56,10 @@
     "text": "(This page is currently a placeholder)\nThis page should be designed in the spirit of one of the templates available here:\nhttps://quarto.org/docs/websites/website-about.html"
   },
   {
-    "objectID": "posts/munichstudentguide/index.html",
-    "href": "posts/munichstudentguide/index.html",
-    "title": "Munich Student Guide Series",
-    "section": "",
-    "text": "Munich Student Guide\n\n\n\n\n\nUnfinished Business: A guide for students in Munich\n\n\n\n\n\nNov 17, 2024\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "Posts",
-    "section": "",
-    "text": "Here is some content\n\nordinalsimr posts\n\n\nMunich Student Guide posts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nordinalsimr\n\n\n\n\n\n\npackages\n\n\nR\n\n\n\nSimulations of Ordinal Endpoints: A Shiny App\n\n\n\n\n\nNov 17, 2024\n\n\nPat\n\n\n\n\n\n\n\n\n\n\n\n\n{ordinalsimr} First Release\n\n\n\n\n\n\npackages\n\n\nR\n\n\nreleases\n\n\n\nFinal checks and the process of submitting to CRAN\n\n\n\n\n\nNov 17, 2024\n\n\nPat\n\n\n\n\n\n\n\n\n\n\n\n\nMunich Student Guide\n\n\n\n\n\n\nGermany\n\n\n\nUnfinished Business: A guide for students in Munich\n\n\n\n\n\nNov 17, 2024\n\n\nPat\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Can fashion this page to look more like this: https://quarto.org/docs/websites/website-about.html"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home Page",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
     "objectID": "posts/munichstudentguide/munich-guide-intro.html",
     "href": "posts/munichstudentguide/munich-guide-intro.html",
     "title": "Munich Student Guide",
     "section": "",
     "text": "This page will detail the start (and long pause) in developing the Munich Student Guide site."
-  },
-  {
-    "objectID": "posts/ordinalsimr/index.html",
-    "href": "posts/ordinalsimr/index.html",
-    "title": "{ordinalsimr} Series",
-    "section": "",
-    "text": "ordinalsimr\n\n\n\n\n\nSimulations of Ordinal Endpoints: A Shiny App\n\n\n\n\n\nNov 17, 2024\n\n\n1 min\n\n\n\n\n\n\n\n{ordinalsimr} First Release\n\n\n\n\n\nFinal checks and the process of submitting to CRAN\n\n\n\n\n\nNov 17, 2024\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
   }
 ]

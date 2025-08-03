@@ -1,15 +1,15 @@
 [
   {
-    "listing": "/posts/munichstudentguide/index.html",
-    "items": [
-      "/posts/munichstudentguide/munich-guide-intro.html"
-    ]
-  },
-  {
     "listing": "/posts.html",
     "items": [
       "/posts/ordinalsimr/development.html",
       "/posts/ordinalsimr/first_release.html",
+      "/posts/munichstudentguide/munich-guide-intro.html"
+    ]
+  },
+  {
+    "listing": "/posts/munichstudentguide/index.html",
+    "items": [
       "/posts/munichstudentguide/munich-guide-intro.html"
     ]
   },

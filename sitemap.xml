@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://neuroshepherd.github.io/posts/ordinalsimr/first_release.html</loc>
-    <lastmod>2024-11-17T21:29:14.661Z</lastmod>
-  </url>
-  <url>
-    <loc>https://neuroshepherd.github.io/posts/ordinalsimr/development.html</loc>
-    <lastmod>2024-11-17T21:29:14.661Z</lastmod>
+    <loc>https://neuroshepherd.github.io/posts.html</loc>
+    <lastmod>2025-08-03T13:56:36.694Z</lastmod>
   </url>
   <url>
     <loc>https://neuroshepherd.github.io/posts/munichstudentguide/index.html</loc>
-    <lastmod>2024-11-17T21:29:14.661Z</lastmod>
-  </url>
-  <url>
-    <loc>https://neuroshepherd.github.io/posts.html</loc>
-    <lastmod>2024-11-17T21:29:14.661Z</lastmod>
-  </url>
-  <url>
-    <loc>https://neuroshepherd.github.io/about.html</loc>
-    <lastmod>2024-11-17T21:29:14.661Z</lastmod>
-  </url>
-  <url>
-    <loc>https://neuroshepherd.github.io/index.html</loc>
-    <lastmod>2024-11-17T21:29:14.661Z</lastmod>
-  </url>
-  <url>
-    <loc>https://neuroshepherd.github.io/posts/munichstudentguide/munich-guide-intro.html</loc>
-    <lastmod>2024-11-17T21:29:14.661Z</lastmod>
+    <lastmod>2025-08-03T13:56:36.694Z</lastmod>
   </url>
   <url>
     <loc>https://neuroshepherd.github.io/posts/ordinalsimr/index.html</loc>
-    <lastmod>2024-11-17T21:29:14.661Z</lastmod>
+    <lastmod>2025-08-03T13:56:36.694Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/index.html</loc>
+    <lastmod>2025-08-03T13:56:36.693Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/about.html</loc>
+    <lastmod>2025-08-03T13:56:36.682Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/posts/ordinalsimr/development.html</loc>
+    <lastmod>2025-08-03T13:56:36.694Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/posts/ordinalsimr/first_release.html</loc>
+    <lastmod>2025-08-03T13:56:36.694Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/posts/munichstudentguide/munich-guide-intro.html</loc>
+    <lastmod>2025-08-03T13:56:36.694Z</lastmod>
   </url>
 </urlset>

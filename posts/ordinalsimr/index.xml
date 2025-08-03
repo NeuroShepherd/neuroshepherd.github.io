@@ -5,11 +5,11 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>NeuroShepherd</title>
+<title>NeuroShepherd&#39;s Blog</title>
 <link>https://neuroshepherd.github.io/posts/ordinalsimr/</link>
 <atom:link href="https://neuroshepherd.github.io/posts/ordinalsimr/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of data projects and blog posts about cool programming things</description>
-<generator>quarto-1.5.57</generator>
+<generator>quarto-1.7.32</generator>
 <lastBuildDate>Sun, 17 Nov 2024 20:10:00 GMT</lastBuildDate>
 <item>
   <title>ordinalsimr</title>
