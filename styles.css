@@ -42,7 +42,12 @@
   object-fit: cover; /* Ensure the image scales properly within the circle */
   display: block; /* Prevent inline elements from affecting dimensions */
   max-height: 50px;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  margin-left: 5px;
+}
 
+.navbar-logo:hover {
+  transform: scale(1.05); /* Pop-up effect on hover */
 }
 
 

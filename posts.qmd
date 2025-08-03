@@ -4,7 +4,7 @@ toc: true
 toc-location: right
 toc-title: Post Year
 page-layout: full
-title-block-banner: "#cdd39aff"
+title-block-banner: "#d35714ff"
 listing:
   - id: year2025
     template: _templates/custom-listing.ejs
@@ -23,8 +23,6 @@ listing:
     sort: "date desc"
     type: default
 ---
-
-
 
 
 

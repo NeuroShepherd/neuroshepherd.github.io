@@ -1,5 +1,7 @@
 ---
 title: "About"
+title-block-banner: "#d3ad14ff"
+page-layout: full
 toc: false
 ---
 
