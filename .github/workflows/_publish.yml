@@ -14,6 +14,12 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
       
+      - name: Fix permissions for APT cache
+        run: sudo chmod -R 777 /var/cache/apt
+
+      - name: Clean up APT cache
+        run: sudo apt-get clean
+        
       - name: Cache APT packages
         uses: actions/cache@v3
         with:
