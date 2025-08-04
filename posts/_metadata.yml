@@ -6,3 +6,22 @@ comments:
     repo: NeuroShepherd/NeuroShepherd.github.io
     category: "Blog Post Comments"
     mapping: "pathname"
+  hypothesis:
+    theme: classic
+    openSidebar: false
+    showHighlights: whenSidebarOpen
+
+format:
+  html: 
+    grid:
+      sidebar-width: 250px
+      body-width: 1050px
+      margin-width: 150px
+      gutter-width: 1.5rem
+
+toc: true
+toc-location: left
+toc-depth: 2
+toc-title: "What You'll Learn"
+
+title-block-banner: "#8a14d3ff" # default banner is a purple gradient
