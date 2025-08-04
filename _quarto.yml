@@ -50,8 +50,8 @@ website:
 format:
   html:
     theme: 
-      - styles.scss
-    css: styles.css
+      - css/styles.scss
+    css: css/styles.css
     toc: true
     toc-depth: 3
     grid:
