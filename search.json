@@ -42,32 +42,11 @@
     "text": "Can fashion this page to look more like this: https://quarto.org/docs/websites/website-about.html\nThis will be a more detailed page about me, my work, and my interests. It will include sections on my background, experience, and recent projects?"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "About Me",
-    "section": "",
-    "text": "content above main card\ncontent below main card"
-  },
-  {
     "objectID": "index.html#experience",
     "href": "index.html#experience",
     "title": "About Me",
     "section": "Experience",
-    "text": "Experience\nCompany | Role | Dates\nCompany | Role | Dates\n\nR Package Developer\nData Analyst"
-  },
-  {
-    "objectID": "index.html#fun-projects",
-    "href": "index.html#fun-projects",
-    "title": "About Me",
-    "section": "Fun Projects",
-    "text": "Fun Projects\n\nsomething about masters thesis\nsomething about previous work\nsomething about fun projects"
-  },
-  {
-    "objectID": "index.html#recent-posts",
-    "href": "index.html#recent-posts",
-    "title": "About Me",
-    "section": "Recent Posts",
-    "text": "Recent Posts\n\n\n\n\n Hello: A template for creating new posts \n\n\n ordinalsimr: Simulations of Ordinal Endpoints: A Shiny App \n\n\n {ordinalsimr} First Release: Final checks and the process of submitting to CRAN \n\n\n\nNo matching items"
+    "text": "Experience\nLMU Open Science Center | Developer | 2022 - Present\n\nGitHub Organization Management\nOpen Source Tutorial Development\n\nBoehringer Ingelheim | Master’s Thesis Student | 2025\n\nShiny App Development\nAnalysis of Clinical Trial Data\n\nNovartis Pharma | Research Intern | 2023\n\nR Package Development\nR Package Validation for Clinical Trials"
   },
   {
     "objectID": "posts/example2025.html",
