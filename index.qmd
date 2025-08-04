@@ -19,6 +19,12 @@ about:
         text: "GitHub"
         href: "https://github.com/neuroshepherd"
 
+listing:
+  - id: recent_posts
+    template: _templates/recent-posts.ejs
+    contents: posts
+    sort: "date desc"
+
 ---
 
 {{< include partials/hero-image.html >}}
@@ -45,11 +51,17 @@ Company | Role | Dates
 - R Package Developer
 - Data Analyst
 
-## Recent Posts
+## Fun Projects
 
 - something about masters thesis
 - something about previous work
 - something about fun projects
+
+## Recent Posts
+
+::: {#recent_posts}
+:::
+
 
 :::
 

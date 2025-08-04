@@ -1,0 +1,20 @@
+<% 
+// Sort items by date (most recent first) and take only the first 3
+const recentPosts = items
+  .filter(item => !item.draft) // Filter out draft posts
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
+  .slice(0, 3);
+%>
+
+<div class="recent-posts">
+<ul class="recent-posts-list">
+<% for (const post of recentPosts) { %>
+<li class="recent-post-item">
+<a href="<%= post.path %>" class="recent-post-link">
+<strong><%= post.title %></strong><% if (post.description) { %>: <%= post.description %><% } %>
+</a>
+</li>
+<% } %>
+</ul>
+</div>
+
