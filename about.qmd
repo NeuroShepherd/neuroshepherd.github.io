@@ -1,8 +1,16 @@
 ---
 title: "About"
 title-block-banner: "#d3ad14ff"
-page-layout: full
+# page-layout: full
 toc: false
+
+format:
+  html: 
+    grid:
+      sidebar-width: 200px
+      body-width: 1050px
+      margin-width: 200px
+      gutter-width: 1.5rem
 ---
 
 
