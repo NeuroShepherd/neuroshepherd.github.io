@@ -1,9 +1,7 @@
 ---
 title: "About"
 title-block-banner: "#d3ad14ff"
-# page-layout: full
 toc: false
-
 format:
   html: 
     grid:
@@ -13,8 +11,111 @@ format:
       gutter-width: 1.5rem
 ---
 
+<style>
+.cv-section {
+  margin-bottom: 2rem;
+}
 
-Can fashion this page to look more like this: https://quarto.org/docs/websites/website-about.html
+.cv-section h2 {
+  border-bottom: 2px solid #d3ad14;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
 
-This will be a more detailed page about me, my work, and my interests. It will include sections on my background, experience, and recent projects?
+.cv-entry {
+  margin-bottom: 1.5rem;
+}
+
+.cv-entry h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cv-entry .dates {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.cv-entry ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+</style>
+
+<div class="cv-section">
+<h2>About Me</h2>
+<p>Welcome to my personal blog and website! I am passionate about open science, reproducible research, and making complex scientific concepts accessible to everyone. This page provides an overview of my professional background, skills, and personal interests.</p>
+</div>
+
+<div class="cv-section">
+<h2>Professional Background</h2>
+
+<div class="cv-entry">
+<h3>[Your Current Job Title] at [Your Organization]</h3>
+<p class="dates">[Start Date] - Present</p>
+<ul>
+  <li>[Responsibility or Achievement 1]</li>
+  <li>[Responsibility or Achievement 2]</li>
+  <li>[Responsibility or Achievement 3]</li>
+</ul>
+</div>
+
+<div class="cv-entry">
+<h3>[Previous Job Title] at [Previous Organization]</h3>
+<p class="dates">[Start Date] - [End Date]</p>
+<ul>
+  <li>[Responsibility or Achievement 1]</li>
+  <li>[Responsibility or Achievement 2]</li>
+</ul>
+</div>
+
+<div class="cv-entry">
+<h3>[Another Job Title] at [Another Organization]</h3>
+<p class="dates">[Start Date] - [End Date]</p>
+<ul>
+  <li>[Responsibility or Achievement 1]</li>
+  <li>[Responsibility or Achievement 2]</li>
+</ul>
+</div>
+</div>
+
+<div class="cv-section">
+<h2>Skills</h2>
+<ul>
+  <li>Programming Languages: R, Python, [Other Languages]</li>
+  <li>Tools & Technologies: Shiny, Quarto, [Other Tools]</li>
+  <li>Areas of Expertise: Epidemiology, Data Analysis, [Other Areas]</li>
+</ul>
+</div>
+
+<div class="cv-section">
+<h2>Recent Projects</h2>
+
+<div class="cv-entry">
+<h3>[Project Title 1]</h3>
+<p>A brief description of the project and its significance. <a href="#">[Link to Project]</a></p>
+</div>
+
+<div class="cv-entry">
+<h3>[Project Title 2]</h3>
+<p>A brief description of the project and its significance. <a href="#">[Link to Project]</a></p>
+</div>
+
+<div class="cv-entry">
+<h3>[Project Title 3]</h3>
+<p>A brief description of the project and its significance. <a href="#">[Link to Project]</a></p>
+</div>
+</div>
+
+<div class="cv-section">
+<h2>Personal Interests</h2>
+<p>When I'm not working, I enjoy:</p>
+<ul>
+  <li>[Hobby or Interest 1]</li>
+  <li>[Hobby or Interest 2]</li>
+  <li>[Hobby or Interest 3]</li>
+</ul>
+</div>
 
