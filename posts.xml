@@ -20,13 +20,61 @@
 
 
 
+
 <p>(This page is currently a placeholder)</p>
+<section id="header1" class="level1">
+<h1>header1</h1>
+<section id="header2" class="level2">
+<h2 class="anchored" data-anchor-id="header2">header2</h2>
+</section>
+<section id="header3" class="level2">
+<h2 class="anchored" data-anchor-id="header3">header3</h2>
+<section id="subheader" class="level3">
+<h3 class="anchored" data-anchor-id="subheader">subheader</h3>
+</section>
+</section>
+</section>
+<section id="more-headers" class="level1">
+<h1>more headers</h1>
+<section id="more-headers2" class="level2">
+<h2 class="anchored" data-anchor-id="more-headers2">more headers2</h2>
+<div class="grid">
+<div class="g-col-4">
+<p>This column takes 1/3 of the page</p>
+</div>
+<div class="g-col-8">
+<p>This column takes 2/3 of the page</p>
+</div>
+</div>
+<p>Start of a new grid section</p>
+</section>
+</section>
+<div class="grid">
+<section id="heres-a-header-in-a-column" class="level1 g-col-4">
+<h1>here’s a header in a column</h1>
+<section id="heres-a-subheader-in-a-column" class="level2">
+<h2 class="anchored" data-anchor-id="heres-a-subheader-in-a-column">here’s a subheader in a column</h2>
+</section>
+</section>
+<div class="g-col-8">
+<p>This column takes 2/3 of the page</p>
+<section id="another-header-in-a-column" class="level1">
+<h1>another header in a column</h1>
+<section id="another-subheader-in-a-column" class="level2">
+<h2 class="anchored" data-anchor-id="another-subheader-in-a-column">another subheader in a column</h2>
+</section>
+</section>
+<section id="second-header-in-the-same-column" class="level1">
+<h1>second header in the same column</h1>
+</section>
+</div>
+</div>
 
 
 
  ]]></description>
   <category>packages</category>
-  <category>R</category>
+  <category>here&#39;s a long category tag</category>
   <guid>https://neuroshepherd.github.io/posts/example2025.html</guid>
   <pubDate>Sun, 03 Aug 2025 00:00:00 GMT</pubDate>
 </item>
@@ -35,6 +83,7 @@
   <dc:creator>Pat </dc:creator>
   <link>https://neuroshepherd.github.io/posts/development.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -57,6 +106,7 @@
   <dc:creator>Pat </dc:creator>
   <link>https://neuroshepherd.github.io/posts/first_release.html</link>
   <description><![CDATA[ 
+
 
 
 

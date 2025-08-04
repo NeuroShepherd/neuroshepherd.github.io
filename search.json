@@ -4,14 +4,14 @@
     "href": "posts.html",
     "title": "Posts",
     "section": "",
-    "text": "Aug 3, 2025\n\n\nA template for creating new posts\n\n\n\n★ packages\n\n\n★ R\n\n\n\n\n\n\nNo matching items"
+    "text": "Aug 3, 2025\n\n\nA template for creating new posts\n\n\n\n★ packages\n\n\n★ here’s a long category tag\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts.html#section",
     "href": "posts.html#section",
     "title": "Posts",
     "section": "",
-    "text": "Aug 3, 2025\n\n\nA template for creating new posts\n\n\n\n★ packages\n\n\n★ R\n\n\n\n\n\n\nNo matching items"
+    "text": "Aug 3, 2025\n\n\nA template for creating new posts\n\n\n\n★ packages\n\n\n★ here’s a long category tag\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts.html#section-1",
@@ -68,5 +68,40 @@
     "title": "Hello",
     "section": "",
     "text": "(This page is currently a placeholder)"
+  },
+  {
+    "objectID": "posts/example2025.html#header2",
+    "href": "posts/example2025.html#header2",
+    "title": "Hello",
+    "section": "header2",
+    "text": "header2"
+  },
+  {
+    "objectID": "posts/example2025.html#header3",
+    "href": "posts/example2025.html#header3",
+    "title": "Hello",
+    "section": "header3",
+    "text": "header3\n\nsubheader"
+  },
+  {
+    "objectID": "posts/example2025.html#more-headers2",
+    "href": "posts/example2025.html#more-headers2",
+    "title": "Hello",
+    "section": "more headers2",
+    "text": "more headers2\n\n\nThis column takes 1/3 of the page\n\n\nThis column takes 2/3 of the page\n\n\nStart of a new grid section"
+  },
+  {
+    "objectID": "posts/example2025.html#heres-a-subheader-in-a-column",
+    "href": "posts/example2025.html#heres-a-subheader-in-a-column",
+    "title": "Hello",
+    "section": "here’s a subheader in a column",
+    "text": "here’s a subheader in a column"
+  },
+  {
+    "objectID": "posts/example2025.html#another-subheader-in-a-column",
+    "href": "posts/example2025.html#another-subheader-in-a-column",
+    "title": "Hello",
+    "section": "another subheader in a column",
+    "text": "another subheader in a column"
   }
 ]
