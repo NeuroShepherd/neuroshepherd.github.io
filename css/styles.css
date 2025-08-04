@@ -109,10 +109,6 @@ nav#TOC {
 
 /* Home page recent posts css */
 
-.recent-posts {
-  margin: 1.5rem 0;
-}
-
 .recent-post-item {
   line-height: 1.5;
 }
@@ -138,3 +134,9 @@ nav#TOC {
     color: #5dade2;
   }
 }
+
+/* Center text class */
+.center-text {
+  text-align: center;
+}
+

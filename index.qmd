@@ -36,7 +36,6 @@ Hello there, dark-mode user.
 
 :::
 
-content above main card
 
 ::: {#above-content}
 
@@ -44,25 +43,55 @@ Pat is a passionate advocate for open science and reproducible research, with a 
 
 ## Experience
 
-Company | Role | Dates
+**LMU Open Science Center** | Developer | 2022 - Present
 
-Company | Role | Dates
+- GitHub Organization Management
+- Open Source Tutorial Development
 
-- R Package Developer
-- Data Analyst
+**Boehringer Ingelheim** | Master's Thesis Student | 2025
 
-## Fun Projects
+- Shiny App Development
+- Analysis of Clinical Trial Data
 
-- something about masters thesis
-- something about previous work
-- something about fun projects
+**Novartis Pharma** | Research Intern | 2023
 
-## Recent Posts
+- R Package Development
+- R Package Validation for Clinical Trials
+
+
+
+:::
+
+<br>
+<br>
+
+
+
+
+
+::: {.grid}
+
+::: {.g-col-6}
+### Fun Projects {.center-text}
+
+[What Universities Have the Best Sprint Coaching?](https://neuroshepherd.github.io/sprint-coaching)
+
+[A Monte Carlo Simulation to Estimate if I Already Studied Enough](https://neuroshepherd.github.io/monte-carlo-simulation)
+
+[Analyzing Interrater Reliability of Tumor Measurement in Clinical Trials for my Master's Thesis](https://neuroshepherd.github.io/masters-thesis)
+
+
+:::
+
+
+
+::: {.g-col-6}
+
+### Recent Posts {.center-text}
 
 ::: {#recent_posts}
 :::
 
-
 :::
 
-content below main card
+:::
