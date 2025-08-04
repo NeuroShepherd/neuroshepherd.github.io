@@ -37,6 +37,21 @@
   font-size: 0.1em; /* Makes the text smaller for default categories */
 }
 
+
+
+
+
+
+/* Navbar adjustments */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Add padding around the navbar */
+  font-size: 1.15rem; /* Adjust text size */
+}
+
 .navbar-logo {
   border-radius: 50%; /* Crop the logo into a circle */
   object-fit: cover; /* Ensure the image scales properly within the circle */
@@ -52,4 +67,8 @@
 
 
 
-
+/* Try to make this only apply to the navbar tools and not all dropdowns from the navbar */
+.quarto-navbar-tools .dropdown-menu {
+  right: 0 !important;
+  left: auto !important;
+}
