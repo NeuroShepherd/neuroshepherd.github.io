@@ -56,11 +56,18 @@
     "text": "Experience\nCompany | Role | Dates\nCompany | Role | Dates\n\nR Package Developer\nData Analyst"
   },
   {
+    "objectID": "index.html#fun-projects",
+    "href": "index.html#fun-projects",
+    "title": "About Me",
+    "section": "Fun Projects",
+    "text": "Fun Projects\n\nsomething about masters thesis\nsomething about previous work\nsomething about fun projects"
+  },
+  {
     "objectID": "index.html#recent-posts",
     "href": "index.html#recent-posts",
     "title": "About Me",
     "section": "Recent Posts",
-    "text": "Recent Posts\n\nsomething about masters thesis\nsomething about previous work\nsomething about fun projects"
+    "text": "Recent Posts\n\n\n\n\n Hello: A template for creating new posts \n\n\n ordinalsimr: Simulations of Ordinal Endpoints: A Shiny App \n\n\n {ordinalsimr} First Release: Final checks and the process of submitting to CRAN \n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/example2025.html",

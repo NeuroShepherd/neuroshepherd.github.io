@@ -7,5 +7,14 @@
       "/posts/first_release.html",
       "/posts/munich-guide-intro.html"
     ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/example2025.html",
+      "/posts/development.html",
+      "/posts/first_release.html",
+      "/posts/munich-guide-intro.html"
+    ]
   }
 ]
