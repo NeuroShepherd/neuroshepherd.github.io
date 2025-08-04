@@ -1,17 +1,14 @@
 ---
-title: "_template"
+title: "Hello"
 description: "A template for creating new posts"
-# comments: false
-editor: source
-date: 2025-01-01
+date: 2025-08-03
 year: 2025
 date-modified: last-modified
+image: ../images/placeholder.png
+title-block-banner: "#8a14d3ff" # this can be a different color or an image
 draft: true
 categories:
-  - packages
-  - R
-title-block-banner: false # this can also be a hex color or an image
-title-block-banner-color: "#000"
+  - draft
 ---
 
 ::: {.grid}

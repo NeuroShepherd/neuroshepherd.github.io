@@ -1,16 +1,65 @@
 ---
 title: "Hello"
 description: "A template for creating new posts"
-# comments: false
 date: 2025-08-03
 year: 2025
 date-modified: last-modified
 draft: false
 categories:
   - packages
-  - R
-title-block-banner: false # this can also be a hex color or an image
-title-block-banner-color: "#000"
+  - here's a long category tag
+title-block-banner: "#8a14d3ff" # this can be a different color or an image
 ---
 
+
+
+
+
 (This page is currently a placeholder)
+
+# header1
+
+## header2
+
+## header3
+
+### subheader
+
+# more headers
+
+## more headers2
+
+
+::: {.grid}
+
+::: {.g-col-4}
+This column takes 1/3 of the page
+:::
+
+::: {.g-col-8}
+This column takes 2/3 of the page
+:::
+
+:::
+
+Start of a new grid section
+
+::: {.grid}
+
+::: {.g-col-4}
+# here's a header in a column
+
+## here's a subheader in a column
+:::
+
+::: {.g-col-8}
+This column takes 2/3 of the page
+
+# another header in a column
+
+## another subheader in a column
+
+# second header in the same column
+:::
+
+:::
