@@ -38,10 +38,6 @@
 }
 
 
-
-
-
-
 /* Navbar adjustments */
 
 .navbar {
@@ -65,10 +61,15 @@
   transform: scale(1.05); /* Pop-up effect on hover */
 }
 
-
-
 /* Try to make this only apply to the navbar tools and not all dropdowns from the navbar */
 .quarto-navbar-tools .dropdown-menu {
   right: 0 !important;
   left: auto !important;
+}
+
+
+/* TOC adjustments */
+
+nav#TOC {
+  margin-bottom: 60px; /* Add margin below the table of contents */
 }
