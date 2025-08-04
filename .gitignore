@@ -59,3 +59,6 @@ rsconnect/
 .quarto
 _site/
 _outline.md
+
+# ignore the images used for making up the banners
+images/home_banner/assets/
