@@ -137,6 +137,6 @@ nav#TOC {
 
 /* Center text class */
 .center-text {
-  text-align: center;
+  text-align: center !important;
 }
 
