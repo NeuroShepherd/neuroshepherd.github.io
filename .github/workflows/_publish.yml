@@ -13,6 +13,14 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+      
+      - name: Cache APT packages
+        uses: actions/cache@v3
+        with:
+          path: /var/cache/apt
+          key: ${{ runner.os }}-apt-${{ hashFiles('**/apt-dependencies.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-apt-
 
       - name: Install system dependencies
         run: |
