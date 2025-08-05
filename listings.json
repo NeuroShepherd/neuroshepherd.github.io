@@ -1,6 +1,10 @@
 [
   {
-    "listing": "/posts.html",
+    "listing": "/fun_projects.html",
+    "items": []
+  },
+  {
+    "listing": "/index.html",
     "items": [
       "/posts/example2025.html",
       "/posts/development.html",
@@ -9,7 +13,7 @@
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/posts.html",
     "items": [
       "/posts/example2025.html",
       "/posts/development.html",

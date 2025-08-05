@@ -1,52 +1,10 @@
 [
   {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "Posts",
+    "objectID": "fun_projects.html",
+    "href": "fun_projects.html",
+    "title": "Fun Projects",
     "section": "",
-    "text": "Aug 3, 2025\n\n\nA template for creating new posts\n\n\n\n★ packages\n\n\n★ here’s a long category tag\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts.html#section",
-    "href": "posts.html#section",
-    "title": "Posts",
-    "section": "",
-    "text": "Aug 3, 2025\n\n\nA template for creating new posts\n\n\n\n★ packages\n\n\n★ here’s a long category tag\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts.html#section-1",
-    "href": "posts.html#section-1",
-    "title": "Posts",
-    "section": "2024",
-    "text": "2024\n\n\n\n\n\n\n\n\nordinalsimr\n\n\nNov 17, 2024\n\n\nSimulations of Ordinal Endpoints: A Shiny App\n\n\n\n★ packages\n\n\n★ R\n\n\n\n\n\n\n\n\n\n\n{ordinalsimr} First Release\n\n\nNov 17, 2024\n\n\nFinal checks and the process of submitting to CRAN\n\n\n\n★ packages\n\n\n★ R\n\n\n★ releases\n\n\n\n\n\n\n\n\n\n\nMunich Student Guide\n\n\nNov 17, 2024\n\n\nUnfinished Business: A guide for students in Munich\n\n\n\n★ Germany\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/munich-guide-intro.html",
-    "href": "posts/munich-guide-intro.html",
-    "title": "Munich Student Guide",
-    "section": "",
-    "text": "This page will detail the start (and long pause) in developing the Munich Student Guide site."
-  },
-  {
-    "objectID": "posts/development.html",
-    "href": "posts/development.html",
-    "title": "ordinalsimr",
-    "section": "",
-    "text": "(This page is currently a placeholder)\nThis page should be designed in the spirit of one of the templates available here:\nhttps://quarto.org/docs/websites/website-about.html"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About Me\n\n\nWelcome to my personal blog and website! I am passionate about open science, reproducible research, and making complex scientific concepts accessible to everyone. This page provides an overview of my professional background, skills, and personal interests.\n\n\n\n\nProfessional Background\n\n\n\n[Your Current Job Title] at [Your Organization]\n\n\n[Start Date] - Present\n\n\n\n[Responsibility or Achievement 1]\n\n\n[Responsibility or Achievement 2]\n\n\n[Responsibility or Achievement 3]\n\n\n\n\n\n[Previous Job Title] at [Previous Organization]\n\n\n[Start Date] - [End Date]\n\n\n\n[Responsibility or Achievement 1]\n\n\n[Responsibility or Achievement 2]\n\n\n\n\n\n[Another Job Title] at [Another Organization]\n\n\n[Start Date] - [End Date]\n\n\n\n[Responsibility or Achievement 1]\n\n\n[Responsibility or Achievement 2]\n\n\n\n\n\n\nSkills\n\n\n\nProgramming Languages: R, Python, [Other Languages]\n\n\nTools & Technologies: Shiny, Quarto, [Other Tools]\n\n\nAreas of Expertise: Epidemiology, Data Analysis, [Other Areas]\n\n\n\n\n\nRecent Projects\n\n\n\n[Project Title 1]\n\n\nA brief description of the project and its significance. [Link to Project]\n\n\n\n\n[Project Title 2]\n\n\nA brief description of the project and its significance. [Link to Project]\n\n\n\n\n[Project Title 3]\n\n\nA brief description of the project and its significance. [Link to Project]\n\n\n\n\n\nPersonal Interests\n\n\nWhen I’m not working, I enjoy:\n\n\n\n[Hobby or Interest 1]\n\n\n[Hobby or Interest 2]\n\n\n[Hobby or Interest 3]"
-  },
-  {
-    "objectID": "index.html#experience",
-    "href": "index.html#experience",
-    "title": "About Me",
-    "section": "Experience",
-    "text": "Experience\nLMU Open Science Center | Developer | 2022 - Present\n\nGitHub Organization Management\nOpen Source Tutorial Development\n\nBoehringer Ingelheim | Master’s Thesis Student | 2025\n\nShiny App Development\nAnalysis of Clinical Trial Data\n\nNovartis Pharma | Research Intern | 2023\n\nR Package Development\nR Package Validation for Clinical Trials"
+    "text": "The Best Sprint Coaching\n\n\nHave you ever wondered which US universities have the best sprint coaching programs? Probably not, but I did, so I made this project to find out. Specifically, I wanted to see which teams do the best job of developing sprinters. Take a look! \n\n\nSkills:\nR\nSQLite\nwebscraping\npatience\n\n\n\n\n\n\n  \n\n\nHave I Studied Enough to Pass?\n\n\nI had to take a test. I was tired of studying during vacation so I did what any reasonable person would do: I made a Monte Carlo simulation to see if I could stop studying. \n\n\nSkills:\nR\nsimulations\ndata visualization\n\n\n\n\n\n\n  \n\n\nMaster’s Thesis: Interrater Reliability of Cancer Tumor Response\n\n\nThis links directly out to my master’s thesis, which I completed in 2025. I did a deep dive into interrater reliability of the Response Evaluation Criteria in Solid Tumors (RECIST) for cancer tumor response. \n\n\nSkills:\nR\nclinical trials\ninterrater reliability\novercaffeination\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/example2025.html",
@@ -89,5 +47,54 @@
     "title": "Hello",
     "section": "another subheader in a column",
     "text": "another subheader in a column"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "About Me",
+    "section": "Experience",
+    "text": "Experience\nLMU Open Science Center | Developer | 2022 - Present\n\nGitHub Organization Management\nOpen Source Tutorial Development\n\nBoehringer Ingelheim | Master’s Thesis Student | 2025\n\nShiny App Development\nAnalysis of Clinical Trial Data\n\nNovartis Pharma | Research Intern | 2023\n\nR Package Development\nR Package Validation for Clinical Trials"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About Me\n\n\nWelcome to my personal blog and website! I am passionate about open science, reproducible research, and making complex scientific concepts accessible to everyone. This page provides an overview of my professional background, skills, and personal interests.\n\n\n\n\nProfessional Background\n\n\n\n[Your Current Job Title] at [Your Organization]\n\n\n[Start Date] - Present\n\n\n\n[Responsibility or Achievement 1]\n\n\n[Responsibility or Achievement 2]\n\n\n[Responsibility or Achievement 3]\n\n\n\n\n\n[Previous Job Title] at [Previous Organization]\n\n\n[Start Date] - [End Date]\n\n\n\n[Responsibility or Achievement 1]\n\n\n[Responsibility or Achievement 2]\n\n\n\n\n\n[Another Job Title] at [Another Organization]\n\n\n[Start Date] - [End Date]\n\n\n\n[Responsibility or Achievement 1]\n\n\n[Responsibility or Achievement 2]\n\n\n\n\n\n\nSkills\n\n\n\nProgramming Languages: R, Python, [Other Languages]\n\n\nTools & Technologies: Shiny, Quarto, [Other Tools]\n\n\nAreas of Expertise: Epidemiology, Data Analysis, [Other Areas]\n\n\n\n\n\nRecent Projects\n\n\n\n[Project Title 1]\n\n\nA brief description of the project and its significance. [Link to Project]\n\n\n\n\n[Project Title 2]\n\n\nA brief description of the project and its significance. [Link to Project]\n\n\n\n\n[Project Title 3]\n\n\nA brief description of the project and its significance. [Link to Project]\n\n\n\n\n\nPersonal Interests\n\n\nWhen I’m not working, I enjoy:\n\n\n\n[Hobby or Interest 1]\n\n\n[Hobby or Interest 2]\n\n\n[Hobby or Interest 3]"
+  },
+  {
+    "objectID": "posts/development.html",
+    "href": "posts/development.html",
+    "title": "ordinalsimr",
+    "section": "",
+    "text": "(This page is currently a placeholder)\nThis page should be designed in the spirit of one of the templates available here:\nhttps://quarto.org/docs/websites/website-about.html"
+  },
+  {
+    "objectID": "posts/munich-guide-intro.html",
+    "href": "posts/munich-guide-intro.html",
+    "title": "Munich Student Guide",
+    "section": "",
+    "text": "This page will detail the start (and long pause) in developing the Munich Student Guide site."
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Posts",
+    "section": "",
+    "text": "Aug 3, 2025\n\n\nA template for creating new posts\n\n\n\n★ packages\n\n\n★ here’s a long category tag\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts.html#section",
+    "href": "posts.html#section",
+    "title": "Posts",
+    "section": "",
+    "text": "Aug 3, 2025\n\n\nA template for creating new posts\n\n\n\n★ packages\n\n\n★ here’s a long category tag\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts.html#section-1",
+    "href": "posts.html#section-1",
+    "title": "Posts",
+    "section": "2024",
+    "text": "2024\n\n\n\n\n\n\n\n\nordinalsimr\n\n\nNov 17, 2024\n\n\nSimulations of Ordinal Endpoints: A Shiny App\n\n\n\n★ packages\n\n\n★ R\n\n\n\n\n\n\n\n\n\n\n{ordinalsimr} First Release\n\n\nNov 17, 2024\n\n\nFinal checks and the process of submitting to CRAN\n\n\n\n★ packages\n\n\n★ R\n\n\n★ releases\n\n\n\n\n\n\n\n\n\n\nMunich Student Guide\n\n\nNov 17, 2024\n\n\nUnfinished Business: A guide for students in Munich\n\n\n\n★ Germany\n\n\n\n\n\n\nNo matching items"
   }
 ]

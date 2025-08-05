@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – NeuroShepherd 🐶</title>
+<title>Fun Projects – NeuroShepherd 🐶</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -39,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-299497c14969878cd675f2411a21be3d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-50e93368ed155a3063f32d29795fb145.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,21 +69,73 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<style>
+<script>
 
-      .quarto-title-block .quarto-title-banner {
-        background: #d3ad14ff;
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-fun_projects .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-image','listing-url','listing-tags','listing-date','listing-link',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-image","listing-url","listing-tags","listing-date","listing-link"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-fun_projects'] = new List('listing-fun_projects', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
       }
-</style>
-
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -100,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
@@ -108,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./fun_projects.html"> 
+    <a class="nav-link active" href="./fun_projects.html" aria-current="page"> 
 <span class="menu-text">Fun Projects</span></a>
   </li>  
 </ul>
@@ -144,197 +198,102 @@ ul.task-list li input[type="checkbox"] {
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">About</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
-
-
-
-
-<style>
-.cv-section {
-  margin-bottom: 2rem;
-}
-
-.cv-section h2 {
-  border-bottom: 2px solid #d3ad14;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.cv-entry {
-  margin-bottom: 1.5rem;
-}
-
-.cv-entry h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.cv-entry .dates {
-  font-style: italic;
-  color: #666;
-  margin-bottom: 0.5rem;
-}
-
-.cv-entry ul {
-  margin: 0;
-  padding-left: 1.5rem;
-}
-</style>
-<div class="cv-section">
-<h2 class="anchored">
-About Me
-</h2>
-<p>
-Welcome to my personal blog and website! I am passionate about open science, reproducible research, and making complex scientific concepts accessible to everyone. This page provides an overview of my professional background, skills, and personal interests.
-</p>
-</div>
-<div class="cv-section">
-<h2 class="anchored">
-Professional Background
-</h2>
-<div class="cv-entry">
-<h3 class="anchored">
-[Your Current Job Title] at [Your Organization]
-</h3>
-<p class="dates">
-[Start Date] - Present
-</p>
-<ul>
-<li>
-[Responsibility or Achievement 1]
-</li>
-<li>
-[Responsibility or Achievement 2]
-</li>
-<li>
-[Responsibility or Achievement 3]
-</li>
-</ul>
-</div>
-<div class="cv-entry">
-<h3 class="anchored">
-[Previous Job Title] at [Previous Organization]
-</h3>
-<p class="dates">
-[Start Date] - [End Date]
-</p>
-<ul>
-<li>
-[Responsibility or Achievement 1]
-</li>
-<li>
-[Responsibility or Achievement 2]
-</li>
-</ul>
-</div>
-<div class="cv-entry">
-<h3 class="anchored">
-[Another Job Title] at [Another Organization]
-</h3>
-<p class="dates">
-[Start Date] - [End Date]
-</p>
-<ul>
-<li>
-[Responsibility or Achievement 1]
-</li>
-<li>
-[Responsibility or Achievement 2]
-</li>
-</ul>
-</div>
-</div>
-<div class="cv-section">
-<h2 class="anchored">
-Skills
-</h2>
-<ul>
-<li>
-Programming Languages: R, Python, [Other Languages]
-</li>
-<li>
-Tools &amp; Technologies: Shiny, Quarto, [Other Tools]
-</li>
-<li>
-Areas of Expertise: Epidemiology, Data Analysis, [Other Areas]
-</li>
-</ul>
-</div>
-<div class="cv-section">
-<h2 class="anchored">
-Recent Projects
-</h2>
-<div class="cv-entry">
-<h3 class="anchored">
-[Project Title 1]
-</h3>
-<p>
-A brief description of the project and its significance. <a href="#">[Link to Project]</a>
-</p>
-</div>
-<div class="cv-entry">
-<h3 class="anchored">
-[Project Title 2]
-</h3>
-<p>
-A brief description of the project and its significance. <a href="#">[Link to Project]</a>
-</p>
-</div>
-<div class="cv-entry">
-<h3 class="anchored">
-[Project Title 3]
-</h3>
-<p>
-A brief description of the project and its significance. <a href="#">[Link to Project]</a>
-</p>
-</div>
-</div>
-<div class="cv-section">
-<h2 class="anchored">
-Personal Interests
-</h2>
-<p>
-When I’m not working, I enjoy:
-</p>
-<ul>
-<li>
-[Hobby or Interest 1]
-</li>
-<li>
-[Hobby or Interest 2]
-</li>
-<li>
-[Hobby or Interest 3]
-</li>
-</ul>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Fun Projects</h1>
 </div>
 
 
 
-</main> <!-- /main -->
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-custom" id="listing-fun_projects">
+<div class="grid">
+<div class="g-col-6">
+<div class="project-card">
+<a href="https://example.com"> <img src="images/neuroshepherd.png" alt="The Best Sprint Coaching screenshot"> </a>
+<div class="project-content">
+<div class="project-title">
+<p><a href="https://example.com">The Best Sprint Coaching</a></p>
+</div>
+<div class="project-description">
+<p><a href="https://example.com">Have you ever wondered which US universities have the best sprint coaching programs? Probably not, but I did, so I made this project to find out. Specifically, I wanted to see which teams do the best job of developing sprinters. Take a look! </a></p>
+</div>
+<div class="project-tags">
+<p><span class="project-tag-prefix">Skills:</span></p>
+<p><span class="project-tag">R</span></p>
+<p><span class="project-tag">SQLite</span></p>
+<p><span class="project-tag">webscraping</span></p>
+<p><span class="project-tag">patience</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="g-col-6">
+<div class="project-card">
+<a href="https://example.com"> <img src="images/neuroshepherd.png" alt="Have I Studied Enough to Pass? screenshot"> </a>
+<div class="project-content">
+<div class="project-title">
+<p><a href="https://example.com">Have I Studied Enough to Pass?</a></p>
+</div>
+<div class="project-description">
+<p><a href="https://example.com">I had to take a test. I was tired of studying during vacation so I did what any reasonable person would do: I made a Monte Carlo simulation to see if I could stop studying. </a></p>
+</div>
+<div class="project-tags">
+<p><span class="project-tag-prefix">Skills:</span></p>
+<p><span class="project-tag">R</span></p>
+<p><span class="project-tag">simulations</span></p>
+<p><span class="project-tag">data visualization</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="g-col-6">
+<div class="project-card">
+<a href="https://example.com"> <img src="images/neuroshepherd.png" alt="Master's Thesis: Interrater Reliability of Cancer Tumor Response screenshot"> </a>
+<div class="project-content">
+<div class="project-title">
+<p><a href="https://example.com">Master’s Thesis: Interrater Reliability of Cancer Tumor Response</a></p>
+</div>
+<div class="project-description">
+<p><a href="https://example.com">This links directly out to my master’s thesis, which I completed in 2025. I did a deep dive into interrater reliability of the Response Evaluation Criteria in Solid Tumors (RECIST) for cancer tumor response. </a></p>
+</div>
+<div class="project-tags">
+<p><span class="project-tag-prefix">Skills:</span></p>
+<p><span class="project-tag">R</span></p>
+<p><span class="project-tag">clinical trials</span></p>
+<p><span class="project-tag">interrater reliability</span></p>
+<p><span class="project-tag">overcaffeination</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://neuroshepherd.github.io/posts.html</loc>
-    <lastmod>2025-08-04T18:24:05.635Z</lastmod>
-  </url>
-  <url>
-    <loc>https://neuroshepherd.github.io/posts/munich-guide-intro.html</loc>
-    <lastmod>2025-08-04T18:24:05.636Z</lastmod>
-  </url>
-  <url>
-    <loc>https://neuroshepherd.github.io/posts/development.html</loc>
-    <lastmod>2025-08-04T18:24:05.636Z</lastmod>
-  </url>
-  <url>
-    <loc>https://neuroshepherd.github.io/about.html</loc>
-    <lastmod>2025-08-04T18:24:05.618Z</lastmod>
-  </url>
-  <url>
-    <loc>https://neuroshepherd.github.io/index.html</loc>
-    <lastmod>2025-08-04T18:24:05.635Z</lastmod>
-  </url>
-  <url>
-    <loc>https://neuroshepherd.github.io/posts/example2025.html</loc>
-    <lastmod>2025-08-04T18:24:05.636Z</lastmod>
+    <loc>https://neuroshepherd.github.io/fun_projects.html</loc>
+    <lastmod>2025-08-05T19:55:13.175Z</lastmod>
   </url>
   <url>
     <loc>https://neuroshepherd.github.io/posts/first_release.html</loc>
-    <lastmod>2025-08-04T18:24:05.636Z</lastmod>
+    <lastmod>2025-08-05T19:55:13.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/posts/example2025.html</loc>
+    <lastmod>2025-08-05T19:55:13.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/index.html</loc>
+    <lastmod>2025-08-05T19:55:13.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/about.html</loc>
+    <lastmod>2025-08-05T19:55:13.174Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/posts/development.html</loc>
+    <lastmod>2025-08-05T19:55:13.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/posts/munich-guide-intro.html</loc>
+    <lastmod>2025-08-05T19:55:13.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/posts.html</loc>
+    <lastmod>2025-08-05T19:55:13.192Z</lastmod>
   </url>
 </urlset>
