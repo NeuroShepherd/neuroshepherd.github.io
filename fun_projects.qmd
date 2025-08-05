@@ -1,0 +1,14 @@
+---
+title: Fun Projects
+page-layout: full
+listing: 
+    id: fun_projects
+    template: _templates/project-card.ejs
+    contents:
+        - fun_projects.yaml
+---
+
+
+
+
+

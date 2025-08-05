@@ -34,7 +34,7 @@ website:
       - about.qmd
       - posts.qmd
       # - open_science.qmd
-      # - fun_projects.qmd
+      - fun_projects.qmd
     right:
       - icon: rss
         href: posts.xml

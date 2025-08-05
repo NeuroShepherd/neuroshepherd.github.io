@@ -1,0 +1,27 @@
+<div class="grid">
+<% for (const item of items) { %>
+<div class="g-col-6">
+<div class="project-card">
+<a href="<%= item.url || '#' %>">
+<img src="<%= item.image || 'images/placeholder.png' %>" alt="<%= item.title %> screenshot">
+</a>
+<div class="project-content">
+<div class="project-title">
+<a href="<%= item.url || '#' %>"><%= item.title %></a>
+</div>
+<div class="project-description">
+<a href="<%= item.url || '#' %>"><%= item.description %></a>
+</div>
+<div class="project-tags">
+<% if (item.tags && item.tags.length) { %>
+<span class="project-tag-prefix">Skills:</span>
+<% for (const tag of item.tags) { %>
+<span class="project-tag"><%= tag %></span>
+<% } %>
+<% } %>
+</div>
+</div>
+</div>
+</div>
+<% } %>
+</div>
