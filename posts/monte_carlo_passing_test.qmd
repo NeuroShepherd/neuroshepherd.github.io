@@ -16,7 +16,7 @@ categories:
 
 ```{r}
 library(purrr)
-
+library(tidyr)
 library(ggplot2)
 library(dplyr)
 ```
@@ -159,7 +159,7 @@ simulation_all_levels <- results_mat %>%
 
 With the data matrix now set up, we can essentially recreate the simulations we ran in @lst-monte-carlo-simulation, but this time for every possible number of correct answers on the practice test. This means mapping over each column of the data, and running the simulation for each practice test score. The result is a list of vectors, where each vector contains the results of 10,000 simulated tests for a specific number of correct answers on the practice test.
 
-So, what can we do with these results? We can calculate the probability of passing th test for each number of correct answers on the practice test, and then plot the results to see how the probability of passing changes as the number of correct answers increases.
+So, what can we do with these results? We can calculate the probability of passing the test for each number of correct answers on the practice test, and then plot the results to see how the probability of passing changes as the number of correct answers increases.
 
 
 ```{r}
@@ -169,33 +169,32 @@ So, what can we do with these results? We can calculate the probability of passi
 #| fig-height: 8
 
 
-simulation_all_levels %>%
-  map_dbl(
-    ~sum(.x >= 17)/10000
-  ) %>%
-  tibble::tibble(passig_probability = .) %>%
-  mutate(number_correct_practice = row_number()) %>%
-  ggplot(aes(number_correct_practice, passig_probability)) +
-  geom_point() +
-  geom_line() +
-  theme_minimal() +
-  theme(
-    plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
-    axis.text = element_text(size = 14),
-    axis.title = element_text(size = 16)
-  ) +
-  labs(
-    title = "Probability of Passing Test Based on Practice Test Scores",
-    x = "Number of Correct Answers on Practice Test",
-    y = "Probability of Passing"
-  )
-```
+# Ggplot only
+
+# simulation_all_levels %>%
+#   map_dbl(
+#     ~sum(.x >= 17)/10000
+#   ) %>%
+#   tibble::tibble(passig_probability = .) %>%
+#   mutate(number_correct_practice = row_number()) %>%
+#   ggplot(aes(number_correct_practice, passig_probability)) +
+#   geom_point() +
+#   geom_line() +
+#   theme_minimal() +
+#   theme(
+#     plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
+#     axis.text = element_text(size = 14),
+#     axis.title = element_text(size = 16)
+#   ) +
+#   labs(
+#     title = "Probability of Passing Test Based on Practice Test Scores",
+#     x = "Number of Correct Answers on Practice Test",
+#     y = "Probability of Passing"
+#   )
 
 
-Let's add in some confidence intervals
+## Plotly solution
 
-
-```{r}
 results_with_ci <- simulation_all_levels %>%
   set_names(0:(length(simulation_all_levels) - 1)) %>%  # Name the list elements
   map_dfr(
@@ -217,8 +216,14 @@ results_with_ci <- simulation_all_levels %>%
 
 
 ribbon_plot <- results_with_ci %>%
-  ggplot(aes(x = number_correct_practice, y = passing_probability)) +
-  geom_ribbon(aes(ymin = lower_ci, ymax = upper_ci), alpha = 0.4, fill = "blue") +
+  rename(
+    "No. Correct Practice" = number_correct_practice,
+    "Passing Probability" = passing_probability,
+    "Lower 95% CI" = lower_ci,
+    "Upper 95% CI" = upper_ci
+  ) %>%
+  ggplot(aes(x = `No. Correct Practice`, y = `Passing Probability`)) +
+  geom_ribbon(aes(ymin = `Lower 95% CI`, ymax = `Upper 95% CI`), alpha = 0.4, fill = "blue") +
   theme_minimal() +
   theme(
     plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
@@ -226,13 +231,215 @@ ribbon_plot <- results_with_ci %>%
     axis.title = element_text(size = 16)
   ) +
   labs(
-    title = "Probability of Passing Test with Confidence Intervals",
+    title = "Probability of Passing Test",
+    subtitle = "Across All Possible Practice Test Scores",
     x = "Number of Correct Answers on Practice Test",
     y = "Probability of Passing"
   ) 
 
 
-plotly::ggplotly(ribbon_plot)
+plotly::ggplotly(ribbon_plot) 
+
+```
 
 
+Note that I've also taken the liberty of adding confidence intervals to the plot, which can be done by calculating the proportion of passing scores and the confidence intervals for each practice test score. This can be done using the `binom.test()` function in R, which provides a confidence interval for the proportion of successes in a binomial distribution. Moreover, the plot.
+
+The overall form of @fig-passing-probability is not particularly surprising: the more questions you answer correctly on the practice test, the higher your probability of passing the actual test, and correctly answering half of the questions on the practice yields a 95% confidence interval of $[48.95, 50.91]\%$ probability of passing the examine. There seems to be an inflection point of diminishing marginal returns around 175 correct answers on the practice test, where the probability of passing the actual test increases at a slower rate as the number of correct answers increases. This is likely due to the fact that once you have a solid understanding of the material, additional practice may not significantly improve your chances of passing.
+
+## Diminishing Marginal Returns
+
+Just for fun, let's model this mathematically and try to find the point at which we experience diminishing returns in studying more practice questions. Based on the form of the plot, the function that describes the probability of passing the test based on the number of correct answers on the practice test is a sigmoid function, which can generally be expressed as:
+
+$$
+P(x) = \frac{1}{1 + e^{-x}}
+$$
+
+Although this function is a bit different from the one we need, it can be adapted to fit our data. The general form of the sigmoid function is:
+
+$$
+P(x) = \frac{L}{1 + e^{-k(x - x_0)}}
+$$
+
+where:
+- $P(x)$ is the probability of passing the test given $x$ correct answers on the practice test,
+- $L$ is the maximum value of the function (in this case, the maximum probability of passing the test),
+- $k$ is the steepness of the curve,
+- $x_0$ is the value of $x$ at which the function reaches its midpoint (i.e., the point of maximum growth which *should be* at 154 correct practice answers).
+
+
+### Fitting the Sigmoid Model
+
+With this, let's first fit a sigmoid model to our data in R so we have actual parameters to work with. The results of this model will give us the parameters $L$, $k$, and $x_0$ that we can use to analyze the inflection point of the sigmoid function. The output of the `nls()` function will provide estimates for these parameters, which we can then use to find the inflection point.
+
+
+```{r}
+sigmoid_model <- nls(
+  passing_probability ~ L / (1 + exp(-k * (number_correct_practice - x0))),
+  data = results_with_ci,
+  start = list(
+    L = max(results_with_ci$passing_probability, na.rm = TRUE),
+    k = 0.1,
+    x0 = median(results_with_ci$number_correct_practice)
+  ),
+  control = nls.control(maxiter = 200),
+  algorithm = "port",
+  lower = c(L = 0, k = 0, x0 = min(results_with_ci$number_correct_practice)),
+  upper = c(L = 1.5 * max(results_with_ci$passing_probability, na.rm = TRUE), k = 10, x0 = max(results_with_ci$number_correct_practice))
+)
+
+sigmoid_model
+```
+
+The sigmoid model has an $L$ value of `r round(coef(sigmoid_model)["L"], 4)`, a $k$ value of `r round(coef(sigmoid_model)["k"], 4)`, and an $x_0$ value of `r round(coef(sigmoid_model)["x0"], 4)`. 
+
+$L$ technically should not be greater than 1, but in this case it is ever so slightly above 1 simply as a result of the fitting process. I'm going to offend mathematicians (and probably statisticians) here and simply make this 1. Meanwhile, $x_0$ came out to essentially be the value of 154 that it should be, and I will likewise round this down to 154 for the modeling. The key parameter we gain from modeling is $k$, which is the steepness of the curve. A larger $k$ value indicates a steeper curve, meaning that the probability of passing the test increases more rapidly as the number of correct answers on the practice test increases. A smaller $k$ value indicates a flatter curve, meaning that the probability of passing the test increases more slowly as the number of correct answers on the practice test increases.
+
+Now that we have the parameters of the sigmoid function, we can develop our mathematical model of the probability of passing the test based on the number of correct answers on the practice test:
+
+$$
+P(x) = \frac{1}{1 + e^{-0.0677(x -154)}}
+$$ 
+
+
+With this model, we can now move on to finding the 
+
+### Finding the "Inflection Point"
+
+Traditionally, when talking about the inflection point of a plot or function, we are referring to the point at which the curve changes concavity. In the case of a sigmoid function, this is the point at which the function transitions from being concave up to concave down, or vice versa. More simply put, this is the midpoint of the sigmoid function, where the rate of increase in the probability of passing the test is at its maximum. This point is typically found at the value of $x$ where the first derivative of the sigmoid function is equal to zero. However, this is not the inflection point we are interested in here, namely because this inflection point is not very informative in the context of our simulation scenario. 
+
+Instead, we are interested in changes in the rate of curvature of the sigmoid function, which can be found by examining the second derivative of the function. The inflection points in this context are the points at which the second derivative of the sigmoid function is equal to zero, indicating a change in the rate of increase in the probability of passing the test. Visually, there are two points at which this is fulfilled, roughly around the values of -2.2 and 2.2 in @fig-sigmoid-derivatives.
+
+
+```{r}
+#| label: fig-sigmoid-derivatives
+#| fig-cap: "Sigmoid Function and Its Derivatives"
+
+# Define the sigmoid function and its derivatives
+sigmoid <- function(x, L = 1, k = 1, x0 = 0) {
+  L / (1 + exp(-k * (x - x0)))
+}
+
+sigmoid_derivative <- function(x, L = 1, k = 1, x0 = 0) {
+  k * L * exp(-k * (x - x0)) / (1 + exp(-k * (x - x0)))^2
+}
+
+sigmoid_second_derivative <- function(x, L = 1, k = 1, x0 = 0) {
+  k^2 * L * exp(-k * (x - x0)) * (1 - exp(-k * (x - x0))) / (1 + exp(-k * (x - x0)))^3
+}
+
+sigmoid_third_derivative <- function(x, L = 1, k = 1, x0 = 0) {
+  k^3 * L * exp(-k * (x - x0)) * (1 - 4 * exp(-k * (x - x0)) + exp(-2 * k * (x - x0))) / (1 + exp(-k * (x - x0)))^4
+}
+
+# Generate data for the plot
+x_values <- seq(-10, 10, length.out = 100) # Range of x values
+y_values <- sigmoid(x_values, L = 1, k = 1, x0 = 0) # Compute sigmoid values
+y_derivative <- sigmoid_derivative(x_values, L = 1, k = 1, x0 = 0) # Compute first derivative
+y_second_derivative <- sigmoid_second_derivative(x_values, L = 1, k = 1, x0 = 0) # Compute second derivative
+y_third_derivative <- sigmoid_third_derivative(x_values, L = 1, k = 1, x0 = 0) # Compute third derivative
+
+# Create a data frame for ggplot
+sigmoid_data <- data.frame(
+  x = x_values,
+  y = y_values,
+  y_derivative = y_derivative,
+  y_second_derivative = y_second_derivative,
+  y_third_derivative = y_third_derivative
+) %>%
+pivot_longer(
+  cols = c(y, y_derivative, y_second_derivative, y_third_derivative),
+  names_to = "derivative",
+  values_to = "value"
+) %>%
+mutate(
+  derivative = factor(derivative, 
+                      levels = c("y", "y_derivative", "y_second_derivative", "y_third_derivative"),
+                      labels = c("Sigmoid", "First Derivative", "Second Derivative", "Third Derivative"))
+)
+
+# Plot the sigmoid function and its derivatives
+ggplot(sigmoid_data, aes(x = x)) +
+  geom_line(aes(y = value, color = derivative), size = 1) +
+  theme_minimal() +
+  labs(
+    title = "Sigmoid Function and Its Derivatives",
+    x = "x",
+    y = "Value"
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
+    axis.text = element_text(size = 14),
+    axis.title = element_text(size = 16)
+  ) +
+  scale_color_manual(
+    name = "Legend",
+    values = c("blue", "red", "green", "purple"),
+    labels = c("Sigmoid", "First Derivative", "Second Derivative", "Third Derivative")
+  )
+```
+
+
+
+
+
+
+```{r}
+#| label: fig-sigmoid-final
+#| fig-cap: "Sigmoid Function and Its Derivatives"
+
+
+# Generate data for the plot
+x_values <- seq(0, 308, length.out = 309) # Range of x values
+y_values <- sigmoid(x_values, L = 1, k = 0.0677, x0 = 154) # Compute sigmoid values
+y_derivative <- sigmoid_derivative(x_values, L = 1, k = 0.0677, x0 = 154) # Compute first derivative
+y_second_derivative <- sigmoid_second_derivative(x_values, L = 1, k = 0.0677, x0 = 154) # Compute second derivative
+y_third_derivative <- sigmoid_third_derivative(x_values, L = 1, k = 0.0677, x0 = 154) # Compute third derivative
+
+# Create a data frame for ggplot
+sigmoid_data <- data.frame(
+  x = x_values,
+  y = y_values,
+  y_derivative = y_derivative,
+  y_second_derivative = y_second_derivative,
+  y_third_derivative = y_third_derivative
+) %>%
+pivot_longer(
+  cols = c(y, y_derivative, y_second_derivative, y_third_derivative),
+  names_to = "derivative",
+  values_to = "value"
+) %>%
+mutate(
+  derivative = factor(derivative, 
+                      levels = c("y", "y_derivative", "y_second_derivative", "y_third_derivative"),
+                      labels = c("Sigmoid", "First Derivative", "Second Derivative", "Third Derivative"))
+)
+
+# Plot the sigmoid function and its derivatives
+ggplot(sigmoid_data, aes(x = x)) +
+  geom_line(aes(y = value, color = derivative), size = 1) +
+  theme_minimal() +
+  labs(
+    title = "Sigmoid Function and Its Derivatives",
+    x = "x",
+    y = "Value"
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
+    axis.text = element_text(size = 14),
+    axis.title = element_text(size = 16)
+  ) +
+  scale_color_manual(
+    name = "Legend",
+    values = c("blue", "red", "green", "purple"),
+    labels = c("Sigmoid", "First Derivative", "Second Derivative", "Third Derivative")
+  )
+
+
+```
+
+
+
+```{r}
+which.max(sigmoid_data$value[sigmoid_data$derivative == "Second Derivative"])
 ```
