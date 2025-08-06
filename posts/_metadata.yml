@@ -19,6 +19,9 @@ format:
       margin-width: 150px
       gutter-width: 1.5rem
     code-overflow: wrap
+    code-fold: true
+    code-summary: "Show Me Your Code Secrets"
+    code-tools: true
 
 toc: true
 toc-location: left

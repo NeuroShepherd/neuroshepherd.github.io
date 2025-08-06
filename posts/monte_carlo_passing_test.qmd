@@ -45,6 +45,7 @@ I was working with a total of 308 possible questions, and I had answered 250 of 
 ```{r}
 #| lst-label: lst-monte-carlo-simulation
 #| lst-cap: "Simple Monte Carlo simulation for passing the test"
+#| code-fold: show
 
 # Set parameters
 total_questions <- 308
@@ -106,6 +107,7 @@ From the histogram alone, we can see that nearly all of the simulated tests resu
 ```{r}
 #| label: passing-rate
 #| fig-cap: "Percentage of Simulations Resulting in a Passing Score"
+#| code-fold: show
 
 passing_rate <- mean(simulation_results >= passing_score) * 100
 ```
@@ -125,6 +127,7 @@ First, let's set up the simulation for all possible practice test scores:
 #| lst-label: lst-monte-carlo-simulation-all-levels
 #| lst-cap: "Monte Carlo simulation for all practice test scores"
 #| cache: true
+#| code-fold: show
 
 
 # Create empty matrix to hold results
