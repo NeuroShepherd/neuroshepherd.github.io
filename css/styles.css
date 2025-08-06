@@ -157,7 +157,7 @@ nav#TOC {
 
   display: flex;
   flex-direction: column;
-  height: 440px; /* Increased fixed card height to accommodate tags */
+  height: 500px; /* Increased fixed card height to accommodate tags */
   max-width: 100%;
   word-wrap: break-word; /* Ensure long words break properly */
 }
@@ -270,9 +270,6 @@ nav#TOC {
     height: 450px; /* Slightly taller on medium screens */
   }
   
-  .project-tags {
-    min-height: 60px; /* More space for tags on medium screens */
-  }
 }
 
 @media (max-width: 767px) {
@@ -284,7 +281,4 @@ nav#TOC {
     min-height: 2rem; /* More space for title on mobile */
   }
 
-  .project-tags {
-    min-height: 70px; /* Even more space for tags on small screens */
-  }
 }

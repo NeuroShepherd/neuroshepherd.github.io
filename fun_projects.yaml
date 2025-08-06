@@ -5,23 +5,32 @@
     Specifically, I wanted to see which teams do the best job of developing sprinters. Take a look!
   image: images/neuroshepherd.png
   url: https://example.com
-  tags: [R, SQLite, webscraping, patience]
-  date: 2025-01-01
+  tags: [R, SQLite, webscraping, linear mixed models, patience]
+
+
 - title: Have I Studied Enough to Pass?
   description: |
     I had to take a test. I was tired of studying during vacation so I did what any reasonable person would do: 
     I made a Monte Carlo simulation to see if I could stop studying.
   image: images/neuroshepherd.png
   url: https://example.com
-  tags: [R, simulations, data visualization]
-  date: 2025-01-01
+  tags: [R, simulations, probability, data visualization, procrastination]
+
 
 - title: "Master's Thesis: Interrater Reliability of Cancer Tumor Response"
   description: |
     This links directly out to my master's thesis, which I completed in 2025.
     I did a deep dive into interrater reliability of the Response Evaluation Criteria in Solid Tumors (RECIST) for cancer tumor response.
   image: images/neuroshepherd.png
-  url: https://example.com
-  tags: [R, clinical trials, interrater reliability, overcaffeination]
-  date: 2025-01-01
-  link: https://neuroshepherd.github.io/masters-thesis
+  url: https://neuroshepherd.github.io/masters-thesis
+  tags: [R, clinical trials, interrater reliability, survival analysis, overcaffeination]
+
+
+- title: "{ordinalsimr}: My First R Package on CRAN" 
+  description: |
+    This is my first R package, which I developed and released on CRAN in 2025.
+    It provides a Shiny application for simulating ordinal data, and running a variety of statistical tests suited for ordinal data.
+    It was a challenging project that taught me a lot about R package development and Shiny applications
+  image: images/neuroshepherd.png
+  url: https://neuroshepherd.github.io/ordinalsimr
+  tags: [R package, Shiny, development, CRAN, ordinal data, simulations]
