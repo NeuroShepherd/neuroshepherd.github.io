@@ -64,6 +64,10 @@ format:
     respect-user-color-scheme: true
     linkcolor: "#F97316"
     title-prefix: "NeuroShepherd 🐶"
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 
 
 

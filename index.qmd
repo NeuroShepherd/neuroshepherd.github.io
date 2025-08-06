@@ -18,8 +18,12 @@ about:
       - icon: github
         text: "GitHub"
         href: "https://github.com/neuroshepherd"
+      - text: |
+          <i class="fa-brands fa-orcid" style="color: #A6CE39;"></i>
+          ORCID
+        href: "https://orcid.org/0000-0003-1769-7580"
 
-listing:
+listing:  
   - id: recent_posts
     template: _templates/recent-posts.ejs
     contents: posts
