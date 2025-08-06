@@ -60,6 +60,7 @@ rsconnect/
 _site/
 _outline.md
 _freeze/
+posts/*_files/
 
 # ignore the images used for making up the banners
 images/home_banner/assets/
