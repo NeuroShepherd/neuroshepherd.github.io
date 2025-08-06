@@ -18,6 +18,7 @@ format:
       body-width: 1050px
       margin-width: 150px
       gutter-width: 1.5rem
+    code-overflow: wrap
 
 toc: true
 toc-location: left
@@ -25,3 +26,8 @@ toc-depth: 2
 toc-title: "What You'll Learn"
 
 title-block-banner: "#8a14d3ff" # default banner is a purple gradient
+
+execute:
+  warning: false
+  error: false
+  echo: true
