@@ -1,11 +1,20 @@
 ---
 title: Fun Projects
-page-layout: full
+title-block-banner: "#d31414ff"
+toc: false
 listing: 
     id: fun_projects
     template: _templates/project-card.ejs
     contents:
         - fun_projects.yaml
+
+format:
+  html: 
+    grid:
+      sidebar-width: 200px
+      body-width: 1050px
+      margin-width: 200px
+      gutter-width: 1.5rem
 ---
 
 
