@@ -192,11 +192,15 @@ nav#TOC {
   text-overflow: ellipsis;
   max-width: 100%;
   min-height: 1.7rem; /* Ensure consistent height for title */
+
+  position: relative; /* Create a stacking context for the tooltip */
 }
 
 .project-title a {
   text-decoration: none; /* Ensure no underline by default */
+  position: relative;
 }
+
 .project-title a:hover {
   text-decoration: underline; /* Optional: underline on hover */
 }
@@ -204,17 +208,20 @@ nav#TOC {
 .project-description {
   font-size: 1.05rem;
   color: #555;
-  margin-bottom: 0.75rem;
-  margin-top: 0.5rem; /* Consistent spacing from title */
-  
-  height: 100px; /* Reduced fixed height to make more room for tags */
+  margin-bottom: 0rem;
+  margin-top: 0.2rem; /* Consistent spacing from title */
+
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* Limit to 5 lines */
+  -webkit-box-orient: vertical;
+
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4; /* Reduced to 4 lines to match shorter height */
-  line-clamp: 4; /* Standard property for compatibility */
-  -webkit-box-orient: vertical;
-  flex-shrink: 0;
+
+  /* Optional: Ensure box-sizing doesn't break the line clamp unexpectedly */
+  box-sizing: border-box;
+
+  max-height: calc(1.4em * 5);
 }
 
 .project-description a {
@@ -263,12 +270,6 @@ nav#TOC {
     height: 450px; /* Slightly taller on medium screens */
   }
   
-  .project-description {
-    height: 90px; /* Reduced height for medium screens */
-    -webkit-line-clamp: 3; /* Show fewer lines on medium screens */
-    line-clamp: 3;
-  }
-  
   .project-tags {
     min-height: 60px; /* More space for tags on medium screens */
   }
@@ -282,13 +283,7 @@ nav#TOC {
   .project-title {
     min-height: 2rem; /* More space for title on mobile */
   }
-  
-  .project-description {
-    height: 80px; /* Reduced height for small screens */
-    -webkit-line-clamp: 3; /* Show even fewer lines on small screens */
-    line-clamp: 3;
-  }
-  
+
   .project-tags {
     min-height: 70px; /* Even more space for tags on small screens */
   }

@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-website','listing-format','listing-language','listing-freeze','listing-author','listing-page-layout','listing-comments','listing-toc','listing-toc-location','listing-toc-depth','listing-toc-title','listing-title-block-banner','listing-title','listing-description','listing-image','listing-date','listing-year','listing-categories','listing-path','listing-outputHref','listing-date-modified','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-draft','listing-editor','listing-date-format','listing-title-block-banner-color',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-project','listing-website','listing-format','listing-_quarto-vars','listing-language','listing-freeze','listing-author','listing-page-layout','listing-comments','listing-toc','listing-toc-location','listing-toc-depth','listing-toc-title','listing-title-block-banner','listing-title','listing-description','listing-image','listing-date','listing-year','listing-categories','listing-path','listing-outputHref','listing-date-modified','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-draft','listing-editor','listing-date-format','listing-title-block-banner-color',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-website","listing-format","listing-language","listing-freeze","listing-author","listing-page-layout","listing-comments","listing-toc","listing-toc-location","listing-toc-depth","listing-toc-title","listing-title-block-banner","listing-title","listing-description","listing-image","listing-date","listing-year","listing-categories","listing-path","listing-outputHref","listing-date-modified","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-draft","listing-editor","listing-date-format","listing-title-block-banner-color"],
+      searchColumns: ["listing-project","listing-website","listing-format","listing-_quarto-vars","listing-language","listing-freeze","listing-author","listing-page-layout","listing-comments","listing-toc","listing-toc-location","listing-toc-depth","listing-toc-title","listing-title-block-banner","listing-title","listing-description","listing-image","listing-date","listing-year","listing-categories","listing-path","listing-outputHref","listing-date-modified","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-draft","listing-editor","listing-date-format","listing-title-block-banner-color"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -97,6 +97,7 @@ ul.task-list li input[type="checkbox"] {
     }
   })
   </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -230,6 +231,11 @@ window.Quarto = {
   <a href="https://github.com/neuroshepherd" class="about-link" rel="" target="">
     <i class="bi bi-github"></i>
      <span class="about-link-text">GitHub</span>
+  </a>
+  <a href="https://orcid.org/0000-0003-1769-7580" class="about-link" rel="" target="">
+     <span class="about-link-text"><i class="fa-brands fa-orcid" style="color: #A6CE39;"></i>
+ORCID
+</span>
   </a>
 </div>
   </div>
