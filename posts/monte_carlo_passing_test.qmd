@@ -216,6 +216,8 @@ results_with_ci <- simulation_all_levels %>%
 
 
 ribbon_plot <- results_with_ci %>%
+  mutate(upper_ci = round(upper_ci, 4),
+    lower_ci = round(lower_ci, 4)) %>%
   rename(
     "No. Correct Practice" = number_correct_practice,
     "Passing Probability" = passing_probability,
