@@ -113,7 +113,7 @@ passing_rate <- mean(simulation_results >= passing_score) * 100
 ```
 
 
-This yields a passing rate of `r round(passing_rate, 2)`%...I think I can stop studying now!
+This yields a passing rate of `r round(passing_rate, 5)`%...I think I can stop studying now!
 
 
 ## I Could Have Studied Less
