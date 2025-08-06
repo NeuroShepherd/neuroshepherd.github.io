@@ -20,7 +20,7 @@ format:
       gutter-width: 1.5rem
     code-overflow: wrap
     code-fold: true
-    code-summary: "Show Me Your Code Secrets"
+    code-summary: "Show Me the Code!"
     code-tools: true
 
 toc: true

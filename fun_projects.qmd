@@ -20,4 +20,6 @@ format:
 
 
 
+::: {#fun_projects}
+:::
 
