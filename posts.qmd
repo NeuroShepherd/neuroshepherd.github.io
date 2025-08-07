@@ -3,7 +3,6 @@ title: "Posts"
 toc: true
 toc-location: right
 toc-title: Post Year
-page-layout: full
 title-block-banner: "#d35714ff"
 listing:
   - id: year2025
@@ -26,9 +25,9 @@ listing:
 format:
   html:
     grid:
-      sidebar-width: 300px
-      body-width: 700px
-      margin-width: 300px
+      sidebar-width: 200px
+      body-width: 1050px
+      margin-width: 200px
       gutter-width: 1.5rem
 ---
 
