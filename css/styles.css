@@ -286,3 +286,11 @@ nav#TOC {
   }
 
 }
+
+
+
+/* Adjust the sidebar navigation size */
+
+.sidebar-navigation {
+  padding-left: 0px;
+}
