@@ -4,7 +4,7 @@ description: "I had to take a test recently, and I wanted to see if I could stop
 date: 2025-08-06
 year: 2025
 date-modified: last-modified
-image: ../images/placeholder.png
+image: monte_carlo_passing_test_files/figure-html/fig-sigmoid-derivatives-1.png
 title-block-banner: "#8a14d3ff" # this can be a different color or an image
 draft: false
 categories:
@@ -13,12 +13,15 @@ categories:
     - R
 ---
 
-
 ```{r}
 library(purrr)
 library(tidyr)
 library(ggplot2)
 library(dplyr)
+
+theme_set(theme_minimal())
+theme_update(plot.background = element_rect(color = "#06005eff", linewidth = 1))
+
 ```
 
 ## Context
@@ -66,6 +69,7 @@ simulation_results <- replicate(n_simulations, {
 
 ```
 
+
 So what exactly is happening in @lst-monte-carlo-simulation? First, I set the parameters for the simulation, including the total number of questions, the number of questions I had answered correctly, the number of questions on the test, the passing score, and the number of simulations to run.
 
 Next, I created a vector called `practice_results` that represents my practice results, where `1` indicates a correct answer and `0` indicates an incorrect answer. This vector is constructed by repeating `1` for the number of correct answers and `0` for the remaining questions.
@@ -91,7 +95,6 @@ ggplot(aes(x = correct_answers, fill = passed)) +
        x = "Number of Correct Answers",
        y = "Frequency") +
   geom_vline(xintercept = 17, linetype = "dashed", color = "red", size = 1) +
-  theme_minimal() +
   theme(
     plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
     axis.text = element_text(size = 14),
@@ -165,7 +168,7 @@ So, what can we do with these results? We can calculate the probability of passi
 ```{r}
 #| label: fig-passing-probability
 #| fig-cap: "Probability of Passing the Test Based on Practice Test Scores"
-#| fig-width: 12
+#| fig-width: 8
 #| fig-height: 8
 
 
@@ -180,7 +183,6 @@ So, what can we do with these results? We can calculate the probability of passi
 #   ggplot(aes(number_correct_practice, passig_probability)) +
 #   geom_point() +
 #   geom_line() +
-#   theme_minimal() +
 #   theme(
 #     plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
 #     axis.text = element_text(size = 14),
@@ -226,7 +228,6 @@ ribbon_plot <- results_with_ci %>%
   ) %>%
   ggplot(aes(x = `No. Correct Practice`, y = `Passing Probability`)) +
   geom_ribbon(aes(ymin = `Lower 95% CI`, ymax = `Upper 95% CI`), alpha = 0.4, fill = "blue") +
-  theme_minimal() +
   theme(
     plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
     axis.text = element_text(size = 14),
@@ -255,13 +256,13 @@ Just for fun, let's model this mathematically and try to find the point at which
 
 $$
 P(x) = \frac{1}{1 + e^{-x}}
-$$
+$$ {#eq-sigmoid-function}
 
 However, this function is the most simple version of the sigmoid i.e. it has no parameters adjusting the steepness or midpoint of the curve. The general form of the sigmoid function is:
 
 $$
 P(x) = \frac{L}{1 + e^{-k(x - x_0)}}
-$$
+$$ {#eq-sigmoid-general}
 
 where:
 - $P(x)$ is the probability of passing the test given $x$ correct answers on the practice test,
@@ -325,7 +326,7 @@ Now that we have the parameters of the sigmoid function, we can develop our math
 
 $$
 P(x) = \frac{1}{1 + e^{-0.0677(x -154)}}
-$$ 
+$$ {#eq-sigmoid-model}
 
 
 With this model, we can now move on to finding the 
@@ -398,7 +399,6 @@ sigmoid_data %>%
   geom_line(aes(y = value, color = derivative), size = 1) +
   geom_point(data = estimated_points, aes(x=x,y=y), color = "black", size = 4) +
   geom_vline(xintercept = c(2.2), linetype = "dashed", color = "black", size = 0.5) +
-  theme_minimal() +
   labs(
     title = "Sigmoid Function and Its Derivatives",
     x = "x",
@@ -419,12 +419,28 @@ sigmoid_data %>%
 
 How can we derive where this point lies on any sigmoid function? Let's take a quick calculus detour:
 
-1. First derivative: represents the slope of the function in question. Also referred to as the "rate" of the function.
-2. Second derivative: represents the change in the slope of the function. Also referred to as the "acceleration" of the function.
-3. Third derivative: represents the change in the acceleration of the function. Also referred to as the "jerk" of the function.
+1. **First derivative:** represents the slope of the function in question. Also referred to as the "rate" of the function.
 
-I previously mentioned that we're interested in the change in the change of the learning rate. We can first reword this as the "change in the acceleration of the learning rate", and can then simplify this to the "jerk" of the learning rate. In other terms, we'll need to find the value of $x$ that maximizes the third derivative of the sigmoid function. This might be a lot to take in so let's visualize the sigmoid plot with its first through third derivaties in @fig-sigmoid-derivatives
+<!-- First derivative of the function \frac{L}{1 + e^{-k(x - x_0)}} -->
 
+$$
+\frac{d}{dx} P(x) = \frac{L k e^{-k(x - x_0)}}{(1 + e^{-k(x - x_0)})^2}
+$$ {#eq-sigmoid-first-derivative}
+
+
+2. **Second derivative:** represents the change in the slope of the function. Also referred to as the "acceleration" of the function.
+
+$$
+\frac{d^2}{dx^2} P(x) = \frac{L k^2 e^{-k(x - x_0)}(1 - e^{-k(x - x_0)})}{(1 + e^{-k(x - x_0)})^3}
+$$ {#eq-sigmoid-second-derivative}
+
+3. **Third derivative:** represents the change in the acceleration of the function. Also referred to as the "jerk" of the function.
+
+$$
+\frac{d^3}{dx^3} P(x) = \frac{L k^3 e^{-k(x - x_0)}(1 - 4e^{-k(x - x_0)} + e^{-2k(x - x_0)})}{(1 + e^{-k(x - x_0)})^4}
+$$ {#eq-sigmoid-third-derivative}
+
+I previously mentioned that we're interested in the change in the change of the learning rate. We can first reword this as the "change in the acceleration of the learning rate", and can then simplify this to the "jerk" of the learning rate. In other terms, we'll need to find the value of $x$ that maximizes the third derivative of the sigmoid function. This might be a lot to take in so let's visualize the sigmoid plot with its first through third derivaties in @fig-sigmoid-derivatives.
 
 
 ```{r}
@@ -438,7 +454,6 @@ sigmoid_data %>%
   geom_line(aes(y = value, color = derivative), size = 1) +
   geom_point(data = estimated_points, aes(x=x,y=y), color = "black", size = 4) +
   geom_vline(xintercept = c(2.2), linetype = "dashed", color = "black", size = 0.5) +
-  theme_minimal() +
   labs(
     title = "Sigmoid Function and Its Derivatives",
     x = "x",
@@ -568,7 +583,6 @@ sigmoid_data_test %>%
   geom_line(aes(y = value, color = derivative), size = 1) +
   geom_point(data = estimated_points, aes(x=x,y=y), color = "black", size = 4) +
   geom_vline(xintercept = c(188), linetype = "dashed", color = "black", size = 0.5) +
-  theme_minimal() +
   labs(
     title = "Sigmoid Function and Its Derivatives",
     x = "x",
@@ -602,7 +616,6 @@ sigmoid_data_test %>%
   ggplot(aes(x = x)) +
   geom_line(aes(y = value, color = derivative), size = 1) +
   geom_vline(xintercept = c(188), linetype = "dashed", color = "black", size = 0.5) +
-  theme_minimal() +
   labs(
     title = "Sigmoid Function 3rd Derivative",
     x = "x",

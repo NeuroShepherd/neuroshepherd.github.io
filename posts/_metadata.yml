@@ -22,6 +22,9 @@ format:
     code-fold: true
     code-summary: "Show Me the Code!"
     code-tools: true
+    fig-width: 8
+    fig-height: 6
+
 
 toc: true
 toc-location: left
