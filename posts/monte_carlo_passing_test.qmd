@@ -249,7 +249,7 @@ Note that I've also taken the liberty of adding confidence intervals to the plot
 
 The overall form of @fig-passing-probability is not particularly surprising: the more questions you answer correctly on the practice test, the higher your probability of passing the actual test, and correctly answering half of the questions on the practice yields a 95% confidence interval of $[48.95, 50.91]\%$ probability of passing the examine. There seems to be an inflection point of diminishing marginal returns around 175 correct answers on the practice test, where the probability of passing the actual test increases at a slower rate as the number of correct answers increases. This is likely due to the fact that once you have a solid understanding of the material, additional practice may not significantly improve your chances of passing.
 
-## Diminishing Marginal Returns
+## Finding the "Optimal" Practice Test Score
 
 Just for fun, let's model this mathematically and try to find the point at which we experience diminishing returns in studying more practice questions. Based on the form of the plot, the function that describes the probability of passing the test based on the number of correct answers on the practice test is a sigmoid function, which can generally be expressed as:
 
@@ -257,7 +257,7 @@ $$
 P(x) = \frac{1}{1 + e^{-x}}
 $$
 
-Although this function is a bit different from the one we need, it can be adapted to fit our data. The general form of the sigmoid function is:
+However, this function is the most simple version of the sigmoid i.e. it has no parameters adjusting the steepness or midpoint of the curve. The general form of the sigmoid function is:
 
 $$
 P(x) = \frac{L}{1 + e^{-k(x - x_0)}}
@@ -276,6 +276,30 @@ With this, let's first fit a sigmoid model to our data in R so we have actual pa
 
 
 ```{r}
+#| lst-label: lst-sigmoid-model
+#| lst-cap: "Fitting a Sigmoid Model to the Data"
+
+### NLS exact code
+# L_fixed <- 1          # Set your desired value for L
+# x0_fixed <- 154         # Set your desired value for x0
+
+# # Custom sigmoid model function with L and x0 fixed
+# sigmoid_fixed <- function(k, number_correct_practice) {
+#   L_fixed / (1 + exp(-k * (number_correct_practice - x0_fixed)))
+# }
+
+# # Fit the model
+# sigmoid_model_fixed <- nls(
+#   passing_probability ~ sigmoid_fixed(k, number_correct_practice),
+#   data = results_with_ci,
+#   start = list(k = 0.1),
+#   control = nls.control(maxiter = 200),
+#   algorithm = "port",
+#   lower = c(k = 0),
+#   upper = c(k = 10)
+# )
+
+
 sigmoid_model <- nls(
   passing_probability ~ L / (1 + exp(-k * (number_correct_practice - x0))),
   data = results_with_ci,
@@ -308,14 +332,15 @@ With this model, we can now move on to finding the
 
 ### Finding the "Inflection Point"
 
-Traditionally, when talking about the inflection point of a plot or function, we are referring to the point at which the curve changes concavity. In the case of a sigmoid function, this is the point at which the function transitions from being concave up to concave down, or vice versa. More simply put, this is the midpoint of the sigmoid function, where the rate of increase in the probability of passing the test is at its maximum. This point is typically found at the value of $x$ where the first derivative of the sigmoid function is equal to zero. However, this is not the inflection point we are interested in here, namely because this inflection point is not very informative in the context of our simulation scenario. 
+Traditionally, when talking about the inflection point of a function, we are referring to the point at which the curve changes concavity. In the case of a sigmoid function, this is the point at which the function transitions from being concave up to concave down, or vice versa. Put in the context of our test-taking scenario, this is the midpoint of the sigmoid function, where the rate of increase in the probability of passing the test is at its maximum. This point can be found at the value of $x$ where the second derivative of the sigmoid function is equal to zero. However, this is not the "inflection point" I'm interested in here for two main reasons. 
 
-Instead, we are interested in changes in the rate of curvature of the sigmoid function, which can be found by examining the second derivative of the function. The inflection points in this context are the points at which the second derivative of the sigmoid function is equal to zero, indicating a change in the rate of increase in the probability of passing the test. Visually, there are two points at which this is fulfilled, roughly around the values of -2.2 and 2.2 in @fig-sigmoid-derivatives.
+First, this traditional inflection point will be right at 154/308 correct practice questions, which, in any practical scenario, is simply not a sufficient point at which one should stop studying. In other words, we would expect someone to continue learning the answers to practice questions beyond this point of diminishing marginal returns. Second, my goal is to strike an appropriate balance between the probability of passing the test and the number of questions one needs to learn. So where do I think this is? Let's take a look at @fig-sigmoid to get a sense.
 
+This plot shows a basic sigmoid function on the range $[-10, 10]$, and I've plotted a single point that I think is of significance at $x=2.2$. This point represents a visual estimation of the "inflection point" I'm interested in here as this seems to be the point at which change in the change of learning rate begins to accelerate. In the context of learning these practice questions, this is the point at which the value in learning the answers to additional questions begins to take a nosedive.
 
 ```{r}
-#| label: fig-sigmoid-derivatives
-#| fig-cap: "Sigmoid Function and Its Derivatives"
+#| label: fig-sigmoid
+#| fig-cap: "Sigmoid Function"
 
 # Define the sigmoid function and its derivatives
 sigmoid <- function(x, L = 1, k = 1, x0 = 0) {
@@ -335,7 +360,7 @@ sigmoid_third_derivative <- function(x, L = 1, k = 1, x0 = 0) {
 }
 
 # Generate data for the plot
-x_values <- seq(-10, 10, length.out = 100) # Range of x values
+x_values <- seq(-10, 10, length.out = 101) # Range of x values
 y_values <- sigmoid(x_values, L = 1, k = 1, x0 = 0) # Compute sigmoid values
 y_derivative <- sigmoid_derivative(x_values, L = 1, k = 1, x0 = 0) # Compute first derivative
 y_second_derivative <- sigmoid_second_derivative(x_values, L = 1, k = 1, x0 = 0) # Compute second derivative
@@ -360,9 +385,19 @@ mutate(
                       labels = c("Sigmoid", "First Derivative", "Second Derivative", "Third Derivative"))
 )
 
+estimated_points <- tibble(
+  x = c(2.2),
+  y = sigmoid(c(2.2)),
+  derivative = c("Sigmoid")
+)
+
 # Plot the sigmoid function and its derivatives
-ggplot(sigmoid_data, aes(x = x)) +
+sigmoid_data %>%
+  dplyr::filter(derivative == "Sigmoid") %>%
+  ggplot(aes(x = x)) +
   geom_line(aes(y = value, color = derivative), size = 1) +
+  geom_point(data = estimated_points, aes(x=x,y=y), color = "black", size = 4) +
+  geom_vline(xintercept = c(2.2), linetype = "dashed", color = "black", size = 0.5) +
   theme_minimal() +
   labs(
     title = "Sigmoid Function and Its Derivatives",
@@ -379,17 +414,121 @@ ggplot(sigmoid_data, aes(x = x)) +
     values = c("blue", "red", "green", "purple"),
     labels = c("Sigmoid", "First Derivative", "Second Derivative", "Third Derivative")
   )
+
 ```
 
+How can we derive where this point lies on any sigmoid function? Let's take a quick calculus detour:
 
+1. First derivative: represents the slope of the function in question. Also referred to as the "rate" of the function.
+2. Second derivative: represents the change in the slope of the function. Also referred to as the "acceleration" of the function.
+3. Third derivative: represents the change in the acceleration of the function. Also referred to as the "jerk" of the function.
 
+I previously mentioned that we're interested in the change in the change of the learning rate. We can first reword this as the "change in the acceleration of the learning rate", and can then simplify this to the "jerk" of the learning rate. In other terms, we'll need to find the value of $x$ that maximizes the third derivative of the sigmoid function. This might be a lot to take in so let's visualize the sigmoid plot with its first through third derivaties in @fig-sigmoid-derivatives
 
 
 
 ```{r}
-#| label: fig-sigmoid-final
+#| label: fig-sigmoid-derivatives
 #| fig-cap: "Sigmoid Function and Its Derivatives"
 
+
+sigmoid_data %>%
+#   dplyr::filter(derivative == "Sigmoid") %>%
+  ggplot(aes(x = x)) +
+  geom_line(aes(y = value, color = derivative), size = 1) +
+  geom_point(data = estimated_points, aes(x=x,y=y), color = "black", size = 4) +
+  geom_vline(xintercept = c(2.2), linetype = "dashed", color = "black", size = 0.5) +
+  theme_minimal() +
+  labs(
+    title = "Sigmoid Function and Its Derivatives",
+    x = "x",
+    y = "Value"
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
+    axis.text = element_text(size = 14),
+    axis.title = element_text(size = 16)
+  ) +
+  scale_color_manual(
+    name = "Legend",
+    values = c("blue", "red", "green", "purple"),
+    labels = c("Sigmoid", "First Derivative", "Second Derivative", "Third Derivative")
+  )
+
+
+```
+
+So, the point I plotted aligns almost perfectly with one of the local maxima of the third derivative of the sigmoid function. At this point, we *could* solve for this point analytically, find the fourth derivative, set it equal to zero, and solve for the corresponding $x$ value. However, I think there's already too much talk of derivatives in this post so we'll simply filter our dataset for the $x$ value at which the third derivative is max (for $x$ values greater than zero).
+
+```{r}
+#| lst-label: lst-sigmoid-3rd-deriv-inflection-point
+#| lst-cap: "Finding the inflection point of the third derivative of the sigmoid function"
+
+sigmoid_data %>%
+dplyr::filter(
+    derivative == "Third Derivative",
+    x > 0
+) %>%
+slice(which.max(value))
+
+```
+
+My estimate for this point was spot-on (I, ugh, have good vision I guess?) However, this is only useful for the basic sigmoid function--let's generalize this. If you had looked at some of the previous plotting code, you might have noticed that I wrote some functions for the sigmoid function and its derivatives, repeated below in @lst-sigmoid-functions. We can use these functions to find the point at which the third derivative is maximized for any sigmoid function, not just the one we fitted to our data.
+
+
+```{r}
+#| lst-label: lst-sigmoid-functions
+#| lst-cap: "Sigmoid function and its derivatives"
+#| code-fold: show
+
+# Define the sigmoid function and its derivatives
+sigmoid <- function(x, L = 1, k = 1, x0 = 0) {
+  L / (1 + exp(-k * (x - x0)))
+}
+
+sigmoid_derivative <- function(x, L = 1, k = 1, x0 = 0) {
+  k * L * exp(-k * (x - x0)) / (1 + exp(-k * (x - x0)))^2
+}
+
+sigmoid_second_derivative <- function(x, L = 1, k = 1, x0 = 0) {
+  k^2 * L * exp(-k * (x - x0)) * (1 - exp(-k * (x - x0))) / (1 + exp(-k * (x - x0)))^3
+}
+
+sigmoid_third_derivative <- function(x, L = 1, k = 1, x0 = 0) {
+  k^3 * L * exp(-k * (x - x0)) * (1 - 4 * exp(-k * (x - x0)) + exp(-2 * k * (x - x0))) / (1 + exp(-k * (x - x0)))^4
+}
+
+```
+
+If we apply these functions to our fitted sigmoid model, we can find the point at which the third derivative is maximized. This will give us the "inflection point" at which the value of learning additional practice questions begins to take a nosedive.
+
+
+```{r}
+#| lst-label: lst-sigmoid-inflection-point
+#| lst-cap: "Finding the inflection point of the sigmoid function for test taking"
+#| code-fold: show
+
+
+sigmoid_third_derivative(
+  x = seq(0, 308, length.out = 309),
+  L = 1,
+  k = coef(sigmoid_model)["k"],
+  x0 = 154
+) %>%
+tibble(
+    x = seq(0, 308, length.out = 309),
+    value = .
+) %>%
+dplyr::filter(x > 154) %>% # only look past the halfway point
+slice(which.max(value))
+```
+
+So an X value of 188
+
+
+```{r}
+#| label: fig-sigmoid-function-testing
+#| fig-cap: "Sigmoid Function and Its Derivatives for Test Taking"
 
 # Generate data for the plot
 x_values <- seq(0, 308, length.out = 309) # Range of x values
@@ -399,7 +538,7 @@ y_second_derivative <- sigmoid_second_derivative(x_values, L = 1, k = 0.0677, x0
 y_third_derivative <- sigmoid_third_derivative(x_values, L = 1, k = 0.0677, x0 = 154) # Compute third derivative
 
 # Create a data frame for ggplot
-sigmoid_data <- data.frame(
+sigmoid_data_test <- data.frame(
   x = x_values,
   y = y_values,
   y_derivative = y_derivative,
@@ -417,9 +556,18 @@ mutate(
                       labels = c("Sigmoid", "First Derivative", "Second Derivative", "Third Derivative"))
 )
 
+estimated_points <- tibble(
+  x = c(188),
+  y = sigmoid(c(188), L = 1, k = 0.0677, x0 = 154),
+  derivative = c("Sigmoid")
+)
+
 # Plot the sigmoid function and its derivatives
-ggplot(sigmoid_data, aes(x = x)) +
+sigmoid_data_test %>%
+  ggplot(aes(x = x)) +
   geom_line(aes(y = value, color = derivative), size = 1) +
+  geom_point(data = estimated_points, aes(x=x,y=y), color = "black", size = 4) +
+  geom_vline(xintercept = c(188), linetype = "dashed", color = "black", size = 0.5) +
   theme_minimal() +
   labs(
     title = "Sigmoid Function and Its Derivatives",
@@ -441,7 +589,39 @@ ggplot(sigmoid_data, aes(x = x)) +
 ```
 
 
+A little bit hard to see what's happening with the derivatives due to the scale of the y-axis; let's take a look at just the third derivative of the sigmoid function in @fig-sigmoid-third-derivative. This plot shows the third derivative of the sigmoid function, which is where we find the "inflection point" that I was looking for. 
+
 
 ```{r}
-which.max(sigmoid_data$value[sigmoid_data$derivative == "Second Derivative"])
+#| label: fig-sigmoid-third-derivative
+#| fig-cap: "Third Derivative of the Sigmoid Function"
+
+# Plot the sigmoid function and its derivatives
+sigmoid_data_test %>%
+  filter(derivative == "Third Derivative") %>%
+  ggplot(aes(x = x)) +
+  geom_line(aes(y = value, color = derivative), size = 1) +
+  geom_vline(xintercept = c(188), linetype = "dashed", color = "black", size = 0.5) +
+  theme_minimal() +
+  labs(
+    title = "Sigmoid Function 3rd Derivative",
+    x = "x",
+    y = "Value"
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
+    axis.text = element_text(size = 14),
+    axis.title = element_text(size = 16)
+  ) +
+  scale_color_manual(
+    name = "Legend",
+    values = c("purple"),
+    labels = c("Third Derivative")
+  )
 ```
+
+The point at which the third derivative is maximized is at 188, which corresponds to a probability of passing the test of `r 100*round(sigmoid(188, L = 1, k = 0.0677, x0 = 154), 4)`%. This means that if I had answered 188 questions correctly on the practice test, I would have been at the point of increasing acceleration of diminishing returns in terms of learning additional practice questions. This is the point at which the value of learning additional practice questions begins to take a nosedive, and I would have been better off spending my time on other activities. In other words, I could have stopped studying after answering 188 questions correctly on the practice test and still had a very high probability of passing the actual test.
+
+
+
+
