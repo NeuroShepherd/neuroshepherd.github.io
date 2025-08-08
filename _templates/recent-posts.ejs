@@ -6,15 +6,54 @@ const recentPosts = items
   .slice(0, 3);
 %>
 
-<div class="recent-posts">
-<ul class="recent-posts-list">
+<div class="recent-posts-container">
 <% for (const post of recentPosts) { %>
-<li class="recent-post-item">
+<div class="recent-post-card">
 <a href="<%= post.path %>" class="recent-post-link">
-<strong><%= post.title %></strong><% if (post.description) { %>: <%= post.description %><% } %>
+<img src="<%= post.image || 'images/neuroshepherd_melted.png' %>" alt="<%= post.title %>" class="recent-post-image" />
 </a>
-</li>
-<% } %>
-</ul>
 </div>
+<% } %>
+</div>
+
+<style>
+.recent-posts-container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recent-post-card {
+  flex: 1; /* Each card takes equal space */
+  margin: 0 5px; /* Add spacing between cards */
+  max-width: 33%; /* Ensure each card takes up 1/3 of the container */
+  height: 200px; /* Fixed height for all cards */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9; /* Add a background color to ensure consistent size */
+  border: 1px solid #ddd; /* Optional border for clarity */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.recent-post-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.recent-post-image {
+  width: 100%; /* Image takes full width of its parent */
+  height: 100%; /* Image takes full height of its parent */
+  object-fit: cover; /* Ensure proper scaling */
+}
+
+.recent-post-image img:hover {
+  transform: scale(1.1); /* Pop-up effect on hover */
+}
+
+</style>
 
