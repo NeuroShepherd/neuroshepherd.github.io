@@ -67,6 +67,10 @@
   left: auto !important;
 }
 
+.dropdown-menu .dropdown-item {
+  color: #000; /* Set text color to black or any visible color */
+}
+
 
 /* TOC adjustments */
 
@@ -281,4 +285,12 @@ nav#TOC {
     min-height: 2rem; /* More space for title on mobile */
   }
 
+}
+
+
+
+/* Adjust the sidebar navigation size */
+
+.sidebar-navigation {
+  padding-left: 0px;
 }

@@ -6,6 +6,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/monte_carlo_passing_test.html",
       "/posts/example2025.html",
       "/posts/development.html",
       "/posts/first_release.html",
@@ -15,6 +16,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/monte_carlo_passing_test.html",
       "/posts/example2025.html",
       "/posts/development.html",
       "/posts/first_release.html",

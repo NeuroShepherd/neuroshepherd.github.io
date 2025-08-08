@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-ea5ada78b2cef6b969c21bdd868a61f8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -78,13 +78,41 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-website','listing-format','listing-_quarto-vars','listing-language','listing-freeze','listing-author','listing-page-layout','listing-comments','listing-toc','listing-toc-location','listing-toc-depth','listing-toc-title','listing-title-block-banner','listing-title','listing-description','listing-image','listing-date','listing-year','listing-categories','listing-path','listing-outputHref','listing-date-modified','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-draft','listing-editor','listing-date-format','listing-title-block-banner-color',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-project','listing-website','listing-format','listing-_quarto-vars','listing-language','listing-freeze','listing-author','listing-page-layout','listing-comments','listing-toc','listing-toc-location','listing-toc-depth','listing-toc-title','listing-title-block-banner','listing-execute','listing-title','listing-description','listing-image','listing-date','listing-year','listing-categories','listing-path','listing-outputHref','listing-date-modified','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-draft','listing-editor','listing-date-format','listing-title-block-banner-color',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-website","listing-format","listing-_quarto-vars","listing-language","listing-freeze","listing-author","listing-page-layout","listing-comments","listing-toc","listing-toc-location","listing-toc-depth","listing-toc-title","listing-title-block-banner","listing-title","listing-description","listing-image","listing-date","listing-year","listing-categories","listing-path","listing-outputHref","listing-date-modified","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-draft","listing-editor","listing-date-format","listing-title-block-banner-color"],
+      searchColumns: ["listing-project","listing-website","listing-format","listing-_quarto-vars","listing-language","listing-freeze","listing-author","listing-page-layout","listing-comments","listing-toc","listing-toc-location","listing-toc-depth","listing-toc-title","listing-title-block-banner","listing-execute","listing-title","listing-description","listing-image","listing-date","listing-year","listing-categories","listing-path","listing-outputHref","listing-date-modified","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-draft","listing-editor","listing-date-format","listing-title-block-banner-color"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-recent_posts'] = new List('listing-recent_posts', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-fun_projects .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-image','listing-url','listing-tags',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-image","listing-url","listing-tags"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-fun_projects'] = new List('listing-fun_projects', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -266,26 +294,186 @@ ORCID
 <div class="grid">
 <section id="fun-projects" class="level3 center-text g-col-6">
 <h3 class="center-text" data-anchor-id="fun-projects">Fun Projects</h3>
-<p><a href="https://neuroshepherd.github.io/sprint-coaching">What Universities Have the Best Sprint Coaching?</a></p>
-<p><a href="https://neuroshepherd.github.io/monte-carlo-simulation">A Monte Carlo Simulation to Estimate if I Already Studied Enough</a></p>
-<p><a href="https://neuroshepherd.github.io/masters-thesis">Analyzing Interrater Reliability of Tumor Measurement in Clinical Trials for my Master’s Thesis</a></p>
+<div id="listing-fun_projects" class="quarto-listing quarto-listing-container-custom">
+<div class="fun-projects-list">
+<ul>
+<li class="fun-project-item" data-description="Have you ever wondered which US universities have the best sprint coaching programs?
+Probably not, but I did, so I made this project to find out.
+Specifically, I wanted to see which teams do the best job of developing sprinters. Take a look!
+">
+<a href="" class="fun-project-link"> The Best Sprint Coaching </a>
+</li>
+<li class="fun-project-item" data-description="I had to take a test. I was tired of studying during vacation so I did what any reasonable person would do: 
+I made a Monte Carlo simulation to see if I could stop studying.
+">
+<a href="" class="fun-project-link"> Have I Studied Enough to Pass? </a>
+</li>
+<li class="fun-project-item" data-description="This links directly out to my master's thesis, which I completed in 2025.
+I did a deep dive into interrater reliability of the Response Evaluation Criteria in Solid Tumors (RECIST) for cancer tumor response.
+">
+<a href="" class="fun-project-link"> Master’s Thesis: Interrater Reliability of Cancer Tumor Response </a>
+</li>
+<li class="fun-project-item" data-description="This is my first R package, which I developed and released on CRAN in 2025.
+It provides a Shiny application for simulating ordinal data, and running a variety of statistical tests suited for ordinal data.
+It was a challenging project that taught me a lot about R package development and Shiny applications
+">
+<a href="" class="fun-project-link"> {ordinalsimr}: My First R Package on CRAN </a>
+</li>
+</ul>
+</div>
+<style>
+.fun-projects-list {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 0;
+}
+
+.fun-projects-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fun-project-item {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+  position: relative;
+  transition: color 0.1s ease;
+}
+
+.fun-project-item:hover {
+  color: #0056b3;
+}
+
+.fun-project-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: all 0.1s ease;
+}
+
+/* Custom tooltip using data-description instead of title */
+.fun-project-item[data-description]:hover::after {
+  content: attr(data-description);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f8f9fa;
+  color: #212529;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-size: 0.7rem;
+  white-space: normal;
+  z-index: 10;
+}
+
+.fun-project-item[data-description]:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #f8f9fa;
+}
+
+</style>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 </section>
 <section id="recent-posts" class="level3 center-text g-col-6">
 <h3 class="center-text" data-anchor-id="recent-posts">Recent Posts</h3>
 <div id="listing-recent_posts" class="quarto-listing quarto-listing-container-custom">
-<div class="recent-posts">
-<ul class="recent-posts-list">
-<li class="recent-post-item">
-<a href="./posts/example2025.html" class="recent-post-link"> <strong>Hello</strong>: A template for creating new posts </a>
-</li>
-<li class="recent-post-item">
-<a href="./posts/development.html" class="recent-post-link"> <strong>ordinalsimr</strong>: Simulations of Ordinal Endpoints: A Shiny App </a>
-</li>
-<li class="recent-post-item">
-<a href="./posts/first_release.html" class="recent-post-link"> <strong>{ordinalsimr} First Release</strong>: Final checks and the process of submitting to CRAN </a>
-</li>
-</ul>
+<div class="recent-posts-container">
+<div class="recent-post-card">
+<a href="./posts/monte_carlo_passing_test.html" class="recent-post-link"> <img src="./posts/monte_carlo_passing_test_files/figure-html/fig-sigmoid-derivatives-1.png" alt="Monte Carlo Simulation of Passing a Test" class="recent-post-image">
+<div class="recent-post-title">
+<p>Monte Carlo Simulation of Passing a Test</p>
 </div>
+</a><p><a href="./posts/monte_carlo_passing_test.html" class="recent-post-link"></a></p>
+</div>
+<div class="recent-post-card">
+<a href="./posts/example2025.html" class="recent-post-link"> <img src="images/neuroshepherd_melted.png" alt="Hello" class="recent-post-image">
+<div class="recent-post-title">
+<p>Hello</p>
+</div>
+</a><p><a href="./posts/example2025.html" class="recent-post-link"></a></p>
+</div>
+<div class="recent-post-card">
+<a href="./posts/development.html" class="recent-post-link"> <img src="./images/placeholder.png" alt="ordinalsimr" class="recent-post-image">
+<div class="recent-post-title">
+<p>ordinalsimr</p>
+</div>
+</a><p><a href="./posts/development.html" class="recent-post-link"></a></p>
+</div>
+</div>
+<style>
+.recent-posts-container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.recent-post-card {
+  flex: 1 1 calc(33.333% - 20px);
+  aspect-ratio: 1 / 1.5;
+  display: flex;
+}
+
+.recent-post-link {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative; /* needed for overlay positioning */
+}
+
+.recent-post-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.75s ease;
+  background-color: #ddd;
+}
+
+.recent-post-image:hover {
+  transform: scale(1.1);
+}
+
+/* Overlay title styling */
+.recent-post-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent dark background */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+/* On hover, show the title */
+.recent-post-link:hover .recent-post-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
 </section>
