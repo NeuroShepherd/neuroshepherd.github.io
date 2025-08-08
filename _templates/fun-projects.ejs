@@ -1,0 +1,82 @@
+<% 
+// Load the fun projects from the provided items
+const funProjects = items;
+%>
+
+<div class="fun-projects-list">
+<ul>
+<% for (let i = 0; i < funProjects.length; i++) { %>
+<li class="fun-project-item" data-description="<%= funProjects[i].description %>">
+<a href="<%= funProjects[i].link %>" class="fun-project-link">
+<%= funProjects[i].title %>
+</a>
+</li>
+<% } %>
+</ul>
+</div>
+
+<style>
+.fun-projects-list {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 0;
+}
+
+.fun-projects-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fun-project-item {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+  position: relative;
+  transition: color 0.1s ease;
+}
+
+.fun-project-item:hover {
+  color: #0056b3;
+}
+
+.fun-project-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: all 0.1s ease;
+}
+
+/* Custom tooltip using data-description instead of title */
+.fun-project-item[data-description]:hover::after {
+  content: attr(data-description);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f8f9fa;
+  color: #212529;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-size: 0.7rem;
+  white-space: normal;
+  z-index: 10;
+}
+
+.fun-project-item[data-description]:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #f8f9fa;
+}
+
+
+</style>

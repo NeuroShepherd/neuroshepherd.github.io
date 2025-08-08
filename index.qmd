@@ -28,6 +28,10 @@ listing:
     template: _templates/recent-posts.ejs
     contents: posts
     sort: "date desc"
+  - id: fun_projects
+    template: _templates/fun-projects.ejs
+    contents: fun_projects.yaml
+    sort: "date desc"
 
 ---
 
@@ -78,12 +82,8 @@ Pat is a passionate advocate for open science and reproducible research, with a 
 ::: {.g-col-6}
 ### Fun Projects {.center-text}
 
-[What Universities Have the Best Sprint Coaching?](https://neuroshepherd.github.io/sprint-coaching)
-
-[A Monte Carlo Simulation to Estimate if I Already Studied Enough](https://neuroshepherd.github.io/monte-carlo-simulation)
-
-[Analyzing Interrater Reliability of Tumor Measurement in Clinical Trials for my Master's Thesis](https://neuroshepherd.github.io/masters-thesis)
-
+::: {#fun_projects}
+:::
 
 :::
 
