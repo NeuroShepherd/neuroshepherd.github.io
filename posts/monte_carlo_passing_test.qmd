@@ -14,6 +14,9 @@ categories:
 ---
 
 ```{r}
+#| code-summary: Load R Libraries
+
+
 library(purrr)
 library(tidyr)
 library(ggplot2)
@@ -417,24 +420,24 @@ sigmoid_data %>%
 
 ```
 
-How can we derive where this point lies on any sigmoid function? Let's take a quick calculus detour:
+How can we *derive* where this point lies on any sigmoid function? Let's take a quick calculus detour:
 
-1. **First derivative:** represents the slope of the function in question. Also referred to as the "rate" of the function.
+[Thank you to LLMs for taking care of the heavy-lifting in actually deriving these equations.]{.aside}
 
-<!-- First derivative of the function \frac{L}{1 + e^{-k(x - x_0)}} -->
+1. **First derivative:** represents the slope of the function in question. Also referred to as the "rate" of the function. Taking the first derivative of the generalized sigmoid function in @eq-sigmoid-general, we get:
 
 $$
 \frac{d}{dx} P(x) = \frac{L k e^{-k(x - x_0)}}{(1 + e^{-k(x - x_0)})^2}
 $$ {#eq-sigmoid-first-derivative}
 
 
-2. **Second derivative:** represents the change in the slope of the function. Also referred to as the "acceleration" of the function.
+2. **Second derivative:** represents the change in the slope of the function. Also referred to as the "acceleration" of the function. Taking the second derivative of the generalized sigmoid function in @eq-sigmoid-general thus gives us:
 
 $$
 \frac{d^2}{dx^2} P(x) = \frac{L k^2 e^{-k(x - x_0)}(1 - e^{-k(x - x_0)})}{(1 + e^{-k(x - x_0)})^3}
 $$ {#eq-sigmoid-second-derivative}
 
-3. **Third derivative:** represents the change in the acceleration of the function. Also referred to as the "jerk" of the function.
+3. **Third derivative:** represents the change in the acceleration of the function. Also referred to as the "jerk" of the function. And finally, taking the third derivative of the generalized sigmoid function in @eq-sigmoid-general gives us:
 
 $$
 \frac{d^3}{dx^3} P(x) = \frac{L k^3 e^{-k(x - x_0)}(1 - 4e^{-k(x - x_0)} + e^{-2k(x - x_0)})}{(1 + e^{-k(x - x_0)})^4}
