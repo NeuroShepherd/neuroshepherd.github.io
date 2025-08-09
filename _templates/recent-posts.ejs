@@ -6,79 +6,71 @@ const recentPosts = items
   .slice(0, 3);
 %>
 
-<div class="recent-posts-container">
+<div class="container my-4">
+<div class="d-flex flex-wrap gap-3 justify-content-center">
 <% for (const post of recentPosts) { %>
-<div class="recent-post-card">
-<a href="<%= post.path %>" class="recent-post-link">
+<div class="card" style="position: relative;">
+<a href="<%= post.url %>" style="display: block; text-decoration: none; color: inherit;">
 <img src="<%= post.image || 'images/neuroshepherd_melted.png' %>" 
-alt="<%= post.title %>" 
-class="recent-post-image" />
-<div class="recent-post-title">
-<%= post.title %>
-</div>
+alt="<%= post.title %>" class="card-img-top">
+<div class="recent-post-title"><%= post.title %></div>
 </a>
 </div>
 <% } %>
 </div>
+</div>
 
 <style>
-.recent-posts-container {
-  display: flex;
-  gap: 20px;
-  width: 100%;
-  flex-wrap: nowrap;
-}
+    .card {
+      flex: 1 1 calc(33.333% - 1rem);
+      max-width: calc(33.333% - 1rem);
+      overflow: hidden; /* Prevents image overflow */
+      aspect-ratio: 1 / 1.5; /* Or whatever ratio you like */
+    }
 
-.recent-post-card {
-  flex: 1 1 calc(33.333% - 20px);
-  aspect-ratio: 1 / 1.5;
-  display: flex;
-}
+    .card-img-top {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Fill the space and crop */
+      aspect-ratio: 1 / 1.5; /* Or whatever ratio you like */
+      object-position: center;
+      transition: transform 0.75s ease;
+    }
 
-.recent-post-link {
-  display: flex;
-  flex: 1;
-  height: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative; /* needed for overlay positioning */
-}
+    .card-img-top:hover {
+      transform: scale(1.1);
+    }
 
-.recent-post-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: transform 0.75s ease;
-  background-color: #ddd;
-}
 
-.recent-post-image:hover {
-  transform: scale(1.1);
-}
+    .recent-post-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6); /* semi-transparent dark background */
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: all 0.3s ease;
+      font-size: clamp(0.3rem, 2vw, 0.8rem);
+    }
 
-/* Overlay title styling */
-.recent-post-title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.6); /* semi-transparent dark background */
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 10px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: all 0.3s ease;
-}
+    .card:hover .recent-post-title {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-/* On hover, show the title */
-.recent-post-link:hover .recent-post-title {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+    @media (max-width: 1000px) {
+      .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+        max-height: 200px; /* Optional: limit height on smaller screens */
+        aspect-ratio: 1 / .75; 
+      }
+    }
 </style>
 
