@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/fun_projects.html",
-    "items": []
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/posts/monte_carlo_passing_test.html",
@@ -22,5 +18,9 @@
       "/posts/first_release.html",
       "/posts/munich-guide-intro.html"
     ]
+  },
+  {
+    "listing": "/fun_projects.html",
+    "items": []
   }
 ]
