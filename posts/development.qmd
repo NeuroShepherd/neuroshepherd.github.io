@@ -1,7 +1,7 @@
 ---
 title: "ordinalsimr"
 description: "Simulations of Ordinal Endpoints: A Shiny App"
-image: ../images/placeholder.png
+image: https://raw.githubusercontent.com/NeuroShepherd/ordinalsimr/master/inst/app/www/favicon.png
 date: 2024-11-17T20:10:00Z
 year: 2024
 categories:
