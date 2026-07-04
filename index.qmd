@@ -23,19 +23,7 @@ about:
           ORCID
         href: "https://orcid.org/0000-0003-1769-7580"
 
-listing:  
-  - id: recent_posts
-    template: _templates/recent-posts.ejs
-    contents: posts
-    sort: "date desc"
-  - id: fun_projects
-    template: _templates/fun-projects.ejs
-    contents: fun_projects.yaml
-    sort: "date desc"
-
 ---
-
-{{< include partials/hero-image.html >}}
 
 
 ::: {.dark-content}
@@ -44,58 +32,3 @@ Hello there, dark-mode user.
 
 :::
 
-
-::: {#above-content}
-
-Pat is a passionate advocate for open science and reproducible research, with a focus on epidemiology and research software engineering. He is dedicated to making complex scientific concepts accessible to a broader audience through engaging and informative content.
-
-## Experience
-
-**LMU Open Science Center** | Developer | 2022 - Present
-
-- GitHub Organization Management
-- Open Source Tutorial Development
-
-**Boehringer Ingelheim** | Master's Thesis Student | 2025
-
-- Shiny App Development
-- Analysis of Clinical Trial Data
-
-**Novartis Pharma** | Research Intern | 2023
-
-- R Package Development
-- R Package Validation for Clinical Trials
-
-
-
-:::
-
-<br>
-<br>
-
-
-
-
-
-::: {.grid}
-
-::: {.g-col-6}
-### Fun Projects {.center-text}
-
-::: {#fun_projects}
-:::
-
-:::
-
-
-
-::: {.g-col-6}
-
-### Recent Posts {.center-text}
-
-::: {#recent_posts}
-:::
-
-:::
-
-:::
