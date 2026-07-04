@@ -1,10 +1,33 @@
 ---
 title: "About"
+image: images/neuroshepherd.png
+about:
+    template: solana
+    image-shape: rounded
+    image-alt: "NeuroShepherd placeholder image of an AI-generated German shepherd dog"
+    image-title: This is the NeuroShepherd
+    links:
+    - icon: book
+      text: ORCID
+      href: https://orcid.org/0000-0003-1769-7580
+    - icon: github
+      text: Github
+      href: https://github.com/NeuroShepherd
 ---
 
-I'm a data scientist and statistical programmer. My work focuses on turning messy data into clear answers, building reproducible pipelines, and writing software that makes analysis easier for others.
+I'm a statistical programmer and epidemiologist. My work focuses on building tools to simplify and improve the analysis of research data, spreading open science practices, and improving reproducibility in research.
 
-I'm the author of **{ordinalsimr}**, an R package for simulating ordinal data that's now on CRAN. My background spans clinical research, epidemiology, programming, and more.
+I tend to do statistics in R, create deployment projects in Python/SQL and distribute with Docker, and I write about statistics and simulations from time to time.
+
+
+## Experience
+
+| Company | Location | Role & Responsibilities |
+|---------|----------|------------------------|
+| LMU Open Science Center | Munich, Germany | Developer: create [technical solutions](https://github.com/lmu-osc) for open science and reproducible research |
+| Boehringer Ingelheim | Biberach, Germany | Master's Thesis: [*RECIST 1.1: An Analysis of the Classification Stability of a Tumor Measurement Scale in Oncology Clinical Trials*](https://neuroshepherd.github.io/masters-thesis/) |
+| Novartis Pharma | Basel, Switzerland | Internship: development of R package risk assessment tools and Shiny applications |
+| LMU IBE | Munich, Germany | Research Assistant: development of [**{ordinalsimr}**](https://neuroshepherd.github.io/ordinalsimr/) R package for simulating ordinal outcomes data |
 
 ## Tools & Skills
 
@@ -12,7 +35,4 @@ I'm the author of **{ordinalsimr}**, an R package for simulating ordinal data th
 
 **Areas:** Statistical modeling, simulation, data visualization, R package development, web scraping
 
-## Contact & Links
 
-- **GitHub:** [NeuroShepherd](https://github.com/NeuroShepherd)
-- **ORCID:** [0000-0003-1769-7580](https://orcid.org/0000-0003-1769-7580)
