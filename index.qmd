@@ -1,13 +1,21 @@
 ---
-title: "About Me"
-pagetitle: "About"
-
+title: "Hi, I'm Pat"
 ---
 
+I'm a data scientist and statistical programmer who builds tools for understanding the world through data. I work in R, write about statistics and simulations, and occasionally build R packages.
 
-::: {.dark-content}
-
-Hello there, dark-mode user.
-
+::: {style="display: flex; gap: 1.5rem; margin-top: 1.5rem;"}
+[See my projects](projects.qmd){.btn .btn-outline-primary} [Read the blog](posts.qmd){.btn .btn-outline-primary}
 :::
 
+## Featured Projects
+
+|  |  |
+|------|------|
+| **Have I Studied Enough to Pass?** | A Monte Carlo simulation exploring exam performance — published as [a blog post](posts/monte-carlo-passing-test.qmd). |
+| **{ordinalsimr}** | An R package for simulating ordinal data. My first CRAN package. |
+| **The Best Sprint Coaching** | Web scraping and analysis of sprint coaching data *(in progress)*. |
+
+## About This Site
+
+In-progress.

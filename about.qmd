@@ -1,5 +1,18 @@
 ---
 title: "About"
-title-block-banner: "#d3ad14ff"
-toc: false
 ---
+
+I'm a data scientist and statistical programmer. My work focuses on turning messy data into clear answers, building reproducible pipelines, and writing software that makes analysis easier for others.
+
+I'm the author of **{ordinalsimr}**, an R package for simulating ordinal data that's now on CRAN. My background spans clinical research, epidemiology, programming, and more.
+
+## Tools & Skills
+
+**Languages:** R, Python, SQL, Go, HTML/CSS
+
+**Areas:** Statistical modeling, simulation, data visualization, R package development, web scraping
+
+## Contact & Links
+
+- **GitHub:** [NeuroShepherd](https://github.com/NeuroShepherd)
+- **ORCID:** [0000-0003-1769-7580](https://orcid.org/0000-0003-1769-7580)

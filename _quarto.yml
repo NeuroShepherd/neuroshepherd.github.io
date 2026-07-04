@@ -2,53 +2,40 @@ project:
   type: website
 
 website:
-  title: "NeuroShepherd's Blog"
-  site-url: "https://neuroshepherd.github.io"
-  search: true
-  description: "A collection of data projects and blog posts about cool programming things"
-  announcement:
-    icon: info-circle
-    dismissable: true
-    content: "**Website still very much under construction**"
-    type: primary
-    position: below-navbar
+  title: "NeuroShepherd"
+  site-url: https://neuroshepherd.github.io
+  description: "Data science, coding, and statistical programming"
+  image: images/neuroshepherd.png
+
   navbar:
-    title: false
+    title: "NeuroShepherd"
     logo: images/neuroshepherd.png
-    logo-alt: "NeuroShepherd Logo"
-    # logo-href: index.qmd # can put a silly different link here if desired
     left:
       - href: index.qmd
         text: Home
       - about.qmd
       - posts.qmd
-      # - open_science.qmd
-      - fun-projects.qmd
+      - projects.qmd
     right:
+      - icon: github
+        href: https://github.com/NeuroShepherd
       - icon: rss
         href: posts.xml
-    tools:
+
+  page-footer:
+    left: "© 2026 Pat Callahan"
+    center: "Built with [Quarto](https://quarto.org)"
+    right:
       - icon: github
-        menu:
-          - text: GitHub Profile
-            href: https://github.com/NeuroShepherd
-          - text: Source Code
-            href: https://github.com/NeuroShepherd/neuroshepherd.github.io
+        href: https://github.com/NeuroShepherd/neuroshepherd.github.io
+
+  search: true
 
 format:
   html:
-    toc: true
-    toc-depth: 3
-    grid:
-      sidebar-width: 300px
-      body-width: 900px
-      margin-width: 200px
-      gutter-width: 1.5rem
-    linestretch: 1.25
-    fontsize: 1.08em
-    respect-user-color-scheme: true
-    linkcolor: "#F97316"
-    title-prefix: "NeuroShepherd 🐶"
-    include-in-header:
-      - text: |
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    theme: cosmo
+    toc: false
+    code-copy: true
+    code-overflow: scroll
+    linestretch: 1.4
+    fontsize: 1.05em
