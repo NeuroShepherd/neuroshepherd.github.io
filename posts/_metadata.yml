@@ -1,8 +1,8 @@
 freeze: true
-author: 'Pat'
-page-layout: article
+author: "Pat"
+# page-layout: article
 comments:
-  giscus: 
+  giscus:
     repo: NeuroShepherd/NeuroShepherd.github.io
     category: "Blog Post Comments"
     mapping: "pathname"
@@ -11,27 +11,24 @@ comments:
     openSidebar: false
     showHighlights: whenSidebarOpen
 
-format:
-  html: 
-    grid:
-      sidebar-width: 300px
-      body-width: 1000px
-      margin-width: 150px
-      gutter-width: 1.5rem
-    code-overflow: wrap
-    code-fold: true
-    code-summary: "Show Me the Code!"
-    code-tools: true
-    fig-width: 8
-    fig-height: 6
-
+# format:
+#   html:
+#     grid:
+#       sidebar-width: 300px
+#       body-width: 1000px
+#       margin-width: 150px
+#       gutter-width: 1.5rem
+#     code-overflow: wrap
+#     code-fold: true
+#     code-summary: "Show Me the Code!"
+#     code-tools: true
+#     fig-width: 8
+#     fig-height: 6
 
 toc: true
 toc-location: left
 toc-depth: 2
 toc-title: "What You'll Learn"
-
-title-block-banner: "#8a14d3ff" # default banner is a purple gradient
 
 execute:
   warning: false

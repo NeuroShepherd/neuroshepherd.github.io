@@ -1,10 +1,10 @@
 ---
 title: Fun Projects
-toc: false
 listing:
   contents: projects.yaml
   type: default
-  sort: "date desc"
+  categories: true
+  # sort: "date desc"
   image-placeholder: images/neuroshepherd.png
 ---
 
