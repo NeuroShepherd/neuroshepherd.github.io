@@ -1,9 +1,8 @@
 ---
 title: Fun Projects
-title-block-banner: "#d31414ff"
 toc: false
 listing:
-  contents: projects.yml
+  contents: projects.yaml
   type: default
   sort: "date desc"
   image-placeholder: images/neuroshepherd.png
