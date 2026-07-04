@@ -2,6 +2,7 @@
 title: "About"
 image: images/neuroshepherd.png
 about:
+    id: hero-heading
     template: solana
     image-shape: rounded
     image-alt: "NeuroShepherd placeholder image of an AI-generated German shepherd dog"
@@ -15,10 +16,20 @@ about:
       href: https://github.com/NeuroShepherd
 ---
 
+:::{#hero-heading}
+
 I'm a statistical programmer and epidemiologist. My work focuses on building tools to simplify and improve the analysis of research data, spreading open science practices, and improving reproducibility in research.
 
 I tend to do statistics in R, create deployment projects in Python/SQL and distribute with Docker, and I write about statistics and simulations from time to time.
 
+## Tools & Skills
+
+**Languages:** R, Python, SQL, Go, HTML/CSS
+
+**Areas:** Statistical modeling, simulation, data visualization, R package development, web scraping
+
+
+:::
 
 ## Experience
 
@@ -29,10 +40,5 @@ I tend to do statistics in R, create deployment projects in Python/SQL and distr
 | Novartis Pharma | Basel, Switzerland | Internship: development of R package risk assessment tools and Shiny applications |
 | LMU IBE | Munich, Germany | Research Assistant: development of [**{ordinalsimr}**](https://neuroshepherd.github.io/ordinalsimr/) R package for simulating ordinal outcomes data |
 
-## Tools & Skills
-
-**Languages:** R, Python, SQL, Go, HTML/CSS
-
-**Areas:** Statistical modeling, simulation, data visualization, R package development, web scraping
 
 
