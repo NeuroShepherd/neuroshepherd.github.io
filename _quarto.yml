@@ -7,8 +7,15 @@ website:
   description: "Data science, coding, and statistical programming"
   image: images/neuroshepherd.png
 
+  # https://quarto.org/docs/websites/website-tools.html#open-graph
+  open-graph:
+    locale: en_US
+
+  # https://quarto.org/docs/websites/website-llms.html#enabling-llms.txt
+  llms-txt: true
+
   navbar:
-    title: "NeuroShepherd"
+    title: "navbar title"
     logo: images/neuroshepherd.png
     left:
       - href: index.qmd
@@ -33,7 +40,9 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: flatly
+      dark: darkly
     toc: false
     code-copy: true
     code-overflow: scroll
