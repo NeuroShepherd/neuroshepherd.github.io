@@ -47,13 +47,15 @@ format:
       light: github
       dark: arrow
     toc: false
-    code-copy: true
-    code-overflow: scroll
     linestretch: 1.4
     fontsize: 1.05em
     link-external-newwindow: true
     link-external-icon: true
     # code-links: repo
     anchor-sections: true
-    code-line-numbers: true
+    # code-line-numbers: true
     code-link: true
+    code-fold: true
+    code-summary: "Show Me the Code!"
+    code-copy: true
+    code-overflow: wrap

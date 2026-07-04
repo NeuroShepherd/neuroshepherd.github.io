@@ -21,7 +21,9 @@ library(ggplot2)
 library(dplyr)
 
 theme_set(theme_minimal())
-theme_update(plot.background = element_rect(color = "#06005eff", linewidth = 1))
+theme_update(
+  plot.background = element_rect(color = "#06005eff", linewidth = 1)
+)
 ```
 
 ## Context
