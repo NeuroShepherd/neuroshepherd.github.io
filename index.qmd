@@ -10,12 +10,12 @@ I'm a data scientist and statistical programmer who builds tools for understandi
 :::
 
 
-:::{.column-screen .brand-banner}
+:::{.column-screen .brand-banner-color}
 :::{.column-page}
 
 ::: {.row}
 ::: {.col-md-6}
-Maybe an image here but i'm going to include some longer content here to see if the row elements wrap on top of each other or what happens
+Maybe an image here 
 
 :::
 
@@ -35,7 +35,7 @@ Maybe an image here but i'm going to include some longer content here to see if 
 <!-- switch to software/projects here -->
 
 
-:::{.column-screen}
+:::{.column-screen .brand-banner}
 :::{.column-page}
 
 ::: {.row}
@@ -59,7 +59,7 @@ Maybe an image here
 
 <!-- final banner here with some color -->
 
-:::{.column-screen .brand-banner}
+:::{.column-screen .brand-banner-color}
 :::{.column-page}
 
 ::: {.row}
