@@ -21,7 +21,7 @@ website:
 
   navbar:
     title: false
-    logo: images/neuroshepherd.png
+    logo: medium
     left:
       - href: index.qmd
         text: Home

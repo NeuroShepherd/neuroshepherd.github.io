@@ -34,4 +34,7 @@ color:
 logo:
   images:
     icon: images/person-running-solid-full.svg
+    default: images/neuroshepherd.png
   small: icon
+  medium: default
+  large: default
