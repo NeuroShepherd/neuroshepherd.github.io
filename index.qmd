@@ -15,7 +15,7 @@ I'm a data scientist and statistical programmer who builds tools for understandi
 :::{.column-page}
 
 ::: {.row}
-::: {.col-md-6}
+::: {.col-md-6 .d-none .d-sm-block}
 ::: {.banner-image-container}
 ![](images/posts.png){.banner-image}
 :::
@@ -42,7 +42,7 @@ I'm a data scientist and statistical programmer who builds tools for understandi
 ::: {.icon-block}
   <i class="fa-solid fa-code"></i>
   
-###  Programming
+###  Code
 
 :::
 
@@ -50,7 +50,7 @@ I'm a data scientist and statistical programmer who builds tools for understandi
 ::: {.col-sm-4}
 
 ::: {.icon-block}
-  <i class="fa-solid fa-person-running"></i>
+  <i class="fa-solid fa-mug-saucer"></i>
   
 ###  Hobbies
 
@@ -83,7 +83,7 @@ Some info about projects and software here or three most recent
 :::
 
 
-::: {.col-md-6}
+::: {.col-md-6 .d-none .d-sm-block}
 ::: {.banner-image-container}
 ![](images/placeholder.png){.banner-image}
 :::
@@ -101,7 +101,7 @@ Some info about projects and software here or three most recent
 :::{.column-page}
 
 ::: {.row}
-::: {.col-md-6}
+::: {.col-md-6 .d-none .d-sm-block}
 ::: {.banner-image-container}
 ![](images/neuroshepherd.png){.banner-image}
 :::

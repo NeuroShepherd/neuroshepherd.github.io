@@ -28,6 +28,7 @@ color:
     peach: "#e3bb98"
     lavender: "#9988A1"
     earth: "#8a2b0e"
+    white: "#ffffff"
   primary: terracotta
   secondary: earth
   tertiary: lavender
