@@ -318,12 +318,12 @@ Listing 3: Fitting a Sigmoid Model to the Data
       model: passing_probability ~ L/(1 + exp(-k * (number_correct_practice -     x0)))
        data: results_with_ci
             L         k        x0 
-      1.00341   0.06784 154.17446 
-     residual sum-of-squares: 0.0118
+      1.00324   0.06791 154.13056 
+     residual sum-of-squares: 0.01105
 
     Algorithm "port", convergence message: both X-convergence and relative convergence (5)
 
-The sigmoid model has an \\L\\ value of 1.0034, a \\k\\ value of 0.0678, and an \\x_0\\ value of 154.1745.
+The sigmoid model has an \\L\\ value of 1.0032, a \\k\\ value of 0.0679, and an \\x_0\\ value of 154.1306.
 
 \\L\\ technically should not be greater than 1, but in this case it is ever so slightly above 1 simply as a result of the fitting process. I’m going to offend mathematicians (and probably statisticians) here and simply make this 1. Meanwhile, \\x_0\\ came out to essentially be the value of 154 that it should be, and I will likewise round this down to 154 for the modeling. The key parameter we gain from modeling is \\k\\, which is the steepness of the curve. A larger \\k\\ value indicates a steeper curve, meaning that the probability of passing the test increases more rapidly as the number of correct answers on the practice test increases. A smaller \\k\\ value indicates a flatter curve, meaning that the probability of passing the test increases more slowly as the number of correct answers on the practice test increases.
 
