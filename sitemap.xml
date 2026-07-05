@@ -2,38 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://neuroshepherd.github.io/index.html</loc>
-    <lastmod>2025-08-13T21:58:35.434Z</lastmod>
+    <lastmod>2026-07-05T11:30:19.584Z</lastmod>
   </url>
   <url>
-    <loc>https://neuroshepherd.github.io/posts.html</loc>
-    <lastmod>2025-08-13T21:58:35.434Z</lastmod>
+    <loc>https://neuroshepherd.github.io/projects/masters-thesis-interrater-reliability.html</loc>
+    <lastmod>2026-07-05T11:30:19.587Z</lastmod>
   </url>
   <url>
-    <loc>https://neuroshepherd.github.io/posts/monte_carlo_passing_test.html</loc>
-    <lastmod>2025-08-13T21:58:35.435Z</lastmod>
-  </url>
-  <url>
-    <loc>https://neuroshepherd.github.io/posts/first_release.html</loc>
-    <lastmod>2025-08-13T21:58:35.435Z</lastmod>
-  </url>
-  <url>
-    <loc>https://neuroshepherd.github.io/fun_projects.html</loc>
-    <lastmod>2025-08-13T21:58:35.417Z</lastmod>
-  </url>
-  <url>
-    <loc>https://neuroshepherd.github.io/posts/munich-guide-intro.html</loc>
-    <lastmod>2025-08-13T21:58:35.435Z</lastmod>
-  </url>
-  <url>
-    <loc>https://neuroshepherd.github.io/posts/example2025.html</loc>
-    <lastmod>2025-08-13T21:58:35.435Z</lastmod>
-  </url>
-  <url>
-    <loc>https://neuroshepherd.github.io/posts/development.html</loc>
-    <lastmod>2025-08-13T21:58:35.435Z</lastmod>
+    <loc>https://neuroshepherd.github.io/projects/have-i-studied-enough.html</loc>
+    <lastmod>2026-07-05T11:30:19.587Z</lastmod>
   </url>
   <url>
     <loc>https://neuroshepherd.github.io/about.html</loc>
-    <lastmod>2025-08-13T21:58:35.417Z</lastmod>
+    <lastmod>2026-07-05T11:30:19.575Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/posts/munich-guide-intro.html</loc>
+    <lastmod>2026-07-05T11:30:19.585Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/posts/first-release.html</loc>
+    <lastmod>2026-07-05T11:30:19.585Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/posts/monte-carlo-passing-test.html</loc>
+    <lastmod>2026-07-05T11:30:19.585Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/projects.html</loc>
+    <lastmod>2026-07-05T11:30:19.585Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/posts/development.html</loc>
+    <lastmod>2026-07-05T11:30:19.585Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/posts/example2025.html</loc>
+    <lastmod>2026-07-05T11:30:19.585Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/posts.html</loc>
+    <lastmod>2026-07-05T11:30:19.584Z</lastmod>
+  </url>
+  <url>
+    <loc>https://neuroshepherd.github.io/projects/ordinalsimr.html</loc>
+    <lastmod>2026-07-05T11:30:19.587Z</lastmod>
   </url>
 </urlset>

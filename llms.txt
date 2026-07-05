@@ -1,0 +1,18 @@
+# NeuroShepherd
+
+> Data science, coding, and statistical programming
+
+## Pages
+
+- [Hi, I'm Pat](https://neuroshepherd.github.io/index.llms.md)
+- [Master's Thesis: Interrater Reliability of Cancer Tumor Response](https://neuroshepherd.github.io/projects/masters-thesis-interrater-reliability.llms.md)
+- [Have I Studied Enough to Pass?](https://neuroshepherd.github.io/projects/have-i-studied-enough.llms.md)
+- [About](https://neuroshepherd.github.io/about.llms.md)
+- [Munich Student Guide](https://neuroshepherd.github.io/posts/munich-guide-intro.llms.md)
+- [{ordinalsimr} First Release](https://neuroshepherd.github.io/posts/first-release.llms.md)
+- [Monte Carlo Simulation of Passing a Test](https://neuroshepherd.github.io/posts/monte-carlo-passing-test.llms.md)
+- [Fun Projects](https://neuroshepherd.github.io/projects.llms.md)
+- [ordinalsimr](https://neuroshepherd.github.io/posts/development.llms.md)
+- [Hello](https://neuroshepherd.github.io/posts/example2025.llms.md)
+- [Posts](https://neuroshepherd.github.io/posts.llms.md)
+- [{ordinalsimr}: My First R Package on CRAN](https://neuroshepherd.github.io/projects/ordinalsimr.llms.md)

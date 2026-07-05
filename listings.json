@@ -1,26 +1,20 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/projects.html",
     "items": [
-      "/posts/monte_carlo_passing_test.html",
-      "/posts/example2025.html",
-      "/posts/development.html",
-      "/posts/first_release.html",
-      "/posts/munich-guide-intro.html"
+      "/projects/have-i-studied-enough.html",
+      "/projects/masters-thesis-interrater-reliability.html",
+      "/projects/ordinalsimr.html"
     ]
   },
   {
     "listing": "/posts.html",
     "items": [
-      "/posts/monte_carlo_passing_test.html",
+      "/posts/monte-carlo-passing-test.html",
       "/posts/example2025.html",
       "/posts/development.html",
-      "/posts/first_release.html",
+      "/posts/first-release.html",
       "/posts/munich-guide-intro.html"
     ]
-  },
-  {
-    "listing": "/fun_projects.html",
-    "items": []
   }
 ]
