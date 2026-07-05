@@ -1,73 +1,60 @@
 project:
   type: website
-  
 
 website:
-  title: "NeuroShepherd's Blog"
-  site-url: "https://neuroshepherd.github.io"
+  title: NeuroShepherd
+  site-url: https://neuroshepherd.github.io
+  description: "Data science, coding, and statistical programming"
+  image: images/neuroshepherd.png
   search: true
-  description: "A collection of data projects and blog posts about cool programming things"
-  page-footer: 
-    center : |
-        NeuroShepherd's Blog <br>
-        A collection of data projects and blog posts about programming.
-        <ul class="footer-links">
-          <li><a href="https://github.com/NeuroShepherd">GitHub</a></li>
-          <li><a href="https://neuroshepherd.github.io/posts.xml">RSS Feed</a></li>
-          <li><a href="/about.html">About</a></li>
-        </ul>
-        &copy; 2025 NeuroShepherd. All rights reserved.
-  announcement: 
-    icon: info-circle
-    dismissable: true
-    content: "**Website still very much under construction**"
-    type: primary
-    position: below-navbar
+  # https://quarto.org/docs/websites/website-tools.html#open-graph
+  open-graph:
+    locale: en_US
+  # https://quarto.org/docs/websites/website-llms.html#enabling-llms.txt
+  llms-txt: true
+  page-footer:
+    left: "© 2026 Pat Callahan"
+    center: "Built with [Quarto](https://quarto.org)"
+    right:
+      - icon: github
+        href: https://github.com/NeuroShepherd/neuroshepherd.github.io
+
   navbar:
     title: false
-    logo: images/neuroshepherd.png
-    logo-alt: "NeuroShepherd Logo"
-    # logo-href: index.qmd # can put a silly different link here if desired
+    background: primary
+    logo: medium
     left:
       - href: index.qmd
         text: Home
       - about.qmd
       - posts.qmd
-      # - open_science.qmd
-      - fun_projects.qmd
+      - projects.qmd
     right:
+      - icon: github
+        menu:
+          - text: See the Source Code
+            href: https://github.com/NeuroShepherd/neuroshepherd.github.io
+          - text: Report a Bug
+            href: https://github.com/NeuroShepherd/neuroshepherd.github.io/issues
       - icon: rss
         href: posts.xml
-    tools:
-      - icon: github
-        menu: 
-          - text: GitHub Profile
-            href: https://github.com/NeuroShepherd
-          - text: Source Code
-            href: https://github.com/NeuroShepherd/neuroshepherd.github.io
 
-      
 format:
   html:
-    theme: 
-      - css/styles.scss
-    css: css/styles.css
-    toc: true
-    toc-depth: 3
-    grid:
-      sidebar-width: 300px
-      body-width: 900px
-      margin-width: 200px
-      gutter-width: 1.5rem
-    linestretch: 1.25
-    fontsize: 1.08em
-    respect-user-color-scheme: true
-    linkcolor: "#F97316"
-    title-prefix: "NeuroShepherd 🐶"
-    include-in-header:
-      - text: |
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-
-
-
+    theme:
+      light: [flatly, brand, _custom.scss]
+      dark: [darkly, brand, _custom.scss]
+    syntax-highlighting:
+      light: github
+      dark: arrow
+    toc: false
+    link-external-newwindow: true
+    link-external-icon: true
+    # code-links: repo
+    anchor-sections: true
+    # code-line-numbers: true
+    code-link: true
+    code-fold: true
+    code-summary: "Show Me the Code!"
+    code-copy: true
+    code-overflow: wrap

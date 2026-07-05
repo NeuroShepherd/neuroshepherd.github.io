@@ -1,101 +1,17 @@
 ---
-title: "About Me"
-pagetitle: "About"
-format:
-  html:
-    grid:
-      sidebar-width: 100px
-      body-width: 1050px
-      margin-width: 200px
-      gutter-width: 2em
-    css: css/reset-padding.css
-about:
-    template: trestles
-    id: above-content
-    image: images/placeholder.png
-    # image-shape: rectangle, round, rounded
-    links:
-      - icon: github
-        text: "GitHub"
-        href: "https://github.com/neuroshepherd"
-      - text: |
-          <i class="fa-brands fa-orcid" style="color: #A6CE39;"></i>
-          ORCID
-        href: "https://orcid.org/0000-0003-1769-7580"
-
-listing:  
-  - id: recent_posts
-    template: _templates/recent-posts.ejs
-    contents: posts
-    sort: "date desc"
-  - id: fun_projects
-    template: _templates/fun-projects.ejs
-    contents: fun_projects.yaml
-    sort: "date desc"
-
+title: "Hi, I'm Pat"
 ---
 
-{{< include partials/hero-image.html >}}
+I'm a data scientist and statistical programmer who builds tools for understanding the world through data. I work in R, write about statistics and simulations, and occasionally build R packages.
 
-
-::: {.dark-content}
-
-Hello there, dark-mode user.
-
+::: {style="display: flex; gap: 1.5rem; margin-top: 1.5rem;"}
+[About Me](about.qmd){.btn .btn-outline-secondary} [See my projects](projects.qmd){.btn .btn-outline-secondary} [Read the blog](posts.qmd){.btn .btn-outline-secondary}
 :::
 
 
-::: {#above-content}
+## About This Site
 
-Pat is a passionate advocate for open science and reproducible research, with a focus on epidemiology and research software engineering. He is dedicated to making complex scientific concepts accessible to a broader audience through engaging and informative content.
-
-## Experience
-
-**LMU Open Science Center** | Developer | 2022 - Present
-
-- GitHub Organization Management
-- Open Source Tutorial Development
-
-**Boehringer Ingelheim** | Master's Thesis Student | 2025
-
-- Shiny App Development
-- Analysis of Clinical Trial Data
-
-**Novartis Pharma** | Research Intern | 2023
-
-- R Package Development
-- R Package Validation for Clinical Trials
+In-progress.
 
 
-
-:::
-
-<br>
-<br>
-
-
-
-
-
-::: {.grid}
-
-::: {.g-col-6}
-### Fun Projects {.center-text}
-
-::: {#fun_projects}
-:::
-
-:::
-
-
-
-::: {.g-col-6}
-
-### Recent Posts {.center-text}
-
-::: {#recent_posts}
-:::
-
-:::
-
-:::
+### Level three

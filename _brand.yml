@@ -1,0 +1,54 @@
+# https://quarto.org/docs/authoring/brand.html
+# https://posit-dev.github.io/brand-yml/
+
+typography:
+  fonts:
+    - family: Inter
+      source: google
+      weight: [400, 500, 600, 700]
+    - family: "JetBrains Mono"
+      source: google
+      weight: [400, 500]
+  base:
+    family: Inter
+    size: 1.15rem
+    line-height: 1.5
+  headings:
+    family: Inter
+    weight: 600
+  monospace:
+    family: '"JetBrains Mono", "Fira Code", monospace'
+  link:
+    color: peach
+
+# https://www.figma.com/resource-library/color-combinations/
+color:
+  palette:
+    terracotta: "#e35336"
+    peach: "#e3bb98"
+    lavender: "#9988A1"
+    earth: "#8a2b0e"
+  primary: terracotta
+  secondary: earth
+  tertiary: lavender
+  light: peach
+
+logo:
+  images:
+    icon:
+      path: images/person-running-solid-full.svg
+      alt: "Person running icon"
+    default:
+      path: images/neuroshepherd.png
+      alt: "NeuroShepherd logo"
+  small: icon
+  medium: default
+  large: default
+
+meta:
+  name:
+    full: Pat
+  link:
+    home: https://neuroshepherd.github.io
+    github: https://github.com/NeuroShepherd
+    orcid: https://orcid.org/0000-0003-1769-7580

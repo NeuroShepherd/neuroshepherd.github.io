@@ -1,11 +1,10 @@
 ---
 title: "Monte Carlo Simulation of Passing a Test"
-description: "I had to take a test recently, and I wanted to see if I could stop studying already..."
+description: "Haven't I studied enough already?"
 date: 2025-08-06
 year: 2025
 date-modified: last-modified
 image: monte_carlo_passing_test_files/figure-html/fig-sigmoid-derivatives-1.png
-title-block-banner: "#8a14d3ff" # this can be a different color or an image
 draft: false
 categories:
     - Monte Carlo
@@ -16,15 +15,18 @@ categories:
 ```{r}
 #| code-summary: Load R Libraries
 
-
 library(purrr)
 library(tidyr)
 library(ggplot2)
 library(dplyr)
 
 theme_set(theme_minimal())
-theme_update(plot.background = element_rect(color = "#06005eff", linewidth = 1))
-
+theme_update(
+  plot.background = element_rect(
+    color = "#06005eff",
+    linewidth = 1
+  )
+)
 ```
 
 ## Context
@@ -62,14 +64,15 @@ n_simulations <- 100000
 
 
 # create a vector to represent practice results
-practice_results <- c(rep(1, correct_answers), rep(0, total_questions - correct_answers))
+practice_results <- c(
+  rep(1, correct_answers),
+  rep(0, total_questions - correct_answers)
+)
 
 # sample 33 (i.e. test_questions) of those questions without replacement, and replicate this 10000 times
 simulation_results <- replicate(n_simulations, {
   sum(sample(practice_results, test_questions, replace = FALSE))
 })
-
-
 ```
 
 
@@ -91,12 +94,14 @@ A simple first step is to plot the distribution of the number of correct answers
 #| fig-cap: "Distribution of Correct Answers in Simulated Tests"
 
 data.frame(correct_answers = simulation_results) %>%
-mutate(passed = correct_answers >= 17) %>%
-ggplot(aes(x = correct_answers, fill = passed)) +
+  mutate(passed = correct_answers >= 17) %>%
+  ggplot(aes(x = correct_answers, fill = passed)) +
   geom_histogram(binwidth = 1, color = "#241a1aff", alpha = 0.7) +
-  labs(title = "Distribution of Correct Answers in Simulated Tests",
-       x = "Number of Correct Answers",
-       y = "Frequency") +
+  labs(
+    title = "Distribution of Correct Answers in Simulated Tests",
+    x = "Number of Correct Answers",
+    y = "Frequency"
+  ) +
   geom_vline(xintercept = 17, linetype = "dashed", color = "red", size = 1) +
   theme(
     plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
@@ -135,9 +140,8 @@ First, let's set up the simulation for all possible practice test scores:
 #| cache: true
 #| code-fold: show
 
-
 # Create empty matrix to hold results
-results_mat <- matrix(0, 308, 308) 
+results_mat <- matrix(0, 308, 308)
 # Fill lower triangle with 1s to represent valid practice test scores
 results_mat[lower.tri(results_mat)] <- 1
 # Transpose the matrix to have practice test scores as rows and simulation results as columns
@@ -146,19 +150,16 @@ results_mat <- t(results_mat)
 results_mat <- cbind(results_mat, 1)
 
 
-
 # Run simulations for all practice test scores
 simulation_all_levels <- results_mat %>%
   as.data.frame() %>%
   tibble::tibble() %>%
   purrr::map(
-    ~replicate(
-      10000, 
+    ~ replicate(
+      10000,
       sum(sample(.x, 33, replace = FALSE))
     )
   )
-
-
 ```
 
 @lst-monte-carlo-simulation-all-levels can be thought of in a few different steps, First, I create an empty matrix with 308 rows and 308 columns, where each row represents a different number of correct answers on the practice test (from 0 to 307--not to 308, but we'll clarify this in a moment)). The lower triangle of the matrix is then filled with `1`s which means that each row represents a test score with one more correct answer than the previous row. However, I don't like to have the rows representing the practice tests, and find it preferable to have the practice test scores as columns, so I transpose the matrix with `t()`. Finally, I add a last column to represent the case where all questions on the practice test were answered correctly (i.e., 308 correct answers).
@@ -173,7 +174,6 @@ So, what can we do with these results? We can calculate the probability of passi
 #| fig-cap: "Probability of Passing the Test Based on Practice Test Scores"
 #| fig-width: 8
 #| fig-height: 8
-
 
 # Ggplot only
 
@@ -197,13 +197,12 @@ So, what can we do with these results? We can calculate the probability of passi
 #     y = "Probability of Passing"
 #   )
 
-
 ## Plotly solution
 
 results_with_ci <- simulation_all_levels %>%
-  set_names(0:(length(simulation_all_levels) - 1)) %>%  # Name the list elements
+  set_names(0:(length(simulation_all_levels) - 1)) %>% # Name the list elements
   map_dfr(
-    ~{
+    ~ {
       successes <- sum(.x >= 17)
       trials <- length(.x)
       proportion <- successes / trials
@@ -219,10 +218,8 @@ results_with_ci <- simulation_all_levels %>%
   mutate(number_correct_practice = as.numeric(number_correct_practice))
 
 
-
 ribbon_plot <- results_with_ci %>%
-  mutate(upper_ci = round(upper_ci, 4),
-    lower_ci = round(lower_ci, 4)) %>%
+  mutate(upper_ci = round(upper_ci, 4), lower_ci = round(lower_ci, 4)) %>%
   rename(
     "No. Correct Practice" = number_correct_practice,
     "Passing Probability" = passing_probability,
@@ -230,7 +227,11 @@ ribbon_plot <- results_with_ci %>%
     "Upper 95% CI" = upper_ci
   ) %>%
   ggplot(aes(x = `No. Correct Practice`, y = `Passing Probability`)) +
-  geom_ribbon(aes(ymin = `Lower 95% CI`, ymax = `Upper 95% CI`), alpha = 0.4, fill = "blue") +
+  geom_ribbon(
+    aes(ymin = `Lower 95% CI`, ymax = `Upper 95% CI`),
+    alpha = 0.4,
+    fill = "blue"
+  ) +
   theme(
     plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
     axis.text = element_text(size = 14),
@@ -241,11 +242,10 @@ ribbon_plot <- results_with_ci %>%
     subtitle = "Across All Possible Practice Test Scores",
     x = "Number of Correct Answers on Practice Test",
     y = "Probability of Passing"
-  ) 
+  )
 
 
-plotly::ggplotly(ribbon_plot) 
-
+plotly::ggplotly(ribbon_plot)
 ```
 
 
@@ -303,7 +303,6 @@ With this, let's first fit a sigmoid model to our data in R so we have actual pa
 #   upper = c(k = 10)
 # )
 
-
 sigmoid_model <- nls(
   passing_probability ~ L / (1 + exp(-k * (number_correct_practice - x0))),
   data = results_with_ci,
@@ -315,7 +314,11 @@ sigmoid_model <- nls(
   control = nls.control(maxiter = 200),
   algorithm = "port",
   lower = c(L = 0, k = 0, x0 = min(results_with_ci$number_correct_practice)),
-  upper = c(L = 1.5 * max(results_with_ci$passing_probability, na.rm = TRUE), k = 10, x0 = max(results_with_ci$number_correct_practice))
+  upper = c(
+    L = 1.5 * max(results_with_ci$passing_probability, na.rm = TRUE),
+    k = 10,
+    x0 = max(results_with_ci$number_correct_practice)
+  )
 )
 
 sigmoid_model
@@ -356,11 +359,19 @@ sigmoid_derivative <- function(x, L = 1, k = 1, x0 = 0) {
 }
 
 sigmoid_second_derivative <- function(x, L = 1, k = 1, x0 = 0) {
-  k^2 * L * exp(-k * (x - x0)) * (1 - exp(-k * (x - x0))) / (1 + exp(-k * (x - x0)))^3
+  k^2 *
+    L *
+    exp(-k * (x - x0)) *
+    (1 - exp(-k * (x - x0))) /
+    (1 + exp(-k * (x - x0)))^3
 }
 
 sigmoid_third_derivative <- function(x, L = 1, k = 1, x0 = 0) {
-  k^3 * L * exp(-k * (x - x0)) * (1 - 4 * exp(-k * (x - x0)) + exp(-2 * k * (x - x0))) / (1 + exp(-k * (x - x0)))^4
+  k^3 *
+    L *
+    exp(-k * (x - x0)) *
+    (1 - 4 * exp(-k * (x - x0)) + exp(-2 * k * (x - x0))) /
+    (1 + exp(-k * (x - x0)))^4
 }
 
 # Generate data for the plot
@@ -378,16 +389,28 @@ sigmoid_data <- data.frame(
   y_second_derivative = y_second_derivative,
   y_third_derivative = y_third_derivative
 ) %>%
-pivot_longer(
-  cols = c(y, y_derivative, y_second_derivative, y_third_derivative),
-  names_to = "derivative",
-  values_to = "value"
-) %>%
-mutate(
-  derivative = factor(derivative, 
-                      levels = c("y", "y_derivative", "y_second_derivative", "y_third_derivative"),
-                      labels = c("Sigmoid", "First Derivative", "Second Derivative", "Third Derivative"))
-)
+  pivot_longer(
+    cols = c(y, y_derivative, y_second_derivative, y_third_derivative),
+    names_to = "derivative",
+    values_to = "value"
+  ) %>%
+  mutate(
+    derivative = factor(
+      derivative,
+      levels = c(
+        "y",
+        "y_derivative",
+        "y_second_derivative",
+        "y_third_derivative"
+      ),
+      labels = c(
+        "Sigmoid",
+        "First Derivative",
+        "Second Derivative",
+        "Third Derivative"
+      )
+    )
+  )
 
 estimated_points <- tibble(
   x = c(2.2),
@@ -400,8 +423,18 @@ sigmoid_data %>%
   dplyr::filter(derivative == "Sigmoid") %>%
   ggplot(aes(x = x)) +
   geom_line(aes(y = value, color = derivative), size = 1) +
-  geom_point(data = estimated_points, aes(x=x,y=y), color = "black", size = 4) +
-  geom_vline(xintercept = c(2.2), linetype = "dashed", color = "black", size = 0.5) +
+  geom_point(
+    data = estimated_points,
+    aes(x = x, y = y),
+    color = "black",
+    size = 4
+  ) +
+  geom_vline(
+    xintercept = c(2.2),
+    linetype = "dashed",
+    color = "black",
+    size = 0.5
+  ) +
   labs(
     title = "Sigmoid Function and Its Derivatives",
     x = "x",
@@ -415,9 +448,13 @@ sigmoid_data %>%
   scale_color_manual(
     name = "Legend",
     values = c("blue", "red", "green", "purple"),
-    labels = c("Sigmoid", "First Derivative", "Second Derivative", "Third Derivative")
+    labels = c(
+      "Sigmoid",
+      "First Derivative",
+      "Second Derivative",
+      "Third Derivative"
+    )
   )
-
 ```
 
 How can we *derive* where this point lies on any sigmoid function? Let's take a quick calculus detour:
@@ -450,13 +487,22 @@ I previously mentioned that we're interested in the change in the change of the 
 #| label: fig-sigmoid-derivatives
 #| fig-cap: "Sigmoid Function and Its Derivatives"
 
-
 sigmoid_data %>%
-#   dplyr::filter(derivative == "Sigmoid") %>%
+  #   dplyr::filter(derivative == "Sigmoid") %>%
   ggplot(aes(x = x)) +
   geom_line(aes(y = value, color = derivative), size = 1) +
-  geom_point(data = estimated_points, aes(x=x,y=y), color = "black", size = 4) +
-  geom_vline(xintercept = c(2.2), linetype = "dashed", color = "black", size = 0.5) +
+  geom_point(
+    data = estimated_points,
+    aes(x = x, y = y),
+    color = "black",
+    size = 4
+  ) +
+  geom_vline(
+    xintercept = c(2.2),
+    linetype = "dashed",
+    color = "black",
+    size = 0.5
+  ) +
   labs(
     title = "Sigmoid Function and Its Derivatives",
     x = "x",
@@ -470,10 +516,13 @@ sigmoid_data %>%
   scale_color_manual(
     name = "Legend",
     values = c("blue", "red", "green", "purple"),
-    labels = c("Sigmoid", "First Derivative", "Second Derivative", "Third Derivative")
+    labels = c(
+      "Sigmoid",
+      "First Derivative",
+      "Second Derivative",
+      "Third Derivative"
+    )
   )
-
-
 ```
 
 So, the point I plotted aligns almost perfectly with one of the local maxima of the third derivative of the sigmoid function. At this point, we *could* solve for this point analytically, find the fourth derivative, set it equal to zero, and solve for the corresponding $x$ value. However, I think there's already too much talk of derivatives in this post so we'll simply filter our dataset for the $x$ value at which the third derivative is max (for $x$ values greater than zero).
@@ -483,12 +532,11 @@ So, the point I plotted aligns almost perfectly with one of the local maxima of 
 #| lst-cap: "Finding the inflection point of the third derivative of the sigmoid function"
 
 sigmoid_data %>%
-dplyr::filter(
+  dplyr::filter(
     derivative == "Third Derivative",
     x > 0
-) %>%
-slice(which.max(value))
-
+  ) %>%
+  slice(which.max(value))
 ```
 
 My estimate for this point was spot-on (I, ugh, have good vision I guess?) However, this is only useful for the basic sigmoid function--let's generalize this. If you had looked at some of the previous plotting code, you might have noticed that I wrote some functions for the sigmoid function and its derivatives, repeated below in @lst-sigmoid-functions. We can use these functions to find the point at which the third derivative is maximized for any sigmoid function, not just the one we fitted to our data.
@@ -509,13 +557,20 @@ sigmoid_derivative <- function(x, L = 1, k = 1, x0 = 0) {
 }
 
 sigmoid_second_derivative <- function(x, L = 1, k = 1, x0 = 0) {
-  k^2 * L * exp(-k * (x - x0)) * (1 - exp(-k * (x - x0))) / (1 + exp(-k * (x - x0)))^3
+  k^2 *
+    L *
+    exp(-k * (x - x0)) *
+    (1 - exp(-k * (x - x0))) /
+    (1 + exp(-k * (x - x0)))^3
 }
 
 sigmoid_third_derivative <- function(x, L = 1, k = 1, x0 = 0) {
-  k^3 * L * exp(-k * (x - x0)) * (1 - 4 * exp(-k * (x - x0)) + exp(-2 * k * (x - x0))) / (1 + exp(-k * (x - x0)))^4
+  k^3 *
+    L *
+    exp(-k * (x - x0)) *
+    (1 - 4 * exp(-k * (x - x0)) + exp(-2 * k * (x - x0))) /
+    (1 + exp(-k * (x - x0)))^4
 }
-
 ```
 
 If we apply these functions to our fitted sigmoid model, we can find the point at which the third derivative is maximized. This will give us the "inflection point" at which the value of learning additional practice questions begins to take a nosedive.
@@ -526,19 +581,18 @@ If we apply these functions to our fitted sigmoid model, we can find the point a
 #| lst-cap: "Finding the inflection point of the sigmoid function for test taking"
 #| code-fold: show
 
-
 sigmoid_third_derivative(
   x = seq(0, 308, length.out = 309),
   L = 1,
   k = coef(sigmoid_model)["k"],
   x0 = 154
 ) %>%
-tibble(
+  tibble(
     x = seq(0, 308, length.out = 309),
     value = .
-) %>%
-dplyr::filter(x > 154) %>% # only look past the halfway point
-slice(which.max(value))
+  ) %>%
+  dplyr::filter(x > 154) %>% # only look past the halfway point
+  slice(which.max(value))
 ```
 
 So an X value of 188
@@ -552,8 +606,18 @@ So an X value of 188
 x_values <- seq(0, 308, length.out = 309) # Range of x values
 y_values <- sigmoid(x_values, L = 1, k = 0.0677, x0 = 154) # Compute sigmoid values
 y_derivative <- sigmoid_derivative(x_values, L = 1, k = 0.0677, x0 = 154) # Compute first derivative
-y_second_derivative <- sigmoid_second_derivative(x_values, L = 1, k = 0.0677, x0 = 154) # Compute second derivative
-y_third_derivative <- sigmoid_third_derivative(x_values, L = 1, k = 0.0677, x0 = 154) # Compute third derivative
+y_second_derivative <- sigmoid_second_derivative(
+  x_values,
+  L = 1,
+  k = 0.0677,
+  x0 = 154
+) # Compute second derivative
+y_third_derivative <- sigmoid_third_derivative(
+  x_values,
+  L = 1,
+  k = 0.0677,
+  x0 = 154
+) # Compute third derivative
 
 # Create a data frame for ggplot
 sigmoid_data_test <- data.frame(
@@ -563,16 +627,28 @@ sigmoid_data_test <- data.frame(
   y_second_derivative = y_second_derivative,
   y_third_derivative = y_third_derivative
 ) %>%
-pivot_longer(
-  cols = c(y, y_derivative, y_second_derivative, y_third_derivative),
-  names_to = "derivative",
-  values_to = "value"
-) %>%
-mutate(
-  derivative = factor(derivative, 
-                      levels = c("y", "y_derivative", "y_second_derivative", "y_third_derivative"),
-                      labels = c("Sigmoid", "First Derivative", "Second Derivative", "Third Derivative"))
-)
+  pivot_longer(
+    cols = c(y, y_derivative, y_second_derivative, y_third_derivative),
+    names_to = "derivative",
+    values_to = "value"
+  ) %>%
+  mutate(
+    derivative = factor(
+      derivative,
+      levels = c(
+        "y",
+        "y_derivative",
+        "y_second_derivative",
+        "y_third_derivative"
+      ),
+      labels = c(
+        "Sigmoid",
+        "First Derivative",
+        "Second Derivative",
+        "Third Derivative"
+      )
+    )
+  )
 
 estimated_points <- tibble(
   x = c(188),
@@ -584,8 +660,18 @@ estimated_points <- tibble(
 sigmoid_data_test %>%
   ggplot(aes(x = x)) +
   geom_line(aes(y = value, color = derivative), size = 1) +
-  geom_point(data = estimated_points, aes(x=x,y=y), color = "black", size = 4) +
-  geom_vline(xintercept = c(188), linetype = "dashed", color = "black", size = 0.5) +
+  geom_point(
+    data = estimated_points,
+    aes(x = x, y = y),
+    color = "black",
+    size = 4
+  ) +
+  geom_vline(
+    xintercept = c(188),
+    linetype = "dashed",
+    color = "black",
+    size = 0.5
+  ) +
   labs(
     title = "Sigmoid Function and Its Derivatives",
     x = "x",
@@ -599,10 +685,13 @@ sigmoid_data_test %>%
   scale_color_manual(
     name = "Legend",
     values = c("blue", "red", "green", "purple"),
-    labels = c("Sigmoid", "First Derivative", "Second Derivative", "Third Derivative")
+    labels = c(
+      "Sigmoid",
+      "First Derivative",
+      "Second Derivative",
+      "Third Derivative"
+    )
   )
-
-
 ```
 
 
@@ -618,7 +707,12 @@ sigmoid_data_test %>%
   filter(derivative == "Third Derivative") %>%
   ggplot(aes(x = x)) +
   geom_line(aes(y = value, color = derivative), size = 1) +
-  geom_vline(xintercept = c(188), linetype = "dashed", color = "black", size = 0.5) +
+  geom_vline(
+    xintercept = c(188),
+    linetype = "dashed",
+    color = "black",
+    size = 0.5
+  ) +
   labs(
     title = "Sigmoid Function 3rd Derivative",
     x = "x",

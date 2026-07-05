@@ -1,0 +1,18 @@
+---
+title: "The Best Sprint Coaching"
+description: |
+  Have you ever wondered which US universities have the best sprint coaching programs?
+  Probably not, but I did, so I made this project to find out.
+  Specifically, I wanted to see which teams do the best job of developing sprinters. Take a look!
+image: ../images/neuroshepherd.png
+draft: true
+categories:
+  - in-progress!
+  - R
+  - SQLite
+  - webscraping
+  - linear mixed models
+  - patience
+---
+
+
