@@ -1,6 +1,7 @@
 ---
 title: "Hi, I'm Pat"
 page-layout: full
+anchor-sections: false
 ---
 
 I'm a data scientist and statistical programmer who builds tools for understanding the world through data. I work in R, write about statistics and simulations, and occasionally build R packages.
@@ -21,7 +22,7 @@ Maybe an image here
 
 ::: {.col-md-6}
 
-#### [Posts](posts.qmd) 
+## [Posts](posts.qmd) 
 
 Maybe an image here but i'm going to include some longer content here to see if the row elements wrap on top of each other or what happens
 :::
@@ -41,7 +42,7 @@ Maybe an image here but i'm going to include some longer content here to see if 
 ::: {.row}
 ::: {.col-md-6}
 
-#### [Projects and Software](projects.qmd)
+## [Projects and Software](projects.qmd)
 
 Some info about projects and software here or three most recent
 :::
