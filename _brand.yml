@@ -30,3 +30,8 @@ color:
   secondary: earth
   tertiary: lavender
   light: peach
+
+logo:
+  images:
+    icon: images/placeholder.png
+  small: icon
