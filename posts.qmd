@@ -1,9 +1,20 @@
 ---
 title: "Posts"
 listing:
+  id: posts
   contents: posts/
   sort: "date desc"
   type: default
   categories: true
-  feed: true
+  sort-ui: true
+  filter-ui: true
+  feed:
+    language: en
+    # https://quarto.org/docs/websites/website-listings.html#feeds
+    # title
+    # image:
 ---
+
+
+::: {#posts}
+:::
