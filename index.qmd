@@ -1,17 +1,115 @@
 ---
 title: "Hi, I'm Pat"
+page-layout: full
+anchor-sections: false
 ---
 
 I'm a data scientist and statistical programmer who builds tools for understanding the world through data. I work in R, write about statistics and simulations, and occasionally build R packages.
 
-::: {style="display: flex; gap: 1.5rem; margin-top: 1.5rem;"}
-[About Me](about.qmd){.btn .btn-outline-secondary} [See my projects](projects.qmd){.btn .btn-outline-secondary} [Read the blog](posts.qmd){.btn .btn-outline-secondary}
+
+:::{.column-screen .brand-banner-color}
+:::{.column-page}
+
+::: {.row}
+::: {.col-md-6 .d-none .d-sm-block}
+::: {.banner-image-container}
+![](images/posts.png){.banner-image}
+:::
+:::
+
+::: {.col-md-6 .d-flex .flex-column}
+
+## [Posts](posts.qmd) 
+
+
+::: {.row .my-auto}
+::: {.col-sm-4}
+
+::: {.icon-block}
+
+<i class="fa-solid fa-chart-column"></i>
+
+###  Analyses
+:::
+
+:::
+::: {.col-sm-4}
+
+::: {.icon-block}
+  <i class="fa-solid fa-code"></i>
+  
+###  Code
+
+:::
+
+:::
+::: {.col-sm-4}
+
+::: {.icon-block}
+  <i class="fa-solid fa-mug-saucer"></i>
+  
+###  Hobbies
+
+:::
+
+:::
 :::
 
 
-## About This Site
+:::
+:::
 
-In-progress.
+:::
+:::
 
 
-### Level three
+
+<!-- switch to software/projects here -->
+
+
+:::{.column-screen .brand-banner}
+:::{.column-page}
+
+::: {.row}
+::: {.col-md-6}
+
+## [Projects and Software](projects.qmd)
+
+Some info about projects and software here or three most recent
+:::
+
+
+::: {.col-md-6 .d-none .d-sm-block}
+::: {.banner-image-container}
+![](images/placeholder.png){.banner-image}
+:::
+:::
+:::
+
+:::
+:::
+
+
+
+<!-- final banner here with some color -->
+
+:::{.column-screen .brand-banner-color}
+:::{.column-page}
+
+::: {.row}
+::: {.col-md-6 .d-none .d-sm-block}
+::: {.banner-image-container}
+![](images/neuroshepherd.png){.banner-image}
+:::
+:::
+
+::: {.col-md-6}
+
+#### Something here for parallel structure
+
+Some info about posts here or three most recent
+:::
+:::
+
+:::
+:::
