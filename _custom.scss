@@ -28,3 +28,9 @@ h3, #quarto-content h3[class], #quarto-content .h3[class] {
   border-bottom: $brand-lavender 1.5px solid;
   padding-bottom: 0.25rem;
 } 
+
+.brand-banner {
+  background-color: $brand-lavender;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}

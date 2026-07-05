@@ -1,5 +1,6 @@
 ---
 title: "Hi, I'm Pat"
+page-layout: full
 ---
 
 I'm a data scientist and statistical programmer who builds tools for understanding the world through data. I work in R, write about statistics and simulations, and occasionally build R packages.
@@ -9,9 +10,69 @@ I'm a data scientist and statistical programmer who builds tools for understandi
 :::
 
 
-## About This Site
+:::{.column-screen .brand-banner}
+:::{.column-body}
 
-In-progress.
+::: {.grid}
+::: {.g-col-6}
+Maybe an image here
+:::
+
+::: {.g-col-6}
+
+#### [Posts](posts.qmd)
+
+Some info about posts here or three most recent
+:::
+:::
+
+:::
+:::
 
 
-### Level three
+
+<!-- switch to software/projects here -->
+
+
+:::{.column-screen}
+:::{.column-body}
+
+::: {.grid}
+::: {.g-col-6}
+
+#### [Projects and Software](projects.qmd)
+
+Some info about projects and software here or three most recent
+:::
+
+
+::: {.g-col-6}
+Maybe an image here
+:::
+:::
+
+:::
+:::
+
+
+
+<!-- final banner here with some color -->
+
+:::{.column-screen .brand-banner}
+:::{.column-body}
+
+::: {.grid}
+::: {.g-col-6}
+Maybe an image here
+:::
+
+::: {.g-col-6}
+
+#### Something here for parallel structure
+
+Some info about posts here or three most recent
+:::
+:::
+
+:::
+:::
