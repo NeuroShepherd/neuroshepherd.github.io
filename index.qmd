@@ -11,18 +11,19 @@ I'm a data scientist and statistical programmer who builds tools for understandi
 
 
 :::{.column-screen .brand-banner}
-:::{.column-body}
+:::{.column-page}
 
-::: {.grid}
-::: {.g-col-6}
-Maybe an image here
+::: {.row}
+::: {.col-md-6}
+Maybe an image here but i'm going to include some longer content here to see if the row elements wrap on top of each other or what happens
+
 :::
 
-::: {.g-col-6}
+::: {.col-md-6}
 
-#### [Posts](posts.qmd)
+#### [Posts](posts.qmd) 
 
-Some info about posts here or three most recent
+Maybe an image here but i'm going to include some longer content here to see if the row elements wrap on top of each other or what happens
 :::
 :::
 
@@ -35,10 +36,10 @@ Some info about posts here or three most recent
 
 
 :::{.column-screen}
-:::{.column-body}
+:::{.column-page}
 
-::: {.grid}
-::: {.g-col-6}
+::: {.row}
+::: {.col-md-6}
 
 #### [Projects and Software](projects.qmd)
 
@@ -46,7 +47,7 @@ Some info about projects and software here or three most recent
 :::
 
 
-::: {.g-col-6}
+::: {.col-md-6}
 Maybe an image here
 :::
 :::
@@ -59,14 +60,14 @@ Maybe an image here
 <!-- final banner here with some color -->
 
 :::{.column-screen .brand-banner}
-:::{.column-body}
+:::{.column-page}
 
-::: {.grid}
-::: {.g-col-6}
+::: {.row}
+::: {.col-md-6}
 Maybe an image here
 :::
 
-::: {.g-col-6}
+::: {.col-md-6}
 
 #### Something here for parallel structure
 

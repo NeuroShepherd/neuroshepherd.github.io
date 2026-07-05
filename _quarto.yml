@@ -41,6 +41,8 @@ website:
 
 format:
   html:
+    css:
+      - assets/bootstrap-grid.min.css
     theme:
       light: [flatly, brand, _custom.scss]
       dark: [darkly, brand, _custom.scss]
