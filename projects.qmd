@@ -1,13 +1,13 @@
 ---
 title: Fun Projects
 listing:
-  contents: projects.yaml
-  type: default
+  contents: projects/
+  type: grid
   categories: true
   # sort: "date desc"
   image-placeholder: images/neuroshepherd.png
 ---
 
-
+Where my bigger projects, software, and other things live--more condensed than the blog posts, although many of these projects have associated blog posts. 
 
 
