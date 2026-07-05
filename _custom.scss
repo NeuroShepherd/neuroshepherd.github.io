@@ -51,6 +51,12 @@ h3, #quarto-content h3[class], #quarto-content .h3[class] {
   padding-right: 0.5rem;
 }
 
+#quarto-content .brand-banner h2 a,
+#quarto-content .brand-banner-color h2 a {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
 #quarto-content .brand-banner h2,
 #quarto-content .brand-banner-color h2 {
   border-bottom: none;
