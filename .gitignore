@@ -68,3 +68,6 @@ images/home_banner/assets/
 
 # positron files
 .posit/
+
+# lua extension
+.luarc.json
