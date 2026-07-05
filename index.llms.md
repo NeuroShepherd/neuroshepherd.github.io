@@ -2,7 +2,7 @@
 
 I’m a data scientist and statistical programmer who builds tools for understanding the world through data. I work in R, write about statistics and simulations, and occasionally build R packages.
 
-![](images/posts.png)
+![](images/posts-transparent.png)
 
 ## [Posts](posts.llms.md)
 
