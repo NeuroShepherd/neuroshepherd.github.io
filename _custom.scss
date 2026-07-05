@@ -1,5 +1,12 @@
 /*-- scss:rules --*/
 
+.navbar-logo {
+  max-height: 3rem;
+  border-radius: 8px;
+  padding-right: 0px;
+  margin-right: 10px;
+}
+
 #quarto-content
 h1, #quarto-content h1[class], #quarto-content .h1[class],
 h2, #quarto-content h2[class], #quarto-content .h2[class],
