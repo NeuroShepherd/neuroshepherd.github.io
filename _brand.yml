@@ -17,11 +17,16 @@ typography:
     weight: 600
   monospace:
     family: '"JetBrains Mono", "Fira Code", monospace'
+  link:
+    color: peach
 
-# color:
-# none of these are in use, but can be accessed with shortcodes like {{< color navy >}}
-# or {{< color accent >}} or in SCSS with $brand-accent
-# palette:
-#   accent: "#2E86C1"
-#   navy: "#1B2631"
-#   teal: "#17A589"
+color:
+  palette:
+    terracotta: "#e35336"
+    peach: "#e3bb98"
+    lavender: "#9988A1"
+    earth: "#8a2b0e"
+  primary: terracotta
+  secondary: earth
+  tertiary: lavender
+  light: peach

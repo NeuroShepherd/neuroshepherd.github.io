@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "NeuroShepherd"
+  title: NeuroShepherd
   site-url: https://neuroshepherd.github.io
   description: "Data science, coding, and statistical programming"
   image: images/neuroshepherd.png
@@ -20,7 +20,7 @@ website:
         href: https://github.com/NeuroShepherd/neuroshepherd.github.io
 
   navbar:
-    title: "navbar title"
+    title: false
     logo: images/neuroshepherd.png
     left:
       - href: index.qmd
@@ -37,8 +37,8 @@ website:
 format:
   html:
     theme:
-      light: [flatly, brand]
-      dark: [darkly, brand]
+      light: [flatly, brand, _custom.scss]
+      dark: [darkly, brand, _custom.scss]
     syntax-highlighting:
       light: github
       dark: arrow

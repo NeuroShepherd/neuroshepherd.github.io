@@ -1,0 +1,23 @@
+/*-- scss:rules --*/
+
+#quarto-content
+h1, #quarto-content h1[class], #quarto-content .h1[class],
+h2, #quarto-content h2[class], #quarto-content .h2[class],
+h3, #quarto-content h3[class], #quarto-content .h3[class],
+h4, #quarto-content h4[class], #quarto-content .h4[class],
+h5, #quarto-content h5[class], #quarto-content .h5[class],
+h6, #quarto-content h6[class], #quarto-content .h6[class] {
+  margin-top: 1.33rem;
+  margin-bottom: 0.75rem;
+}
+
+#quarto-content
+h2, #quarto-content h2[class], #quarto-content .h2[class] {
+  border-bottom: $brand-lavender 2px solid;
+}
+
+#quarto-content
+h3, #quarto-content h3[class], #quarto-content .h3[class] {
+  border-bottom: $brand-lavender 1.5px solid;
+  padding-bottom: 0.25rem;
+} 
