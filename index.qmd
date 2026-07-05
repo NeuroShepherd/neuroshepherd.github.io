@@ -13,7 +13,7 @@ I'm a data scientist and statistical programmer who builds tools for understandi
 ::: {.row}
 ::: {.col-md-6 .d-none .d-sm-block}
 ::: {.banner-image-container}
-![](images/posts.png){.banner-image}
+![](images/posts-transparent.png){.banner-image}
 :::
 :::
 
