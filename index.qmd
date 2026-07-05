@@ -17,7 +17,7 @@ I'm a data scientist and statistical programmer who builds tools for understandi
 ::: {.row}
 ::: {.col-md-6}
 ::: {.banner-image-container}
-![](images/placeholder.png){.banner-image}
+![](images/posts.png){.banner-image}
 :::
 :::
 
