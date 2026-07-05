@@ -1,5 +1,10 @@
 /*-- scss:rules --*/
 
+/* Vertically center the image alongside content in the solana about template */
+.about-entity {
+  align-items: center !important;
+}
+
 .icon-block {
   text-align: center;
 
