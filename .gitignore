@@ -65,3 +65,6 @@ posts/*_files/
 # ignore the images used for making up the banners
 images/home_banner/assets/
 **/*.quarto_ipynb
+
+# positron files
+.posit/
