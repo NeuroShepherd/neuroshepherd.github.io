@@ -318,12 +318,12 @@ Listing 3: Fitting a Sigmoid Model to the Data
       model: passing_probability ~ L/(1 + exp(-k * (number_correct_practice -     x0)))
        data: results_with_ci
             L         k        x0 
-      1.00347   0.06774 154.20629 
-     residual sum-of-squares: 0.01244
+      1.00344   0.06773 154.14877 
+     residual sum-of-squares: 0.01181
 
     Algorithm "port", convergence message: both X-convergence and relative convergence (5)
 
-The sigmoid model has an \\L\\ value of 1.0035, a \\k\\ value of 0.0677, and an \\x_0\\ value of 154.2063.
+The sigmoid model has an \\L\\ value of 1.0034, a \\k\\ value of 0.0677, and an \\x_0\\ value of 154.1488.
 
 \\L\\ technically should not be greater than 1, but in this case it is ever so slightly above 1 simply as a result of the fitting process. I’m going to offend mathematicians (and probably statisticians) here and simply make this 1. Meanwhile, \\x_0\\ came out to essentially be the value of 154 that it should be, and I will likewise round this down to 154 for the modeling. The key parameter we gain from modeling is \\k\\, which is the steepness of the curve. A larger \\k\\ value indicates a steeper curve, meaning that the probability of passing the test increases more rapidly as the number of correct answers on the practice test increases. A smaller \\k\\ value indicates a flatter curve, meaning that the probability of passing the test increases more slowly as the number of correct answers on the practice test increases.
 
@@ -596,7 +596,7 @@ Listing 6: Finding the inflection point of the sigmoid function for test taking
     # A tibble: 1 × 2
           x     value
       <dbl>     <dbl>
-    1   188 0.0000130
+    1   188 0.0000129
 
 So an X value of 188
 
