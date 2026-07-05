@@ -5,6 +5,7 @@
 library(hexSticker)
 library(ggplot2)
 library(dplyr)
+library(scales)
 library(sysfonts)
 library(showtext)
 
@@ -30,31 +31,42 @@ lin_seq <- seq(0, 1, length.out = n)
 y_vals <- 10^(lin_seq^0.4 * log10(3e6))
 
 # Continuous background gradient
+# Use fill_val = ymid^1.5 so the color gradient is even on the visual scale
 bg <- tibble(
   ymin = y_vals,
   ymax = lead(y_vals, default = 3e6),
   idx = seq_len(n)
-)
+) |>
+  mutate(
+    ymid = (ymin + ymax) / 2,
+    fill_val = ymid^1.5
+  )
 
 p <- bg |>
   ggplot() +
   geom_rect(
-    aes(xmin = 0, xmax = 2, ymin = ymin, ymax = ymax, fill = idx),
+    aes(xmin = 0, xmax = 2, ymin = ymin, ymax = ymax, fill = fill_val),
     alpha = 0.7
   ) +
   scale_fill_gradientn(colors = cols) +
-  scale_y_log10(
-    breaks = c(10, 100, 1000, 10000, 100000, 1e6, 3e6),
-    labels = c("10", "100", "1K", "10K", "100K", "1M", "3M")
+  scale_y_continuous(
+    trans = trans_new(
+      name = "compress-low",
+      transform = function(x) x^1.5,
+      inverse = function(x) x^(1 / 1.5)
+    ),
+    breaks = c(1e6, 2e6, 3e6),
+    labels = c("1M", "2M", "3M")
   ) +
   coord_cartesian(xlim = c(0, 2), expand = FALSE) +
   theme_void() +
   theme(
     axis.text.y = element_text(
       family = "barlow-condensed",
-      size = 14,
+      size = 18,
       color = "#FFFFFF",
-      hjust = 1
+      hjust = 1,
+      margin = margin(r = 3)
     ),
     axis.ticks.y = element_blank(),
     plot.background = element_rect(fill = "transparent", color = NA),
@@ -66,17 +78,18 @@ p <- bg |>
 # --- Generate and save the sticker ---
 sticker(
   p,
-  package = "Scoville Scale",
+  package = "Scoville",
   p_family = "barlow",
+  p_y = 1.55,
   p_size = 20,
   p_color = "#FFFFFF",
   h_fill = "#9bc79b",
   h_color = "#3D7A33",
   h_size = 1.5,
-  s_x = 1.0,
+  s_x = 0.95,
   s_y = 0.85,
   s_width = 1.3,
-  s_height = 0.85,
+  s_height = 0.95,
   spotlight = TRUE,
   l_alpha = 0.3,
   url = "scoville.scale",
