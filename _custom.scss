@@ -1,5 +1,17 @@
 /*-- scss:rules --*/
 
+.icon-block {
+  text-align: center;
+
+  i {
+    color: $brand-terracotta;
+    font-size: 80px;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+}
+
 .navbar-logo {
   max-height: 3rem;
   border-radius: 8px;

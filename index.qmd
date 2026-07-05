@@ -21,11 +21,45 @@ I'm a data scientist and statistical programmer who builds tools for understandi
 :::
 :::
 
-::: {.col-md-6}
+::: {.col-md-6 .d-flex .flex-column}
 
 ## [Posts](posts.qmd) 
 
-Maybe an image here but i'm going to include some longer content here to see if the row elements wrap on top of each other or what happens
+
+::: {.row .my-auto}
+::: {.col-sm-4}
+
+::: {.icon-block}
+
+<i class="fa-solid fa-chart-column"></i>
+
+###  Analyses
+:::
+
+:::
+::: {.col-sm-4}
+
+::: {.icon-block}
+  <i class="fa-solid fa-code"></i>
+  
+###  Programming
+
+:::
+
+:::
+::: {.col-sm-4}
+
+::: {.icon-block}
+  <i class="fa-solid fa-person-running"></i>
+  
+###  Hobbies
+
+:::
+
+:::
+:::
+
+
 :::
 :::
 

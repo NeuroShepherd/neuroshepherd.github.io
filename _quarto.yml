@@ -43,6 +43,7 @@ format:
   html:
     css:
       - assets/bootstrap-grid.min.css
+      - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css
     theme:
       light: [flatly, brand, _custom.scss]
       dark: [darkly, brand, _custom.scss]
