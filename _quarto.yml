@@ -21,6 +21,7 @@ website:
 
   navbar:
     title: false
+    background: primary
     logo: medium
     left:
       - href: index.qmd
@@ -30,7 +31,11 @@ website:
       - projects.qmd
     right:
       - icon: github
-        href: https://github.com/NeuroShepherd
+        menu:
+          - text: See the Source Code
+            href: https://github.com/NeuroShepherd/neuroshepherd.github.io
+          - text: Report a Bug
+            href: https://github.com/NeuroShepherd/neuroshepherd.github.io/issues
       - icon: rss
         href: posts.xml
 

@@ -1,4 +1,5 @@
 # https://quarto.org/docs/authoring/brand.html
+# https://posit-dev.github.io/brand-yml/
 
 typography:
   fonts:
@@ -20,6 +21,7 @@ typography:
   link:
     color: peach
 
+# https://www.figma.com/resource-library/color-combinations/
 color:
   palette:
     terracotta: "#e35336"
