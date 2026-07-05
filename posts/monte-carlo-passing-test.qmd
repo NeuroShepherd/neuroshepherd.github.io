@@ -1,6 +1,6 @@
 ---
 title: "Monte Carlo Simulation of Passing a Test"
-description: "I had to take a test recently, and I wanted to see if I could stop studying already..."
+description: "Haven't I studied enough already?"
 date: 2025-08-06
 year: 2025
 date-modified: last-modified
