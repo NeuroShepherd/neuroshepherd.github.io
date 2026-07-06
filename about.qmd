@@ -19,7 +19,6 @@ format:
   html:
     grid:
       body-width: 1000px
-    theme: templates/solana-extra/about.scss
 ---
 
 :::{#hero-heading}
