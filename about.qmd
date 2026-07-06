@@ -14,6 +14,10 @@ about:
     - icon: github
       text: Github
       href: https://github.com/NeuroShepherd
+format:
+  html:
+    grid:
+      body-width: 1000px
 ---
 
 :::{#hero-heading}
@@ -33,6 +37,9 @@ I tend to do statistics in R, create deployment projects in Python/SQL and distr
 
 ## Experience
 
+
+::: {.d-none .d-md-block}
+
 | Company | Location | Role & Responsibilities |
 |---------|----------|------------------------|
 | LMU Open Science Center | Munich, Germany | Developer: create [technical solutions](https://github.com/lmu-osc) for open science and reproducible research |
@@ -42,3 +49,36 @@ I tend to do statistics in R, create deployment projects in Python/SQL and distr
 
 
 
+:::
+
+::: {.d-md-none}
+
+<div class="experience-card">
+  <div class="experience-company">LMU Open Science Center</div>
+  <div class="experience-location">Munich, Germany</div>
+  <div class="experience-position">Developer</div>
+  <div class="experience-role">Creating [technical solutions](https://github.com/lmu-osc) for open science and reproducible research</div>
+</div>
+
+<div class="experience-card">
+  <div class="experience-company">Boehringer Ingelheim</div>
+  <div class="experience-location">Biberach, Germany</div>
+  <div class="experience-position">Master's Thesis Candidate</div>
+  <div class="experience-role">[*RECIST 1.1: An Analysis of the Classification Stability of a Tumor Measurement Scale in Oncology Clinical Trials*](https://neuroshepherd.github.io/masters-thesis/)</div>
+</div>
+
+<div class="experience-card">
+  <div class="experience-company">Novartis Pharma</div>
+  <div class="experience-location">Basel, Switzerland</div>
+  <div class="experience-position">Intern</div>
+  <div class="experience-role">Development of R package risk assessment tools and Shiny applications</div>
+</div>
+
+<div class="experience-card">
+  <div class="experience-company">LMU IBE</div>
+  <div class="experience-location">Munich, Germany</div>
+  <div class="experience-position">Research Assistant</div>
+  <div class="experience-role">Development of [**{ordinalsimr}**](https://neuroshepherd.github.io/ordinalsimr/) R package for simulating ordinal outcomes data</div>
+</div>
+
+:::
