@@ -1,15 +1,13 @@
 ---
 title: About Me
-image: images/roadtrip.jpg
-
 about:
     id: hero-heading
     template: templates/solana-extra/solana.ejs.html 
+    image: images/roadtrip.jpg
     image-shape: rounded
     image-width: 15em
     image-alt: "NeuroShepherd placeholder image of an AI-generated German shepherd dog"
     image-title: Somewhere along I-80 in in Nevada, USA
-    image-caption: testing
     links:
     - icon: book
       text: ORCID

@@ -34,5 +34,8 @@ const customClz = imgOpts.classes !== undefined ? imgOpts.classes : "";
 %> 
 
 <% if (about.image) { %>
+<figure>
 <img src="<%= about.image %>" <%= altText() %>class="about-image<%= imgClz %> <%= customClz %>" <%= imageSize() %><%= title() %> />
+<figcaption style="text-align: center; font-style: italic;">Camping, traveling, and Polaroids</figcaption>
+</figure>
 <%}%>
