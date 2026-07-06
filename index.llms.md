@@ -18,7 +18,7 @@ Projects built on (or building) Python, FastAPI, SQL, R Packages, Shiny, Docker,
 
 ![](images/projects/projects.png)
 
-![](images/neuroshepherd.png)
+![](images/about.png)
 
 ## [About Me](about.llms.md)
 

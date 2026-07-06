@@ -129,7 +129,7 @@ Show Me the Code!
 passing_rate <- mean(simulation_results >= passing_score) * 100
 ```
 
-This yields a passing rate of 100%…I think I can stop studying now!
+This yields a passing rate of 99.998%…I think I can stop studying now!
 
 ## I Could Have Studied Less
 
@@ -317,13 +317,13 @@ Listing 3: Fitting a Sigmoid Model to the Data
     Nonlinear regression model
       model: passing_probability ~ L/(1 + exp(-k * (number_correct_practice -     x0)))
        data: results_with_ci
-           L        k       x0 
-      1.0035   0.0678 154.2452 
-     residual sum-of-squares: 0.01148
+            L         k        x0 
+      1.00326   0.06785 154.11757 
+     residual sum-of-squares: 0.0115
 
     Algorithm "port", convergence message: both X-convergence and relative convergence (5)
 
-The sigmoid model has an \\L\\ value of 1.0035, a \\k\\ value of 0.0678, and an \\x_0\\ value of 154.2452.
+The sigmoid model has an \\L\\ value of 1.0033, a \\k\\ value of 0.0679, and an \\x_0\\ value of 154.1176.
 
 \\L\\ technically should not be greater than 1, but in this case it is ever so slightly above 1 simply as a result of the fitting process. I’m going to offend mathematicians (and probably statisticians) here and simply make this 1. Meanwhile, \\x_0\\ came out to essentially be the value of 154 that it should be, and I will likewise round this down to 154 for the modeling. The key parameter we gain from modeling is \\k\\, which is the steepness of the curve. A larger \\k\\ value indicates a steeper curve, meaning that the probability of passing the test increases more rapidly as the number of correct answers on the practice test increases. A smaller \\k\\ value indicates a flatter curve, meaning that the probability of passing the test increases more slowly as the number of correct answers on the practice test increases.
 
