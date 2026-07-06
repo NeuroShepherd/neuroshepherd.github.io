@@ -1,6 +1,6 @@
 # Posts
 
-[![](./posts/monte_carlo_passing_test_files/figure-html/fig-sigmoid-derivative-1.png)](posts/monte-carlo-passing-test.llms.md)
+[![](./posts/monte-carlo-passing-test_files/figure-html/fig-sigmoid-derivative-1.png)](posts/monte-carlo-passing-test.llms.md)
 
 ### [Monte Carlo Simulation of Passing a Test](posts/monte-carlo-passing-test.llms.md)
 
