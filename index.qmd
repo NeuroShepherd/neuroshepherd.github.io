@@ -75,13 +75,14 @@ I'm a data scientist and statistical programmer who builds tools for understandi
 
 ## [Projects and Software](projects.qmd)
 
-Some info about projects and software here or three most recent
+Projects built on (or building) Python, FastAPI, SQL, R Packages, Shiny, Docker, and sometimes Go. 
+
 :::
 
 
 ::: {.col-md-6 .d-none .d-sm-block}
 ::: {.banner-image-container}
-![](images/placeholder.png){.banner-image}
+![](images/projects.png){.banner-image-outline} 
 :::
 :::
 :::
@@ -105,9 +106,10 @@ Some info about projects and software here or three most recent
 
 ::: {.col-md-6}
 
-#### Something here for parallel structure
+## [About Me](about.qmd)
 
-Some info about posts here or three most recent
+A bit more about my background, skills, and work of yours I might be able to contribute to!
+
 :::
 :::
 

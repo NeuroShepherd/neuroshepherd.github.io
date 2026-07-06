@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: About Me
 image: images/neuroshepherd.png
 about:
     id: hero-heading
