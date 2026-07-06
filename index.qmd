@@ -100,7 +100,7 @@ Projects built on (or building) Python, FastAPI, SQL, R Packages, Shiny, Docker,
 ::: {.row}
 ::: {.col-md-6 .d-none .d-sm-block}
 ::: {.banner-image-container}
-![](images/neuroshepherd.png){.banner-image}
+![](images/about.png){.banner-image}
 :::
 :::
 

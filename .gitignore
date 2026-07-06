@@ -71,3 +71,6 @@ images/home_banner/assets/
 
 # lua extension
 .luarc.json
+
+# about pptx file
+images/about.pptx
