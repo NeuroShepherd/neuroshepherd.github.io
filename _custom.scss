@@ -102,3 +102,38 @@ h3, #quarto-content h3[class], #quarto-content .h3[class] {
   @extend .banner-image;
   box-shadow: inset 0 0 0 1px #000000;
 }
+
+/* Experience card layout for mobile/small screens */
+.experience-card {
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid $brand-lavender;
+  background-color: rgba($brand-lavender, 0.06);
+  border-radius: 0 8px 8px 0;
+
+  .experience-company {
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+
+  .experience-location {
+    color: #777;
+    font-size: 0.85rem;
+  }
+
+  .experience-position {
+    font-size: 0.9rem;
+    color: $brand-terracotta;
+    margin-top: 0.15rem;
+  }
+
+  .experience-role {
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+}
+
+#quarto-content .experience-card h3 {
+  margin-top: 0;
+  border-bottom: none;
+}
