@@ -4,7 +4,7 @@ description: "Haven't I studied enough already?"
 date: 2025-08-06
 year: 2025
 date-modified: last-modified
-image: monte_carlo_passing_test_files/figure-html/fig-sigmoid-derivatives-1.png
+image: monte_carlo_passing_test_files/figure-html/fig-sigmoid-derivative-1.png
 draft: false
 categories:
     - Monte Carlo
