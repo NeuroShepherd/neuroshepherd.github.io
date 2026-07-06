@@ -2,7 +2,7 @@
 
 I’m a data scientist and statistical programmer who builds tools for understanding the world through data. I work in R, write about statistics and simulations, and occasionally build R packages.
 
-![](images/posts-transparent.png)
+![](images/posts/posts-transparent.png)
 
 ## [Posts](posts.llms.md)
 
@@ -16,7 +16,7 @@ I’m a data scientist and statistical programmer who builds tools for understan
 
 Projects built on (or building) Python, FastAPI, SQL, R Packages, Shiny, Docker, and sometimes Go.
 
-![](images/projects.png)
+![](images/projects/projects.png)
 
 ![](images/neuroshepherd.png)
 
