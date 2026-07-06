@@ -71,7 +71,7 @@ I'm a data scientist and statistical programmer who builds tools for understandi
 :::{.column-page}
 
 ::: {.row}
-::: {.col-md-6}
+::: {.col-md-6 .order-2 .order-md-1}
 
 ## [Projects and Software](projects.qmd)
 
@@ -80,7 +80,7 @@ Projects built on (or building) Python, FastAPI, SQL, R Packages, Shiny, Docker,
 :::
 
 
-::: {.col-md-6 .d-none .d-sm-block}
+::: {.col-md-6 .d-none .d-sm-block .order-1 .order-md-2}
 ::: {.banner-image-container}
 ![](images/projects/projects.png){.banner-image-outline} 
 :::
