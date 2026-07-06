@@ -14,12 +14,12 @@ I’m a data scientist and statistical programmer who builds tools for understan
 
 ## [Projects and Software](projects.llms.md)
 
-Some info about projects and software here or three most recent
+Projects built on (or building) Python, FastAPI, SQL, R Packages, Shiny, Docker, and sometimes Go.
 
-![](images/placeholder.png)
+![](images/projects.png)
 
 ![](images/neuroshepherd.png)
 
-#### Something here for parallel structure
+## [About Me](about.llms.md)
 
-Some info about posts here or three most recent
+A bit more about my background, skills, and work of yours I might be able to contribute to!

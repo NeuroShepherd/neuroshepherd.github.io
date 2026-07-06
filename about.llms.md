@@ -1,4 +1,4 @@
-# About
+# About Me
 
 [ ORCID](https://orcid.org/0000-0003-1769-7580) [ Github](https://github.com/NeuroShepherd)
 

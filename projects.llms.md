@@ -1,4 +1,4 @@
-# Fun Projects
+# Projects & Software
 
 Where my bigger projects, software, and other things live–more condensed than the blog posts, although many of these projects have associated blog posts.
 
