@@ -13,7 +13,7 @@ I'm a data scientist and statistical programmer who builds tools for understandi
 ::: {.row}
 ::: {.col-md-6 .d-none .d-sm-block}
 ::: {.banner-image-container}
-![](images/posts-transparent.png){.banner-image}
+![](images/posts/posts-transparent.png){.banner-image}
 :::
 :::
 
@@ -82,7 +82,7 @@ Projects built on (or building) Python, FastAPI, SQL, R Packages, Shiny, Docker,
 
 ::: {.col-md-6 .d-none .d-sm-block}
 ::: {.banner-image-container}
-![](images/projects.png){.banner-image-outline} 
+![](images/projects/projects.png){.banner-image-outline} 
 :::
 :::
 :::
