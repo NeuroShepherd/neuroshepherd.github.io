@@ -2,7 +2,7 @@
 
 Where my bigger projects, software, and other things live–more condensed than the blog posts, although many of these projects have associated blog posts.
 
-![](./posts/monte_carlo_passing_test_files/figure-html/fig-sigmoid-derivatives-1.png)
+![](./posts/monte-carlo-passing-test_files/figure-html/fig-sigmoid-derivatives-1.png)
 
 ##### Have I Studied Enough to Pass?
 
